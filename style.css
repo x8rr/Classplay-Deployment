@@ -9,11 +9,6 @@ body {
   src: url(/fonts/rubik.ttf);
 }
 
-@font-face {
-  font-family: Rubik;
-  src: url(/fonts/GoogleSansMedium.ttf);
-}
-
 nav {
   display: block;
   justify-content: space-between;
