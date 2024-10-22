@@ -1,7 +1,7 @@
 body {
   background-color: #1d1d1d;
   color: white;
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 @font-face {
@@ -10,7 +10,7 @@ body {
 }
 
 @font-face {
-  font-family: Google Sans;
+  font-family: Rubik;
   src: url(/fonts/GoogleSansMedium.ttf);
 }
 
@@ -23,7 +23,7 @@ nav {
   border-radius: 100px;
   box-shadow: 0 0 8px black;
   font-weight: 500;
-  font-family: Google Sans;
+  font-family: Rubik;
 }
   
 nav ul {
@@ -37,7 +37,7 @@ nav li {
   display: inline-block;
   margin-right: 1rem;
   position: relative;
-  font-family: Google Sans;
+  font-family: Rubik;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -47,7 +47,7 @@ nav a {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  font-family: Google Sans;
+  font-family: Rubik;
   font-weight: 500;
 }
   
@@ -88,7 +88,7 @@ nav a:hover::after {
 }
 
 .home-title {
-  font-family: Google Sans;
+  font-family: Rubik;
   font-size: 65px;
 }
 
@@ -209,7 +209,7 @@ nav a:hover::after {
   justify-content: center;
   display: flex;
   transition: 0.4s;
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 .card:hover {
@@ -217,7 +217,7 @@ nav a:hover::after {
 }
 
 h1.cardtext {
-  font-family: Google Sans;
+  font-family: Rubik;
   font-size: 40px;
 }
 
@@ -226,7 +226,7 @@ button.inner {
   border-radius: 10000px;
   height: 50px;
   width: 200px;
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 
@@ -236,7 +236,7 @@ button.inner {
   margin-left: 10px;
   margin-right: 10px;
   transition: 0.2s;
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 .game-card img {
@@ -258,7 +258,7 @@ button.inner {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   max-width: 130px;
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 .game-card:hover .game-title-overlay {
@@ -274,7 +274,7 @@ button.inner {
   display: block; /* Makes the title span take up the full width */
   text-align: center; /* Centers the text */
   font-weight: medium; /* Makes the title bold */
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 .title {
@@ -287,27 +287,27 @@ button.inner {
 }
 
 html {
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 h1 {
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 p {
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 h2 {
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 button {
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 a {
-  font-family: Google Sans;
+  font-family: Rubik;
 }
 
 .to {
