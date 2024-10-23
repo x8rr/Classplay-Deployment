@@ -12,3 +12,5 @@ document.addEventListener('keydown', (event) => {
         search();
     }
 });
+
+console.log('hi')
