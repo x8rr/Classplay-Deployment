@@ -3,9 +3,12 @@
 <head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classplay - Games</title>
-  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+  <title id="title">Classplay - Games</title>
+  <link id="favicon" rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <script src="main.js"></script>
 </head>
 <body>
   
@@ -13,25 +16,28 @@
 
   <nav>
     <ul>
-        <a href="/index.html"><img src="/img/.png" class="github-icon" style="margin-left: 10px; height: 30px; margin-top: -2px;" alt=""></a>
         <li><a href="index.html">Home</a></li>
         <li><a href="g.html">Games</a></li>
         <li><a href="apps.html">Apps</a></li>
         <a href="https://github.com/hardmathproblems/hardmathproblems.github.io" target="_blank"><img src="/img/github.png" style="margin-top: -2px;" class="github-icon"></a>
+        <button id="cloack-tab" onclick="cloackTab()">Cloak Tab 🥷</button>
     </ul>   
   </nav>
 
 
 <center>
-  <h1 class="title">Games</h1>
+  <h1 class="title" style="margin-bottom: 10px">Games</h1>  
+  <!-- Search Bar -->
+  <input type="text" name="search" class="games-search" placeholder="Press enter to complete search!" />
 </center>
 
+<br><br>
 
 <div class="games-container">
 
   <div class="container">
    
-    <div class="game-card">
+    <div class="game-card" id="Request">
       <a href="https://forms.gle/ZRD1M73cgp8iv2757">
         <img src="img/gforms-logo.png" style="width: 150px;" alt="glogo">
       </a>
@@ -40,7 +46,7 @@
       </div>
     </div>
     
-    <div class="game-card">
+    <div class="game-card" id="Minecraft">
       <a href="/games/eaglercraftx-downloads.html">
         <img src="img/mc.png" style="width: 150px;" alt="Minecraft">
       </a>
@@ -49,7 +55,7 @@
       </div>
     </div>
 
-    <div class="game-card">
+    <div class="game-card" id="Dadish 3">
       <a href="/games/dadish3/index.html" onclick="refreshWarning()">
         <img src="img/dadish3.png" style="width: 150px;" alt="Dadish 3">
       </a>
@@ -58,7 +64,7 @@
       </div>
     </div>
 
-    <div class="game-card">
+    <div class="game-card" id="Paper Mario 64">
       <a href="/games/PM64-N64/Paper-Mario-64.html">
         <img src="img/paper-mario.png" style="width: 150px;" alt="Paper Mario 64">
       </a>
@@ -67,29 +73,44 @@
       </div>
     </div>
 
-    <div class="game-card">
+    <div class="game-card" id="Retro Bowl">
       <a href="/games/retro-bowl/index.html">
-        <img src="img/retro-bowl.png" style="width: 150px;" alt="Paper Mario 64">
+        <img src="img/retro-bowl.png" style="width: 150px;">
       </a>
       <div class="game-title-overlay">
         <span>Retro Bowl</span>
       </div>
     </div>
 
-    <div class="game-card">
+    <div class="game-card" id="Football Bros">
       <a href="/games/football-bros/index.html">
-        <img src="img/footballbros.png" style="width: 150px;" alt="Paper Mario 64">
+        <img src="img/footballbros.png" style="width: 150px;">
       </a>
       <div class="game-title-overlay">
         <span>Football Bros</span>
       </div>
     </div>
+  </div>
 
-    <!--Insert next game here-->
+</div><br>
+
+<div class="games-container">
+
+  <div class="container">
+
+    <div class="game-card" id="Polytrack 4">
+      <a href="/games/polytrack/index.html">
+        <img src="img/polytrack.png" style="width: 150px;">
+      </a>
+      <div class="game-title-overlay">
+        <span>Polytrack 4</span>
+      </div>
+    </div>
 
   </div>
 
 </div>
+
 <script>
 
 function refreshWarning() {

@@ -1,12 +1,12 @@
 body {
   background-color: #1d1d1d;
   color: white;
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 @font-face {
-  font-family: Rubik;
-  src: url(/fonts/rubik.ttf);
+  font-family: Inter;
+  src: url(/fonts/inter.ttf);
 }
 
 nav {
@@ -18,7 +18,7 @@ nav {
   border-radius: 100px;
   box-shadow: 0 0 8px black;
   font-weight: 500;
-  font-family: Rubik;
+  font-family: Inter;
 }
   
 nav ul {
@@ -32,7 +32,7 @@ nav li {
   display: inline-block;
   margin-right: 1rem;
   position: relative;
-  font-family: Rubik;
+  font-family: Inter;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -42,8 +42,8 @@ nav a {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  font-family: Rubik;
-  font-weight: 500;
+  font-family: Inter;
+  font-weight: 600;
 }
   
 nav a::after {
@@ -83,7 +83,7 @@ nav a:hover::after {
 }
 
 .home-title {
-  font-family: Rubik;
+  font-family: Inter;
   font-size: 65px;
 }
 
@@ -204,7 +204,7 @@ nav a:hover::after {
   justify-content: center;
   display: flex;
   transition: 0.4s;
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 .card:hover {
@@ -212,7 +212,7 @@ nav a:hover::after {
 }
 
 h1.cardtext {
-  font-family: Rubik;
+  font-family: Inter;
   font-size: 40px;
 }
 
@@ -221,7 +221,7 @@ button.inner {
   border-radius: 10000px;
   height: 50px;
   width: 200px;
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 
@@ -231,7 +231,7 @@ button.inner {
   margin-left: 10px;
   margin-right: 10px;
   transition: 0.2s;
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 .game-card img {
@@ -253,7 +253,7 @@ button.inner {
   border-bottom-left-radius: 19px;
   border-bottom-right-radius: 19px;
   max-width: 130px;
-  font-family: Rubik;
+  font-family: Inter;
   margin-bottom: 4px;
 }
 
@@ -270,7 +270,7 @@ button.inner {
   display: block; /* Makes the title span take up the full width */
   text-align: center; /* Centers the text */
   font-weight: medium; /* Makes the title bold */
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 .title {
@@ -283,27 +283,27 @@ button.inner {
 }
 
 html {
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 h1 {
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 p {
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 h2 {
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 button {
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 a {
-  font-family: Rubik;
+  font-family: Inter;
 }
 
 .to {
@@ -335,4 +335,72 @@ a {
 
 .to:hover:before {
   opacity: 1;
+}
+
+.games-search {
+  height: 50px;
+  width: 600px;
+  border-radius: 500px;
+  border-width: 0px;
+  background: #363636;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-family: Inter;
+  margin-bottom: 10px;
+  transition: 0.s;
+}
+
+.games-search:focus {
+  outline: solid lightskyblue;
+  outline-offset: 2px;
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 30
+}
+
+#search-button {
+  margin-left: 10px;
+  border-radius: 100px;
+  height: 50px;
+  width: 75px;
+  border: none;
+  background: lightskyblue;
+}
+
+::placeholder {
+  font-size: 17px;
+  font-style: italic;
+}
+
+#cloack-tab {
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-family: Inter;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.15s;
+  font-weight: 500;
+  width: 125px;
+  float: right;
+  margin-top: -3px;
+  margin-right: 15px;
+}
+
+#cloack-tab:hover {
+  scale: 110%;
+}
+
+li.right {
+  text-align: right;
+  justify-content: right;
+  align-self: right;
 }
