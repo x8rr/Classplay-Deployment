@@ -232,6 +232,7 @@ button.inner {
   margin-right: 10px;
   transition: 0.2s;
   font-family: Rubik;
+  bottom: 3px;
 }
 
 .game-card img {
