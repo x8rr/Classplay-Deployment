@@ -4,7 +4,7 @@ function search(){
 
 function cloackTab(){
    $('#title').html('Google Classroom');
-   $('#favicon').href = '/img/gclassroom.png'
+   $("#favicon").attr("href","/img/gclassroom.svg");
 };
 
 document.addEventListener('keydown', (event) => {
@@ -12,5 +12,3 @@ document.addEventListener('keydown', (event) => {
         search();
     }
 });
-
-console.log('hi')
