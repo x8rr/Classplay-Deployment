@@ -354,7 +354,7 @@ a {
 .games-search:focus {
   outline: solid lightskyblue 2.5px;
   outline-offset: 2px;
-  scale: 102%;
+  box-shadow: 0 0 20px lightskyblue;
 
 }
 
