@@ -1,10 +1,11 @@
 function search(){
-   var game = $('.games-search');
+   var game = $('.games-search').val();
+   
 };
 
 function cloackTab(){
-   $('#title').html('Google Classroom');
-   $("#favicon").attr("href","/img/gclassroom.svg");
+   $('#title').html('Home');
+   $("#favicon").attr("href","/img/gclassroom.png");
 };
 
 document.addEventListener('keydown', (event) => {
@@ -12,3 +13,17 @@ document.addEventListener('keydown', (event) => {
         search();
     }
 });
+
+
+function openGame() {
+    var win = window.open()
+    var url = "https://useclassplay.github.io"
+    var iframe = win.document.createElement('iframe')
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.style.margin = "0";
+    iframe.style.padding = "0";
+    iframe.src = url
+    win.document.body.appendChild(iframe)
+}

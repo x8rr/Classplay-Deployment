@@ -348,12 +348,13 @@ a {
   font-size: 17px;
   font-family: Inter;
   margin-bottom: 10px;
-  transition: 0.s;
+  transition: 0.1s;
 }
 
 .games-search:focus {
-  outline: solid lightskyblue;
+  outline: solid lightskyblue 2.5px;
   outline-offset: 2px;
+  scale: 102%;
 
 }
 
