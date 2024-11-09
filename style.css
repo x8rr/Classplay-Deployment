@@ -13,10 +13,10 @@ nav {
   display: block;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: black;
+  background-color: rgb(10, 10, 10);
   color: white;
-  border-radius: 100px;
-  box-shadow: 0 0 8px black;
+  border-radius: 23px;
+  box-shadow: 0 0 15px rgb(10, 10, 10);
   font-weight: 500;
   font-family: Inter;
 }
