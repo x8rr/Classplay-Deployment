@@ -18,10 +18,10 @@ Here at Classplay, we strive to get you the best places for games, apps, and oth
 - Content Creator (3k+ subs) [(My Youtube)](https://youtube.com/@cobblesteve.official)
 
 ### SprintingSnail69
-- Helper
+- Does stuff
 - Front-End dev
 - Knows HTML, CSS, and JS
-
+- Also a content creator (3+ subs) [(My Youtube)](https://youtube.com/@SprintingSnail123)
 > [!TIP]
 > Want to help with the development of Classplay? Just fill out a pull request!
 
