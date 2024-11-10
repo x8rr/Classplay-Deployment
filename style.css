@@ -15,10 +15,11 @@ nav {
   padding: 1rem 2rem;
   background-color: rgb(10, 10, 10);
   color: white;
-  border-radius: 23px;
+  border-radius: 27px;
   box-shadow: 0 0 15px rgb(10, 10, 10);
   font-weight: 500;
   font-family: Inter;
+  height: 45px;
 }
   
 nav ul {
@@ -44,22 +45,14 @@ nav a {
   overflow: hidden;
   font-family: Inter;
   font-weight: 600;
+  top: 10px;
+  transition: 0.2s;
 }
-  
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
+
+nav a:hover {
   background-color: dodgerblue;
-  transform: scaleX(0); /* Initially hidden */
-  transition: transform 0.15s ease-in-out;
-}
-  
-nav a:hover::after {
-  transform: scaleX(1); /* Expand to full width on hover */
+  padding: 12px;
+  border-radius: 15px;
 }
 
 .github-icon {
@@ -394,6 +387,7 @@ a {
   float: right;
   margin-top: -3px;
   margin-right: 15px;
+  margin-top: 6.5px;
 }
 
 #cloack-tab:hover {
