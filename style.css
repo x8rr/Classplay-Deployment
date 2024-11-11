@@ -36,6 +36,7 @@ nav li {
   font-family: Inter;
   font-size: 1.2rem;
   font-weight: 500;
+  transition: 0.2s;
 }
   
 nav a {
@@ -49,10 +50,13 @@ nav a {
   transition: 0.2s;
 }
 
-nav a:hover {
+nav li:hover {
   background-color: dodgerblue;
-  padding: 12px;
+  padding-bottom: 13px;
+  padding-right: 20px;
+  padding-left: 20px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .github-icon {
