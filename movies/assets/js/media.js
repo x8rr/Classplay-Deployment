@@ -1,85 +1,120 @@
-function fetchTmdbId() {
-  let search = document.getElementById("searchbar").value;
-  let link;
+function createAndDisplayCard(movie, container) {
   let poster;
-  let encodedSearch = encodeURIComponent(search);
-  let url =
-    "https://api.themoviedb.org/3/search/multi?api_key=9a2954cb0084e80efa20b3729db69067&language=en-US&query=" +
-    encodedSearch +
-    "&page=1&include_adult=false";
-  const gameContainer = document.getElementById("game-container");
-  gameContainer.innerHTML = "";
+  if (movie.poster_path === null || !movie.poster_path) {
+    return;
+  } else {
+    poster = "https://image.tmdb.org/t/p/w500/" + movie.poster_path;
+  }
 
+  let gameHtml;
+  let rating = Math.round(movie.vote_average * 10) / 10;
+  let year = movie.release_date ? movie.release_date.slice(0, 4) : "N/A";
+
+  if (
+    movie.media_type === "tv" ||
+    (!movie.media_type && movie.first_air_date)
+  ) {
+    year = movie.first_air_date ? movie.first_air_date.slice(0, 4) : "N/A";
+    gameHtml = `<div class="card" style="padding-top: 5px">
+      <a href='watch/tv?id=${movie.id}'> 
+        <div class="rating">★ ${rating}</div>
+        <div class="year">${year}</div>
+        <div class="image-container">
+          <img loading="eager" src="${poster}" style="border-radius: 25px">
+          <div class="play-button"></div>
+          <p class="item-name">${movie.name || movie.title}</p> 
+        </div>
+      </a>
+    </div>`;
+  } else {
+    gameHtml = `<div class="card" style="padding-top: 5px">
+      <a href="watch/movie?id=${movie.id}"> 
+        <div class="rating">★ ${rating}</div>
+        <div class="year">${year}</div>
+        <div class="image-container">
+          <img loading="eager" src="${poster}" style="border-radius: 25px">
+          <div class="play-button"></div>
+          <p class="item-name">${movie.name || movie.title}</p> 
+        </div>
+      </a>
+    </div>`;
+  }
+  container.insertAdjacentHTML("beforeend", gameHtml);
+}
+
+async function searchMedia(searchQuery) {
   try {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        const results = data.results;
-        results.forEach(function (movie) {
-          let poster;
-          if (movie.poster_path === null || !movie.poster_path) {
-            return;
-          } else {
-            poster = "https://image.tmdb.org/t/p/w500/" + movie.poster_path;
-          }
+    const encodedSearch = encodeURIComponent(searchQuery);
+    const url = `https://api.themoviedb.org/3/search/multi?api_key=9a2954cb0084e80efa20b3729db69067&language=en-US&query=${encodedSearch}&page=1&include_adult=false`;
 
-          let gameHtml;
-          let rating = Math.round(movie.vote_average * 10) / 10;
-          let year = movie.release_date
-            ? movie.release_date.slice(0, 4)
-            : "N/A";
-          if (movie.media_type === "tv") {
-            year = movie.first_air_date
-              ? movie.first_air_date.slice(0, 4)
-              : "N/A";
-            gameHtml = `<div class="card" style="padding-top: 5px">
-              <a onclick="promptForSeasonAndEpisode(${movie.id})"> 
-              <div class="rating">★ ${rating}</div>
-              <div class="year">${year}</div>
-                <div class="image-container">
-                  <img loading="eager" src="${poster}" style="border-radius: 25px">
-                  <div class="play-button"></div>
-                  <p class="item-name">${movie.name || movie.title}</p> 
-                </div>
-              </a>
-            </div>`;
-          } else if (movie.media_type === "movie") {
-            let link = `https://moviesapi.club/movie/${movie.id}`;
-            gameHtml = `<div class="card" style="padding-top: 5px">
-              <div class="rating">★ ${rating}</div>
-              <div class="year">${year}</div>
-              <a onclick="hire('${link}');"> 
-                <div class="image-container">
-                  <img loading="eager" src="${poster}" style="border-radius: 25px">
-                  <div class="play-button"></div>
-                  <p class="item-name">${movie.name || movie.title}</p> 
-                </div>
-              </a>
-            </div>`;
-          }
-          gameContainer.insertAdjacentHTML("beforeend", gameHtml);
-        });
-      });
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const bigDiv = document.getElementById("bigDiv");
+    bigDiv.innerHTML = ``;
+
+    const resultsContainer = document.createElement("div");
+    resultsContainer.id = "search-results";
+    resultsContainer.className = "search-results-container";
+    bigDiv.appendChild(resultsContainer);
+
+    data.results.forEach((movie) =>
+      createAndDisplayCard(movie, resultsContainer)
+    );
+
+    if (resultsContainer.innerHTML.trim() === "") {
+      resultsContainer.innerHTML = '<p class="no-results">No results found</p>';
+    }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching search results:", error);
+    const bigDiv = document.getElementById("bigDiv");
+    bigDiv.innerHTML =
+      '<p class="error">Error fetching search results. Please try again.</p>';
   }
 }
-function promptForSeasonAndEpisode(videoId) {
-  const season = prompt("Enter season number:");
-  const episode = prompt("Enter episode number:");
-  if (!season || !episode) {
-    return;
-  } else if (isNaN(season) || isNaN(episode)) {
-    alert("Season and episode must be numbers");
-    return;
-  } else if (season < 1 || episode < 1) {
-    alert("Season and episode must be greater than 0");
-    return;
-  } else if (season.includes(".") || episode.includes(".")) {
-    alert("Season and episode must be whole numbers");
-    return;
-  }
 
-  const link = `https://moviesapi.club/tv/${videoId}-${season}-${episode}`;
-  hire(link);
-}
+document.addEventListener("DOMContentLoaded", function () {
+  let cooldown = false;
+  const searchbar = document.getElementById("searchbar");
+  const cooldownNotice = document.getElementById("cooldownNotice");
+
+  searchbar.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      if (cooldown) {
+        cooldownNotice.style.display = "block";
+        return;
+      }
+
+      const searchQuery = searchbar.value.trim();
+      if (searchQuery) {
+        searchMedia(searchQuery);
+        cooldownNotice.style.display = "none";
+        cooldown = true;
+        setTimeout(function () {
+          cooldown = false;
+          cooldownNotice.style.display = "none";
+        }, 2000);
+      }
+    }
+  });
+});
+document.addEventListener("keydown", function (e) {
+  if (
+    [
+      "ArrowUp",
+      "ArrowDown",
+      "ArrowLeft",
+      "ArrowRight",
+      "b",
+      "a",
+      "Control",
+      "Alt",
+    ].includes(e.key) ||
+    e.metaKey
+  )
+    return;
+
+  let searchbar = document.getElementById("searchbar");
+  searchbar.focus();
+  if (e.toLowerCase() != e.toUpperCase()) searchbar.value += e.key;
+});
