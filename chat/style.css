@@ -242,3 +242,12 @@ button:hover {
 .toast2.show {
   right: 10px; /* Moves the toast into view */
 }
+
+#clicktocopy {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  font-style: italic;
+  margin-top: -10px;
+  top: -10px;
+}
