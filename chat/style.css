@@ -216,3 +216,29 @@ button:hover {
     opacity: 0;
   }
 }
+
+#room-id:hover {
+  cursor: pointer;
+  color: #1f51ff;
+}
+
+#room-id {
+  transition: 0.2s ease;
+}
+
+.toast2 {
+  position: fixed;
+  top: 20px;
+  right: -460px; /* Initially hidden, off-screen */
+  background-color: white;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  z-index: 9999;
+  transition: right 0.3s ease-in-out; /* Slide-in animation */
+}
+
+.toast2.show {
+  right: 10px; /* Moves the toast into view */
+}
