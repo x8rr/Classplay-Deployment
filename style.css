@@ -196,17 +196,26 @@ nav a:hover {
 
 .card {
   border: 1px solid white;
-  width: 250px;
+  width: 150px;
   height: 175px;
   border-radius: 35px;
   justify-content: center;
   display: flex;
   transition: 0.4s;
   font-family: Inter;
+  background-color: transparent;
+  color: white;
 }
 
 .card:hover {
   transform: translate(0, -15px);
+  background-color: white;
+  box-shadow: 0 0 50px white;
+  color: black;
+}
+
+.noflex {
+  display: block;
 }
 
 h1.cardtext {
