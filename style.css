@@ -60,6 +60,16 @@ nav a:hover {
   cursor: pointer;
 }
 
+nav a.disabled:hover {
+  cursor: default;
+  background-color: gray;
+  color: white;
+}
+
+nav a.disabled {
+  color: gray;
+}
+
 .github-icon {
   height: 1.6rem;
   float: right;
