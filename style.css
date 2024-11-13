@@ -211,6 +211,7 @@ nav a:hover {
   transform: translate(0, -15px);
   background-color: white;
   box-shadow: 0 0 50px white;
+  scale: 105%;
   color: black;
 }
 
