@@ -395,9 +395,9 @@ a {
 }
 
 .games-search:focus {
-  outline: solid lightskyblue 2.5px;
+  outline: solid dodgerblue 2.5px;
   outline-offset: 2px;
-  box-shadow: 0 0 20px lightskyblue;
+  box-shadow: 0 0 20px dodgerblue;
 
 }
 
@@ -407,15 +407,6 @@ a {
   'wght' 400,
   'GRAD' 0,
   'opsz' 30
-}
-
-#search-button {
-  margin-left: 10px;
-  border-radius: 100px;
-  height: 50px;
-  width: 75px;
-  border: none;
-  background: lightskyblue;
 }
 
 ::placeholder {
@@ -461,10 +452,9 @@ li.right {
 }
 
 #register input:focus {
-  outline: solid lightskyblue 2.5px;
+  outline: solid dodgerblue 2.5px;
   outline-offset: 2px;
-  box-shadow: 0 0 20px lightskyblue;
-  width: 350px;
+  box-shadow: 0 0 20px dodgerblue;
 }
 
 #register button {
@@ -509,10 +499,9 @@ li.right {
 }
 
 #login input:focus {
-  outline: solid lightskyblue 2.5px;
+  outline: solid dodgerblue 2.5px;
   outline-offset: 2px;
-  box-shadow: 0 0 20px lightskyblue;
-  width: 350px;
+  box-shadow: 0 0 20px dodgerblue;
 }
 
 #login button {
