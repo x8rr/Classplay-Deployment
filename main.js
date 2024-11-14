@@ -50,3 +50,17 @@ function filterGames() {
       noGames.style.display = "block";
   }
 }
+
+function displayLogin() {
+    const loginForm = document.getElementById("login");
+    const registerForm = document.getElementById("register");
+    loginForm.style.display = "block";
+    registerForm.style.display = "none";
+}
+
+function displayRegister() {
+    const loginForm = document.getElementById("login");
+    const registerForm = document.getElementById("register");
+    loginForm.style.display = "none";
+    registerForm.style.display = "block";
+}
