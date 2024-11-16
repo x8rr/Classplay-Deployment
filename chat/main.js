@@ -176,11 +176,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
       location.reload();
     });
     
-    // Copy room code to clipboard
-    const roomCodeElement = document.getElementById("room-id");
-    roomCodeElement.addEventListener("click", () => {
-      const roomCode = roomCodeElement.textContent.replace('');
-      navigator.clipboard.writeText(roomCode)
-        .then(() => showToast("Room code copied to clipboard!"))
-        .catch((error) => console.error("Failed to copy text:", error));
-    });    
+   
+const roomCodeElement = document.getElementById("room-id");
+roomCodeElement.addEventListener("click", () => {
+  const roomCode = roomCodeElement.textContent.trim(); 
+  console.log("Room Code: ", roomCode); 
+  navigator.clipboard.writeText(roomCode)
+    .then(() => showToast("Room code copied to clipboard!"))
+    .catch((error) => console.error("Failed to copy text:", error));
+});
