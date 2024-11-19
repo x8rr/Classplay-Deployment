@@ -110,12 +110,12 @@
     
     // Function to validate username
 async function validateUsername(username) {
-  if (username.length > 30) {
-    showToast("Please shorten your username.");
+  if (username.length > 20) {
+    showToast("shorten ur username lol");
     return false;
   }
   if (await containsProfanity(username)) {
-    showToast("Initiating report...");
+    showToast("you thought :P");
     return false;
   }
   return true;
@@ -124,7 +124,7 @@ async function validateUsername(username) {
 // Create a new room
 createRoomBtn.addEventListener("click", async () => {
   username = usernameInput.value.trim();
-  if (!username) return showToast("You forgot your username💀");
+  if (!username) return showToast("you forgot your username ._.");
   
   if (!(await validateUsername(username))) return; // Validate username
   
@@ -140,12 +140,12 @@ joinRoomBtn.addEventListener("click", async () => {
   username = usernameInput.value.trim();
   roomId = roomCodeInput.value.trim();
   
-  if (!username || !roomId) return showToast("Forgetting something? (Room code and/or username)");
+  if (!username || !roomId) return showToast("forgetting something? (room code and/or username)");
   
   if (!(await validateUsername(username))) return; // Validate username
   
   const roomDoc = await getDoc(doc(db, "rooms", roomId));
-  if (!roomDoc.exists()) return showToast("We couldn't find that room :(");
+  if (!roomDoc.exists()) return showToast("we couldn't find that room :(");
   
   roomTitle.textContent = `${roomId}`;
   showChatSection();
@@ -165,13 +165,13 @@ joinRoomBtn.addEventListener("click", async () => {
       
       // Check if the message is longer than 100 characters
       if (message.length > 100) {
-        showToast("GET OUT!!!");
+        showToast("stop trying to break the servers >:(");
         return;
       }
     
       // Check for profanity using Perspective API
       if (await containsProfanity(message)) {
-        showToast("Message sent to moderators for review.");
+        showToast("nice try buddy. not having another incident.");
         return;
       }
     
@@ -199,8 +199,8 @@ roomCodeElement.addEventListener("click", () => {
   const roomCode = roomCodeElement.textContent.trim(); 
   console.log("Room Code: ", roomCode); 
   navigator.clipboard.writeText(roomCode)
-    .then(() => showToast("Code copied to clipboard :D"))
-    .catch((error) => console.error("Looks like we couldn't copy that text. \n error:", error));
+    .then(() => showToast("code copied to clipboard :D"))
+    .catch((error) => console.error("looks like we couldn't copy that text. \n error:", error));
 });
 
 if (event.key.length === 1 && event.key.match(/[a-z]/i)) {
