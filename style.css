@@ -1,7 +1,7 @@
 body {
   background-color: #1d1d1d;
   color: white;
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 ::-webkit-scrollbar {
@@ -10,8 +10,8 @@ body {
 }
 
 @font-face {
-  font-family: DM Sans;
-  src: url(/fonts/dm.ttf);
+  font-family: Inter;
+  src: url(/fonts/inter.ttf);
 }
 
 nav {
@@ -23,7 +23,7 @@ nav {
   border-radius: 27px;
   box-shadow: 0 0 15px rgb(10, 10, 10);
   font-weight: 500;
-  font-family: DM Sans;
+  font-family: Inter;
   height: 45px;
 }
   
@@ -37,7 +37,7 @@ nav ul {
 nav li {
   margin-right: 1rem;
   position: relative;
-  font-family: DM Sans;
+  font-family: Inter;
   font-size: 1.2rem;
   font-weight: 500;
   transition: 0.2s;
@@ -55,7 +55,7 @@ nav a {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  font-family: DM Sans;
+  font-family: Inter;
   font-weight: 600;
   top: 10px;
   transition: 0.2s;
@@ -117,12 +117,12 @@ nav a.disabled {
 }
 
 .home-title {
-  font-family: DM Sans;
+  font-family: Inter;
   font-size: 65px;
 }
 
 .rainbow-button {
-  font-family: "DM Sans", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   cursor: pointer;
   background-color: #413d3d;
   border: none;
@@ -238,7 +238,7 @@ nav a.disabled {
   justify-content: center;
   display: flex;
   transition: 0.4s;
-  font-family: DM Sans;
+  font-family: Inter;
   background-color: transparent;
   color: white;
 }
@@ -256,7 +256,7 @@ nav a.disabled {
 }
 
 h1.cardtext {
-  font-family: DM Sans;
+  font-family: Inter;
   font-size: 40px;
 }
 
@@ -265,7 +265,7 @@ button.inner {
   border-radius: 10000px;
   height: 50px;
   width: 200px;
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 
@@ -275,7 +275,7 @@ button.inner {
   margin-left: 10px;
   margin-right: 10px;
   transition: 0.2s;
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 .game-card img {
@@ -297,7 +297,7 @@ button.inner {
   border-bottom-left-radius: 19px;
   border-bottom-right-radius: 19px;
   max-width: 130px;
-  font-family: DM Sans;
+  font-family: Inter;
   margin-bottom: 4px;
 }
 
@@ -314,7 +314,7 @@ button.inner {
   display: block; /* Makes the title span take up the full width */
   text-align: center; /* Centers the text */
   font-weight: medium; /* Makes the title bold */
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 .title {
@@ -327,27 +327,27 @@ button.inner {
 }
 
 html {
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 h1 {
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 p {
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 h2 {
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 button {
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 a {
-  font-family: DM Sans;
+  font-family: Inter;
 }
 
 .to {
@@ -390,7 +390,7 @@ a {
   text-align: center;
   color: white;
   font-size: 17px;
-  font-family: DM Sans;
+  font-family: Inter;
   margin-bottom: 10px;
   transition: 0.2s;
 }
@@ -420,7 +420,7 @@ a {
   border: none;
   border-radius: 10px;
   color: white;
-  font-family: DM Sans;
+  font-family: Inter;
   height: 30px;
   cursor: pointer;
   transition: 0.15s;
@@ -448,7 +448,7 @@ li.right {
   padding: 10px;
   border-radius: 13px;
   border: none;
-  font-family: DM Sans;
+  font-family: Inter;
   transition: 0.15s;
 }
 
@@ -464,7 +464,7 @@ li.right {
   border-radius: 12px;
   border: none;
   background: dodgerblue;
-  font-family: DM Sans;
+  font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
   font-weight: 500;
@@ -495,7 +495,7 @@ li.right {
   padding: 10px;
   border-radius: 13px;
   border: none;
-  font-family: DM Sans;
+  font-family: Inter;
   transition: 0.15s;
 }
 
@@ -511,7 +511,7 @@ li.right {
   border-radius: 12px;
   border: none;
   background: dodgerblue;
-  font-family: DM Sans;
+  font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
   font-weight: 500;
@@ -543,7 +543,7 @@ li.right {
   color: black;
   text-align: center;
   border-radius: 15px;
-  font-family: DM Sans;
+  font-family: Inter;
   padding: 20px;
   position: fixed;
   top: 20px;

@@ -1,6 +1,11 @@
 // This is a work in progress, do not expect any of these features to work.
 // - cobblesteve01
 
+const { Client } = Appwrite;
+
+const client = new Client();
+client.setProject('673cc7500006c91704ce');
+
 function displayLogin() {
   const loginForm = document.getElementById("login");
   const registerForm = document.getElementById("register");
