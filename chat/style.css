@@ -28,6 +28,7 @@ body {
   padding: 20px;
   flex: 1;
   border-radius: 30px;
+  font-family: Inter;
 }
 
 #auth-section, 
@@ -60,6 +61,7 @@ h1 {
   margin-bottom: 15px;
   margin-top: 0;
   font-size: 35px;
+  font-family: Inter;
 }
 
 #auth-section input,
