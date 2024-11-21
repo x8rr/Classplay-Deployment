@@ -164,8 +164,8 @@ joinRoomBtn.addEventListener("click", async () => {
       if (!message) return;
       
       // Check if the message is longer than 100 characters
-      if (message.length > 100) {
-        showToast("stop trying to break the servers >:(");
+      if (message.length > 300 || message.length < 2) {
+        showToast("stop trying to break the chat or spell something out.");
         return;
       }
     

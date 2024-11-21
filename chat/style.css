@@ -1,7 +1,7 @@
 body {
   background-color: #1d1d1d;
   color: #f1f1f1;
-  font-family: Inter;
+  font-family: DM Sans;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,8 +10,8 @@ body {
 }
 
 @font-face {
-  font-family: Inter;
-  src: url(Inter.ttf);
+  font-family: DM Sans;
+  src: url(/fonts/dm.ttf);
 }
 
 .spacer {
@@ -19,7 +19,7 @@ body {
 }
 
 * {
-  font-family: Inter;
+  font-family: DM Sans;
 }
 
 #app {
@@ -176,7 +176,7 @@ button:hover {
   color: black;
   text-align: center;
   border-radius: 15px;
-  font-family: Inter;
+  font-family: DM Sans;
   padding: 20px;
   position: fixed;
   top: 20px;
