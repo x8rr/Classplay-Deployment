@@ -110,7 +110,7 @@
     
     // Function to validate username
 async function validateUsername(username) {
-  if (username.length > 20) {
+  if (username.length > 30) {
     showToast("shorten ur username lol");
     return false;
   }
