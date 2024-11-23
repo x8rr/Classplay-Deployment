@@ -272,8 +272,7 @@ button.inner {
 .game-card {
   position: relative; /* Makes the overlay element position itself relative to the image */
   overflow: hidden; /* Hides any overflow content from the overlay */
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   transition: 0.2s;
   font-family: Inter;
 }
@@ -324,6 +323,9 @@ button.inner {
 .games-container {
   margin: auto;
   width: 1080px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 html {
