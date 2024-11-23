@@ -584,3 +584,7 @@ li.right {
     opacity: 0;
   }
 }
+
+p.invis {
+  display: none;
+}
