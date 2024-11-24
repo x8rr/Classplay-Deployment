@@ -12,6 +12,12 @@ Here at Classplay, we strive to get you the best places for games, apps, and oth
 - Movies
 - More to come!
 
+## Getting Help
+Fill out an issue.
+
+## Update Schedule
+whenever i feel like it! :)
+
 ## Meet the Developers
 
 ### cobblesteve01
