@@ -1,9 +1,9 @@
 ---
 name: help us out and report a flaw ;P
-about: help out the website and get your name on the hall of helpers
+about: use this template if you don't know how to structure your issue
 title: "[BUG] [...]"
 labels: bug, help wanted
-assignees: ''
+assignees: 'cobblesteve01'
 
 ---
 
@@ -25,6 +25,7 @@ please add pictures so we can better understand your problem
 
 ### **computer**
  - operating system: [e.g. windows]
+ - os version: [e.g. windows 10]
  - browser: [e.g. chrome]
  - browser version (go to settings > about to check): [e.g. 122]
 
@@ -32,7 +33,7 @@ please add pictures so we can better understand your problem
  - device: [e.g. iphone 15]
  - os: [e.g. ios 17]
  - browser: [e.g. chrome]
- - version: [e.g. 22]
+ - version: [e.g. 122]
 
 ### **notes and other stuff**
 add additional stuff
