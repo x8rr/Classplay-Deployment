@@ -1,5 +1,5 @@
 ---
-name: help us out and report a flaw ;P
+name: bug report
 about: use this template if you don't know how to structure your issue
 title: "[BUG] [...]"
 labels: bug, help wanted

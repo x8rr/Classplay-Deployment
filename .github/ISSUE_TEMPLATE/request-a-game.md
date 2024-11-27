@@ -1,5 +1,5 @@
 ---
-name: Request a game
+name: request a game
 about: Suggest a game for the site
 title: '[GAME REQUEST] [Add ...]'
 labels: 'priority'
