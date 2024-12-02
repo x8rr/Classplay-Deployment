@@ -3,7 +3,7 @@ name: bug report
 about: use this template if you don't know how to structure your issue
 title: "[BUG] [...]"
 labels: bug, help wanted
-assignees: 'cobblesteve01'
+assignees: cobblesteve01
 
 ---
 

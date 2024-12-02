@@ -1,9 +1,10 @@
 ---
 name: request a game
 about: Suggest a game for the site
-title: '[GAME REQUEST] [Add ...]'
-labels: 'priority'
-assignees: 'cobblesteve01'
+title: "[GAME REQUEST] [Add ...]"
+labels: ''
+assignees: cobblesteve01
+
 ---
 
 ### **what game do you want to be added?**
