@@ -28,6 +28,10 @@ https://amazingmath.vercel.app
 
 https://coolmathskills.vercel.app
 
+## *`Stats`*
+
+![Alt](https://repobeats.axiom.co/api/embed/83e2b6b982b07c01e1b89c22d68fc9ab0f03d6e2.svg "Repobeats analytics image")
+
 
 ## *`Meet the Devlopers`*
 
