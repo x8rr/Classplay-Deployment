@@ -1,7 +1,7 @@
-## Welcome to Classplay!
+## *```Welcome to Classplay!```*
 Here at Classplay, we strive to get you the best places for games, apps, and other things you might need. We're constantly updating the website, with greater and greater features every time. You can see some things we have right now!
 
-## Features:
+## *```Features:```*
 - Games
 - Apps
 - Proxies
@@ -12,30 +12,27 @@ Here at Classplay, we strive to get you the best places for games, apps, and oth
 - Movies
 - More to come!
 
-## Getting Help
+## *```Getting Help```*
 Fill out an issue.
 
-## Update Schedule
+## *`Update Schedule`*
 whenever i feel like it! :)
 
-## Meet the Developers
 
-### cobblesteve01
-- Front-end developer
-- Founder
-- Knows HTML, CSS, and JS
-- Content Creator (3k+ subs) [(My Youtube)](https://youtube.com/@cobblesteve.official)
+## *`Links`*
+https://math-for-dummies.vercel.app
 
-### SprintingSnail69
-- Does stuff
-- Front-End dev
-- Knows HTML, CSS, and JS
-- Also a content creator (3+ subs) [(My Youtube)](https://youtube.com/@SprintingSnail123)
-> [!TIP]
-> Want to help with the development of Classplay? Just fill out a pull request!
+https://nasa-archive.vercel.app
 
-> [!IMPORTANT]
-> No services on this are affiliates or sponsors.
+https://amazingmath.vercel.app
 
-> [!WARNING]
-> Some games or other services may be unstable
+https://coolmathskills.vercel.app
+
+## *`Stats`*
+
+![Alt](https://repobeats.axiom.co/api/embed/83e2b6b982b07c01e1b89c22d68fc9ab0f03d6e2.svg "Repobeats analytics image")
+
+
+## *`Credits`*
+
+[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay.github.io)](https://github.com/useclassplay/useclassplay.github.io/graphs/contributors)
