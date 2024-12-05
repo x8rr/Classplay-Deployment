@@ -23,10 +23,10 @@ jobs:
         cd uv
         npm install
 
-    - name: Deploy
+    - name: Deploy (Railway)
       run: |
         cd uv
-        npm run build
+        npm start
         curl -sL https://railway.app/install.sh | bash
-        railway login --apiKey ${{ secrets.RAILWAY_API_KEY }}
+        railway login --apiKey ***
         railway up
