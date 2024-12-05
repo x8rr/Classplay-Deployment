@@ -33,16 +33,6 @@ https://coolmathskills.vercel.app
 ![Alt](https://repobeats.axiom.co/api/embed/83e2b6b982b07c01e1b89c22d68fc9ab0f03d6e2.svg "Repobeats analytics image")
 
 
-## *`Meet the Devlopers`*
+## *`Credits`*
 
-### *`cobblesteve01`*
-- Front-end developer
-- Founder, Main maintainer
-- Knows HTML, CSS, and JS
-- Content Creator (3k+ subs) [(My Youtube)](https://youtube.com/@cobblesteve.official)
-
-### *`SprintingSnail69`*
-- Does stuff
-- Front-End dev
-- Knows HTML, CSS, and JS
-- Also a content creator (3+ subs) [(My Youtube)](https://youtube.com/@SprintingSnail123)
+[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay.github.io)](https://github.com/useclassplay/useclassplay.github.io/graphs/contributors)
