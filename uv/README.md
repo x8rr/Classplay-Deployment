@@ -1,29 +1,26 @@
 <p align="center"><img src="https://raw.githubusercontent.com/titaniumnetwork-dev/Ultraviolet-Static/main/public/uv.png" height="200"></p>
 
-<h1 align="center">Ultraviolet-App</h1>
+<h1 align="center">Ultraviolet-Static</h1>
 
-The deployable all-in-one bundle for [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet), a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!
+Static files/assets used to spin up an Ultraviolet website.
 
-## Deployment
+## Install in [Ultraviolet-App](https://github.com/titaniumnetwork-dev/Ultraviolet-App.git)
 
-[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Run-on-Replit)
-[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-on-Railway)
-[![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Remix-on-Glitch)
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-to-Koyeb)
+See [Ultraviolet-App's Wiki](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Customizing-your-frontend).
 
-If you are deploying to an alternative service or to a server, refer to [Deploy via terminal](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-via-terminal).
+## Usage outside of Ultraviolet-App/Static hosting
 
-Additional information such as [customizing your frontend](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Customizing-your-frontend) can be found on the [wiki](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki).
+### Ultraviolet scripts
 
-Support and updates can be found in our [Discord Server](discord.gg/unblock).
+This repository doesn't serve any Ultraviolet scripts. It has a `uv.config.js` to show how Ultraviolet is intended to work with this demo. Ultraviolet-App automatically merges our `uv.config.js` with the remaining UV scripts (`uv.sw.js`, `uv.client.js`, etc). **Some work has to be done in order to make this repository standalone.**
 
-> [!IMPORTANT]  
-> Until deployed on a domain with a valid SSL certificate, Firefox will not be able to load the site. Use chromium for testing on localhost
+Here's how to get the remaining scripts for the purpose of hosting this repository:
 
-### HTTP Transport
+1. Go to the [Ultraviolet releases](https://github.com/titaniumnetwork-dev/Ultraviolet/releases/)
+2. Find the latest release
+3. Download the latest tarball (eg. `titaniumnetwork-dev-ultraviolet-x.x.x.tgz`)
+4. Open the tarball, navigate to the `dist` directory, and extract all the scripts with the exception of `uv.config.js` (we already have a configuration) into the `public/uv/` directory in this repository.
+   You may see `.map` files. These are used for debugging. If they're too large, you can omit them without any errors.
 
-The example uses [EpoxyTransport](https://github.com/MercuryWorkshop/EpoxyTransport) to fetch proxied data encrypted.
+   Do not copy `uv.config.js` from the archive!
 
-You may also want to use [CurlTransport](https://github.com/MercuryWorkshop/CurlTransport), a different way of fetching encrypted data, or [Bare-Client](https://github.com/MercuryWorkshop/Bare-as-module3), the legacy (unencrypted!) transport.
-
-See the [bare-mux](https://github.com/MercuryWorkshop/bare-mux) documentation for more information.
