@@ -39,9 +39,11 @@
       <h2 id="room-title">Room: <span id="room-id"></span></h2>
       <center><p class="clicktocopy" style="margin-top: -10px;"><i>Click the code to copy it!</i></p></center>
       <div id="chat-box"></div>
-      <input type="text" id="message-input" placeholder="Type your message...">
       <div class="container">
-        <button id="send-btn" style="margin:5px;">Send</button>
+        <input type="text" id="message-input" placeholder="Type your message..." >
+        <button id="send-btn" style="margin-top: 12px; margin-left: -50px;"><i class="fa-solid fa-paper-plane" style="scale: 125%; padding-bottom: 10px; padding-right: 10px;"></i></button>
+      </div>
+      <div class="container">
         <button id="leave-room-btn" style="margin:5px;">Leave Room</button>
       </div>
     </div>
@@ -56,5 +58,6 @@
   <div id="toast" class="toast"><i class="fa-regular fa-circle-xmark" style="scale: 175%; color: red"></i>&nbsp;Your message contains profanity and was not sent.</div>
 
   <script type="module" src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/appwrite"></script>
 </body>
 </html>

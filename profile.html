@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classplay Profile</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classplay Profile</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@16.0.2"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js" type="module"></script>
 </head>
 <body>
 
@@ -66,8 +69,7 @@
         <button onclick="logoutUser()">Logout</button>
       </div>
 
-    <script src="main.js"></script>
-    <script src="profile.js"></script>
+      <script type="module" src="profile.js"></script>
     
 </body>
 </html>
