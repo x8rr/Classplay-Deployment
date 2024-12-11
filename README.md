@@ -33,6 +33,6 @@ https://coolmathskills.vercel.app
 ![Alt](https://repobeats.axiom.co/api/embed/83e2b6b982b07c01e1b89c22d68fc9ab0f03d6e2.svg "Repobeats analytics image")
 
 
-## *`Credits`*
+## `Credits`
 
 [![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay.github.io)](https://github.com/useclassplay/useclassplay.github.io/graphs/contributors)
