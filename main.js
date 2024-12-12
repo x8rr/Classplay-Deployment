@@ -12,7 +12,7 @@ document.addEventListener('keydown', (event) => {
 
 function openGame() {
     var win = window.open()
-    var url = "https://useclassplay.github.io"
+    var url = "https://easysciencetools.github.io"
     var iframe = win.document.createElement('iframe')
     iframe.style.width = "100%";
     iframe.style.height = "100%";
