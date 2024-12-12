@@ -588,3 +588,88 @@ li.right {
 p.invis {
   display: none;
 }
+
+.uv a {
+  color: dodgerblue;
+  text-decoration: none 1.5px;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.uv a:hover {
+  text-decoration: underline;
+}
+
+#urlInput {
+  background-color: #363636;
+  color: white;
+  font-family: Inter;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  transition: 0.3s;
+  outline: none;
+  height: 40px;
+  width: 600px;
+  text-align: center;
+  font-size: 17px;
+}
+
+#urlInput:focus {
+  width: 675px;
+  background-color: #3d3d3d;
+}
+
+#searchButton {
+  background-color: dodgerblue;
+  border-radius: 17px;
+  border: none;
+  height: 48px;
+  width: 48px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  margin-left: -59.5px;
+  transition: .3s;
+}
+
+#searchButton i {
+  font-size: 17px;
+  text-align: center;
+  padding-left: 8px;
+  transition: .3s;
+  margin-top: -2px;
+}
+
+#searchButton:hover {
+  width: 125px;
+  margin-left: -135px;
+  cursor: pointer;
+}
+
+#searchButton:hover i {
+  padding-right: 70px;
+}
+
+#searchButton p {
+  opacity: 0;
+  font-family: Inter;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-right: -25px;
+  margin-top: -3px;
+  position: fixed;
+  transition: .2s;
+  transition-delay: .1s;
+}
+
+#searchButton:hover p {
+  opacity: 1;
+}
+
+#searchButton:active {
+  scale: 0.9;
+  background-color: rgb(0, 128, 255);
+}
