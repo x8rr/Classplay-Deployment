@@ -58,7 +58,7 @@ nav a {
   font-family: Inter;
   font-weight: 600;
   top: 10px;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 nav a:hover {
@@ -66,10 +66,29 @@ nav a:hover {
   padding-top: 10px;
   color: black;
   padding-bottom: 10px;
-  padding-right: 12px;
+  padding-right: 100px;
   padding-left: 12px;
   border-radius: 15px;
   cursor: pointer;
+}
+
+nav a p {
+  opacity: 0;
+  transition: .2s;
+  color: black;
+  position: fixed;
+  display: none;
+  margin-left: 50px;
+  margin-top: -24px;
+  transition: .3s;
+  transition-delay: .2s;
+}
+
+nav a:hover p {
+  opacity: 1;
+  display: block;
+  position: fixed;
+
 }
 
 nav a.disabled:hover {
@@ -672,4 +691,103 @@ p.invis {
 #searchButton:active {
   scale: 0.9;
   background-color: rgb(0, 128, 255);
+}
+
+.cloakButton {
+  height: 50px;
+  padding: 15px;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 17px;
+  border-radius: 20px;
+  transition: .2s;
+}
+
+.cloakButton:hover {
+  cursor: pointer;
+  scale: 1.2;
+  background-color: rgb(0, 128, 255);
+}
+
+.settings-card {
+  background-color: #363636;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 175px;
+  text-align: center;
+  margin: 10px;
+}
+
+.settings-card h1 {
+  margin-top: 5px;
+}
+
+.settings-card input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 15px;
+  height: 25px;
+  transition: .2s;
+  background-color: #464646;
+  font-family: Inter;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  caret-shape: underscore;
+}
+
+.settings-card input[type="text"]:focus {
+  background-color: #565656;
+  outline: none;
+  caret-shape: underscore;
+}
+
+#theme-selector {
+  height: 45px;
+  width: 200px;
+  text-align: center;
+  border-radius: 17px;
+  background-color: #474747;
+  border: none;
+  color: white;
+  font-family: Inter;
+  font-size: 15px;
+}
+
+#premadecloaks {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 15px;
+  height: 50px;
+  transition: .2s;
+  background-color: #474747;
+  font-family: Inter;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  caret-shape: underscore;
+  margin-bottom: 0;
+}
+
+.settings-card button {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .2s;
+}
+
+.settings-card button:hover {
+  scale: 1.1;
 }

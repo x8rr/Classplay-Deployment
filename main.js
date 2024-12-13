@@ -9,7 +9,6 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-
 function openGame() {
     var win = window.open()
     var url = "https://easysciencetools.github.io"
@@ -24,26 +23,65 @@ function openGame() {
     win.document.body.appendChild(iframe)
 }
 
-// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //// This is definitly human made //
+function pickRandomGame() {
+    const gameCards = document.querySelectorAll('.game-card');
+    if (gameCards.length === 0) {
+        alert('No games available to pick from!');
+        return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * gameCards.length);
+    const selectedGame = gameCards[randomIndex];
+
+    const gameName = selectedGame.querySelector('.game-title-overlay').textContent;
+    const gameImageSrc = selectedGame.querySelector('img').src;
+
+    const launchScreen = document.getElementById('launchScreen');
+    const overlay = document.querySelector('.overlay');
+    const content = document.querySelector('.content');
+    const gameImage = document.getElementById('gameImage');
+    const gameNameSpan = document.getElementById('gameName');
+
+    gameImage.src = gameImageSrc;
+    gameNameSpan.textContent = gameName;
+    
+    // Fade in the overlay and content
+    launchScreen.style.visibility = 'visible';
+    launchScreen.style.opacity = '1';
+    overlay.style.opacity = '1';
+    content.style.opacity = '1';
+
+    setTimeout(() => {
+        window.location.href = selectedGame.querySelector('a').href;
+    }, 3000);
+     
+}    
+
+
+function cloackTab(){
+    $('#title').html('Home');
+    $("#favicon").attr("href","/img/gclassroom.png");
+ };
+
 
 function filterGames() {
   const searchTerm = document.getElementById("gameSearch").value.toLowerCase();
   const gameCards = document.querySelectorAll(".game-card");
-  let hasVisibleGames = false; // Track if any game matches the search term
+  let hasVisibleGames = false;
 
   gameCards.forEach(gameCard => {
       const gameTitle = gameCard.querySelector(".game-title-overlay span").textContent.toLowerCase();
       
       if (gameTitle.includes(searchTerm)) {
           gameCard.style.display = "block";
-          hasVisibleGames = true; // A matching game is found
+          hasVisibleGames = true;
       } else {
           gameCard.style.display = "none";
       }
   });
 
-  // Show or hide the "no games" message based on whether any games are visible
-  const noGames = document.getElementById("noGames"); // Ensure you have this element in your HTML
+
+  const noGames = document.getElementById("noGames");
   if (hasVisibleGames) {
       noGames.style.display = "none";
   } else {
