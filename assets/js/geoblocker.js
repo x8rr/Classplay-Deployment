@@ -2,9 +2,9 @@ const validCodes = ["Yqcne2", "Omv46U", "L3v2I0", "fxFl6s", "ZlO3Gy", "t760kv", 
 
 if (window.location.pathname.endsWith("blocked.html") && localStorage.getItem("accessGranted") !== "true") {
   showAuthDiv();
-} else if (window.location.pathname.endsWith("blocked.html") && localStorage.getItem("accessGranted") === "true") {
+} else if (window.location.pathname.endsWith("blocked") && localStorage.getItem("accessGranted") === "true") {
   window.location.href = "/";
-} else if (!window.location.pathname.endsWith("blocked.html") && localStorage.getItem("accessGranted") !== "true") {
+} else if (!window.location.pathname.endsWith("blocked") && localStorage.getItem("accessGranted") !== "true") {
   window.location.href = "blocked";
 }
 
