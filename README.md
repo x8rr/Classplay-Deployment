@@ -20,13 +20,13 @@ whenever i feel like it! :)
 
 
 ## `Links`
-https://math-for-dummies.vercel.app
+https://easysciencetools.github.io
 
-https://nasa-archive.vercel.app
+https://coolmathskills.github.io
 
-https://amazingmath.vercel.app
+https://math-for-dummies.github.io
 
-https://coolmathskills.vercel.app
+https://comprehensive-math.github.io
 
 ## `Stats`
 
