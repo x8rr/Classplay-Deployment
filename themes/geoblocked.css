@@ -3,6 +3,11 @@
     src: url(/fonts/segoeui.ttf);
 }
 
+::placeholder {
+    color: gray;
+    font-size: 20px;
+}
+
 body {
     background-color: dodgerblue;
     font-family: Segoe UI;
@@ -57,6 +62,10 @@ a {
     padding: 5px;
     font-family: Segoe UI;
     margin-right: 0;
+}
+
+.auth input::selection {
+    background: rgba(30, 143, 255, 0.548);
 }
 
 .auth input:focus {
