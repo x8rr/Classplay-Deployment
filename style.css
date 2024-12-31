@@ -347,6 +347,14 @@ button.inner {
   justify-content: center;
 }
 
+.cont {
+  margin: auto;
+  width: 1080px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 html {
   font-family: Inter;
 }
@@ -790,4 +798,60 @@ p.invis {
 
 .settings-card button:hover {
   scale: 1.1;
+}
+
+.release-card {
+  background-color: #3d3d3d;
+  height: 250px;
+  width: 300px;
+  border-radius: 35px;
+  padding: 10px;
+  margin: 7px;
+  position: relative;
+}
+
+.release-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.release-card h1 {
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+.release-card p {
+  font-size: 17px;
+  line-height: 35px;
+  margin-top: -15px;
+  transform: trans;
+}
+
+.release-card button {
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .2s;
+  text-align: center;
+}
+
+.release-card button:hover {
+  scale: 1.2;
+}
+
+.seemore {
+  color: dodgerblue;
+  font-weight: 500;
+  font-size: 17px;
+  transition: .2s;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: linear-gradient(180deg, transparent, #3d3d3d);
+  z-index: 999;
 }
