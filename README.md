@@ -20,13 +20,13 @@ whenever i feel like it! :)
 
 
 ## `Links`
-https://easysciencetools.github.io
+https://freereads-lite.github.io
 
-https://coolmathskills.github.io
+https://learnthatlanguage.github.io
 
-https://math-for-dummies.github.io
+https://pngchanger.github.io
 
-https://comprehensive-math.github.io
+https://themathcafe.github.io
 
 ## `Stats`
 
