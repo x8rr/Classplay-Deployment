@@ -1,5 +1,18 @@
-name: useclassplay
-type: web
-runtime: static
-plan: free
-previews.generation: automatic
+ - type: web
+    name: useclassplay
+    runtime: static
+    buildCommand: yarn build
+    staticPublishPath: ./
+    previews:
+      generation: automatic
+    buildFilter:
+      paths:
+      - /
+    headers:
+      - path: /
+        name: X-Frame-Options
+        value: sameorigin
+    routes:
+      - type: redirect
+        source: /old
+        destination: /new
