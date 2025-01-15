@@ -927,45 +927,104 @@ p.invis {
   animation: scaleOut 0.3s ease forwards;
 }
 
-button {
-  font-family: roboto;
-  font-size: 19px;
-  padding: 15px 50px;
-  margin: 10px;
-  width: 250px;
-  font-weight: 400;
-  border: 0;
-  outline: 0;
-  color: white;
-  background-color: #2196F3;
-  text-transform: uppercase;
-  border-radius: 0.15em;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  position: relative;
-}
-
 #mc-download h1 {
   font-family: roboto;
   font-weight: 600;
 }
 
-button .ripple {
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
-  position: absolute;
-  transform: scale(0);
-  animation: ripple 0.6s linear;
+#mc-download a {
+  text-decoration: none;
+  color: white;
 }
 
-@keyframes ripple {
-  to {
-      transform: scale(2.5);
+#cc-download {
+  display: none;
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transform-origin: center;
+  opacity: 0;
+  color: black;
+  text-align: center;
+}
+
+@keyframes scaleIn {
+  0% {
+      transform: scale(0.5) translate(-50%, -50%);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1) translate(-50%, -50%);
+      opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+      transform: scale(1) translate(-50%, -50%);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(0.5) translate(-50%, -50%);
       opacity: 0;
   }
 }
 
-#mc-download a {
+#cc-download.scale-in {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+#cc-download.scale-out {
+  animation: scaleOut 0.3s ease forwards;
+}
+
+#cc-download h1 {
+  font-family: roboto;
+  font-weight: 600;
+}
+
+#cc-download a {
   text-decoration: none;
   color: white;
+}
+
+#cc-download p {
+  font-family: roboto;
+  font-weight: 600;
+  color: dodgerblue;
+  margin-top: -15px;
+  transition: 0.2s;
+  width: 65px;
+  padding: 10px;
+}
+
+#cc-download p:hover {
+  background-color: rgba(30, 143, 255, 0.2);
+  cursor: pointer;
+  border-radius: 6px;
+  scale: 110%;
+}
+
+#mc-download p {
+  font-family: roboto;
+  font-weight: 600;
+  color: dodgerblue;
+  margin-top: -15px;
+  transition: 0.2s;
+  width: 65px;
+  padding: 10px;
+}
+
+#mc-download p:hover {
+  background-color: rgba(30, 143, 255, 0.2);
+  cursor: pointer;
+  border-radius: 6px;
+  scale: 110%;
 }
