@@ -8,4 +8,4 @@ services:
       generation: automatic
     buildFilter:
       paths:
-      - /
+      - ./
