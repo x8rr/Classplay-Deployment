@@ -1,7 +1,5 @@
----
-render-name: my-site
-build-command: |
-  npm install
-  npm run build
-publish-dir: ./
-config:
+name: useclassplay
+type: web
+runtime: static
+plan: free
+previews.generation: automatic
