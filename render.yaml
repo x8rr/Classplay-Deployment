@@ -1,5 +1,5 @@
  - type: web
-    name: useclassplay
+    name: classplay
     runtime: static
     buildCommand: yarn build
     staticPublishPath: ./
