@@ -14,6 +14,8 @@
   <script src="/assets/js/settings.js"></script>
   <script src="/assets/js/geoblocker.js"></script>
   <script src="/assets/js/profile.js" type="module"></script>
+  <script src="/assets/js/ripple.js" defer></script>
+  <script src="/assets/js/mc-download-popup.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
   <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
@@ -130,8 +132,8 @@
       </div>
     </div>
     
-    <div class="game-card" id="Minecraft"s>
-      <a href="/downloads/eaglercraftx.html">
+    <div class="game-card" id="Minecraft">
+      <a onclick="showPopup()" style="cursor: pointer;">
         <img src="img/mc.png" style="width: 150px;" alt="Minecraft">
       </a>
       <div class="game-title-overlay">
@@ -537,6 +539,31 @@ function refreshWarning() {
   window.alert('In case of a black screen, please reload and try again \n Always wait before clicking enter. \n CLICKING TRIGGERS BLACK SCREEN!')
 }
 </script>
+
+<div id="mc-download">
+
+  <br><br><br><br>
+  <img src="/img/mc.png" alt="" style="border-radius: 15px; width: 100px;">
+  <h1 style="margin-bottom: -5px;">Select a Boot Option</h1>
+
+  <br>
+  
+  <button id="buttons">
+    <a href="/downloads/eaglercraftx.html">
+      <i class="fa-solid fa-play"></i>&nbsp;Play Here
+    </a>
+  </button>
+  <button id="buttons">
+    <a href="/downloads/eaglercraftx.html" download="EaglercraftX 1.8 (u49).html">
+      <i class="fa-solid fa-download"></i>&nbsp;Download
+    </a>
+  </button>
+
+  <p class="messagenotething" style="font-family: roboto; margin-top: 50px;">Press ESC to close this</p>
+
+</div>
+
+<div id="overlay"></div>
 
 </body>
 </html>
