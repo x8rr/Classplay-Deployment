@@ -1,4 +1,6 @@
+services:
  - type: web
+    name: classplay
     runtime: static
     buildCommand: yarn build
     staticPublishPath: ./
