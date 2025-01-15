@@ -1,5 +1,7 @@
-services:
-  - name: my-static-website
-    type: static
-    staticPublishPath: /
-    buildCommand: ""
+---
+render-name: my-site
+build-command: |
+  npm install
+  npm run build
+publish-dir: ./
+config:
