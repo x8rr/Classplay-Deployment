@@ -1,6 +1,8 @@
 services:
-  - type: static
-    name: my-static-website
-    env: static
-    staticPublishPath: .
-    buildCommand: ""
+  - type: web
+    name: classplay
+    runtime: static
+    buildCommand: yarn build
+    staticPublishPath: ./
+    previews:
+      generation: automatic
