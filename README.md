@@ -20,6 +20,9 @@ whenever i feel like it! :)
 
 
 ## `Links`
+
+### On Github:
+
 https://freereads-lite.github.io
 
 https://learnthatlanguage.github.io
@@ -27,6 +30,22 @@ https://learnthatlanguage.github.io
 https://pngchanger.github.io
 
 https://themathcafe.github.io
+
+### On Vercel:
+
+https://math-for-dummies.vercel.app
+
+https://amazingmath.vercel.app
+
+https://coolmathskills.vercel.app
+
+### On Railway:
+
+https://useclassplay.up.railway.app
+
+### On Firebase:
+
+https://useclassplay.web.app (classified as dangerous by google rn, working on a fix.)
 
 ## `Stats`
 
