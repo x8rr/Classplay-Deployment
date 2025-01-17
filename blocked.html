@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">Access Required</title>
-    <link rel="stylesheet" href="/themes/geoblocked.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="themes.js"></script>
     <meta name="description" content="A game hub built for students, by students" property="og:description">
     <meta name="title" content="Classplay" property="og:title">
@@ -20,14 +20,41 @@
 </head>
 <body>
 
-    <h1 class="face">:(</h1>
-    <p class="message">Looks like you don't have access to this site. Try again later or <br><a onclick="showAuthDiv()" href="#">enter an access code.</a></p>
+<style>
+    input[type="text"] {
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: #3d3d3d;
+        font-size: 16px;
+        width: 375px;
+        height: 30px;
+        text-align: center;
+        color: white;
+        transition: 0.3s;
+        font-family: Inter;
+        caret-shape: underscore;
+      }
+      
+      input[type="text"]:focus {
+        outline: none;
+        width: 425px;
+        caret-shape: underscore;
+        background-color: #4d4d4d;
+        caret-color: dodgerblue;
+      }
+</style>
 
-    <div class="auth" style="display: none;" id="auth">
-        <input type="text" name="auth" id="invite-code" placeholder="XXXXXX"><a href="https://github.com/orgs/useclassplay/discussions/30" target="_blank"><i class="fa-regular fa-circle-question" style="color: gray; margin-left: -25px; vertical-align: 3px;"></i></a><br>
-        <button class="enter" onclick="checkInviteCode()" style="bottom: 10px;">Enter</button>
-        <p id="error-message" style="color: rgb(255, 230, 0); display: none;">That code seems to be invalid. Try again.</p>
-    </div>
+<center class="vcent">
+
+    <h1 class="title">Access Required</h1><br>
+
+    <p style="margin-top: -50px; font-size: 18px; font-weight: 500;">Please enter an access code to continue viewing the site.</p><br>
+
+    <input type="text" name="" id="invite-code" placeholder="XXXXXX" style="margin-top: -15px;">
+    <button id="searchButton" onclick="checkInviteCode()" style="margin-top: -20px;"><div class="container"><i class="fa-solid fa-arrow-right" align="center"></i><p>check</p></div></button>
+
+</center>
 
 </body>
 </html>

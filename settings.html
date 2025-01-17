@@ -46,6 +46,8 @@
 
             <h1>about:blank</h1><br>
 
+            <p style="margin-top: -25px;">This feature is currently out of order. We're working on it!</p>
+
             <button onclick="openGame()" class="cloakButton">Open Popup</button>
 
         </div>
@@ -91,6 +93,17 @@
         <div class="settings-card">
 
             <h1>Panic Button</h1>
+
+            <form>
+                <input class="tab-cloaker-form" type="text" id="key" placeholder="Panic Key" onkeyup="setPanicKey()" name="icon">
+                <input class="tab-cloaker-form" type="text" id="link" name="name" placeholder="Panic Link" onkeyup="setPanicLink()">
+            </form>
+
+        </div>
+
+        <div class="settings-card">
+
+            <h1>Saves</h1>
 
             <form>
                 <input class="tab-cloaker-form" type="text" id="key" placeholder="Panic Key" onkeyup="setPanicKey()" name="icon">

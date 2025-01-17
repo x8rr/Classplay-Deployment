@@ -670,7 +670,7 @@ p.invis {
   font-size: 17px;
   text-align: center;
   padding-left: 8px;
-  transition: .3s;
+  transition: .4s;
   margin-top: -2px;
 }
 
@@ -693,8 +693,6 @@ p.invis {
   margin-right: -25px;
   margin-top: -3px;
   position: fixed;
-  transition: .2s;
-  transition-delay: .1s;
 }
 
 #searchButton:hover p {
@@ -1027,4 +1025,31 @@ p.invis {
   cursor: pointer;
   border-radius: 6px;
   scale: 110%;
+}
+
+.vcent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#invite-code {
+  background-color: #363636;
+  color: white;
+  font-family: Inter;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  transition: 0.3s;
+  outline: none;
+  height: 40px;
+  width: 600px;
+  text-align: center;
+  font-size: 17px;
+}
+
+#invite-code:focus {
+  width: 675px;
+  background-color: #3d3d3d;
 }
