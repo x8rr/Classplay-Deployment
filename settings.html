@@ -57,21 +57,22 @@
 
             <h1><b>About</b></h1>
             <p id="updated">Last Updated:</p>
-            <p>Version: v1.9.1</p>
+            <p>Version: v2.0.0</p>
 
         </div>
 
         <div class="settings-card">
 
-            <h1><b>Theme</b></h1>
+            <h1>Saves</h1>
 
-            <select id="theme-selector">
-                <option value="style.css">Default</option>
-                <option value="themes/light.css">Light</option>
-                <option value="themes/christmas24.css">Christmas '24</option>
-            </select>
+            <button onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-export"></i> Export Data Save</button>
+            <input type="file" id="importFile" accept=".ucpconfig" style="display: none;" onchange="handleFileImport(this.files[0])">
+            <br><br>
+            <button onclick="document.getElementById('importFile').click()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-import"></i> Load Data Save</button>
 
         </div>
+
+    </div>
 
     </div>
 
@@ -101,18 +102,7 @@
 
         </div>
 
-        <div class="settings-card">
 
-            <h1>Saves</h1>
-
-            <form>
-                <input class="tab-cloaker-form" type="text" id="key" placeholder="Panic Key" onkeyup="setPanicKey()" name="icon">
-                <input class="tab-cloaker-form" type="text" id="link" name="name" placeholder="Panic Link" onkeyup="setPanicLink()">
-            </form>
-
-        </div>
-
-    </div>
 
     
 </body>

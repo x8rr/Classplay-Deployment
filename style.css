@@ -1053,3 +1053,42 @@ p.invis {
   width: 675px;
   background-color: #3d3d3d;
 }
+
+.announcements {
+  background-color: rgba(0, 0, 0, 0.212);
+  border: 2px solid white;
+  padding: 15px;
+  border-style: none;
+  top: 10px;
+  position: relative;
+  height: 300px;
+  width: 400px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.announcements::after {
+  content: "";
+  position: absolute;
+  inset: -.625em;
+  background: linear-gradient(to bottom right,
+          rgb(4, 67, 129), rgb(77, 0, 77));
+  filter: blur(1.5em);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.announcements p {
+  font-family: inter;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.announcements i {
+  margin-top: 15px;
+}
+
+.announcements h1 {
+  margin-top: 15px;
+}

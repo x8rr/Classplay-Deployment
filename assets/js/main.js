@@ -88,3 +88,61 @@ function filterGames() {
       noGames.style.display = "block";
   }
 }
+
+function exportWebsiteData() {
+    const allData = {
+        localStorage: {},
+        sessionStorage: {},
+        cookies: document.cookie
+    };
+
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        allData.localStorage[key] = localStorage.getItem(key);
+    }
+
+    for (let i = 0; i < sessionStorage.length; i++) {
+        const key = sessionStorage.key(i);
+        allData.sessionStorage[key] = sessionStorage.getItem(key);
+    }
+
+    const blob = new Blob([JSON.stringify(allData)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "save.ucpconfig";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function importWebsiteData(file) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const importedData = JSON.parse(event.target.result);
+
+        for (const key in importedData.localStorage) {
+            localStorage.setItem(key, importedData.localStorage[key]);
+        }
+
+        for (const key in importedData.sessionStorage) {
+            sessionStorage.setItem(key, importedData.sessionStorage[key]);
+        }
+
+        if (importedData.cookies) {
+            const cookies = importedData.cookies.split('; ');
+            cookies.forEach(cookie => {
+                document.cookie = cookie;
+            });
+        }
+    };
+
+    reader.readAsText(file);
+}
+
+function handleFileImport(file) {
+    if (file) {
+        importWebsiteData(file);
+    }
+}
