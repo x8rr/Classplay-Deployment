@@ -45,6 +45,8 @@ https://useclassplay.up.railway.app
 
 ### On Firebase:
 
+https://useclassplay.firebaseapp.com
+
 https://useclassplay.web.app (classified as dangerous by google rn, working on a fix.)
 
 ## `Stats`
