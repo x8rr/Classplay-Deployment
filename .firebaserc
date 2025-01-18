@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "useclassplay"
-  }
+    "default": "useclassplay",
+    "Classplay": "useclassplay"
+  },
+  "targets": {},
+  "etags": {}
 }
