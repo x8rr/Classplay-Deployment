@@ -43,11 +43,9 @@ https://coolmathskills.vercel.app
 
 https://useclassplay.up.railway.app
 
-### On Firebase:
+### On Render:
 
-https://useclassplay.firebaseapp.com
-
-https://useclassplay.web.app (classified as dangerous by google rn, working on a fix.)
+https://useclassplay.onrender.com
 
 ## `Stats`
 
