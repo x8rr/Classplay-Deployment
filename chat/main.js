@@ -3,12 +3,12 @@ import { getFirestore, doc, setDoc, addDoc, collection, onSnapshot, serverTimest
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDMGCzjVLZUVZHCCxBDql5npVz_wcKxEX4",
+  apiKey: "AIzaSyCtK97gSqU9o0j3cJHTVV64z5VmDsSiDOE",
   authDomain: "chat-room-eda59.firebaseapp.com",
   projectId: "chat-room-eda59",
-  storageBucket: "chat-room-eda59.appspot.com",
+  storageBucket: "chat-room-eda59.firebasestorage.app",
   messagingSenderId: "1063922969354",
-  appId: "1:1063922969354:web:c1693925c907a1681368f3"
+  appId: "1:1063922969354:web:058715d5f7e49e381368f3"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -1,3 +1,5 @@
+## HUGE THANKS TO @REDNOTSUS CREATION OF 55GMS -- BIG INSPIRATION
+
 ## ```Welcome to Classplay!```
 Here at Classplay, we strive to get you the best places for games, apps, and other things you might need. We're constantly updating the website, with greater and greater features every time. You can see some things we have right now!
 
