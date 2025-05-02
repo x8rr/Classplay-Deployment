@@ -1,3 +1,3 @@
-[submodule "games/games/smashkartsonline.github.io"]
-	path = games/games/smashkartsonline.github.io
+[submodule "games/smashkarts"]
+	path = games/smashkarts
 	url = https://github.com/yk4ndrew/smashkartsonline.github.io
