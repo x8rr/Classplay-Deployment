@@ -1059,7 +1059,7 @@ p.invis {
   border-style: none;
   top: 10px;
   position: relative;
-  height: 300px;
+  height: fit-content;
   width: 400px;
   border-radius: 30px;
   transition: 0.3s;
