@@ -45,7 +45,6 @@ function pickRandomGame() {
     gameImage.src = gameImageSrc;
     gameNameSpan.textContent = gameName;
     
-    // Fade in the overlay and content
     launchScreen.style.visibility = 'visible';
     launchScreen.style.opacity = '1';
     overlay.style.opacity = '1';

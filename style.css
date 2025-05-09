@@ -1,12 +1,34 @@
 body {
-  background-color: #1d1d1d;
+  background: linear-gradient(to bottom right, #061917, #04061f);
   color: white;
   font-family: Inter;
+  background-size: cover;
+  background-attachment: fixed
+}
+
+html {
+  background: linear-gradient(to bottom right, #061917, #04061f);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-attachment: fixed
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
+}
+
+button {
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
+  border-radius: 7.5px;
 }
 
 @font-face {
@@ -16,95 +38,67 @@ body {
 
 @font-face {
   font-family: Inter;
-  src: url(/fonts/inter.ttf);
+  src: url(/fonts/ggsans.ttf);
 }
 
 nav {
   display: block;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem 2rem;
-  background-color: rgb(10, 10, 10);
+  background-color: rgba(10, 10, 10, 1);
+  outline: 1px white solid;
+  outline-offset: -5px;
   color: white;
   border-radius: 270px;
-  box-shadow: 0 0 15px rgb(10, 10, 10);
-  font-weight: 500;
   font-family: Inter;
-  height: 45px;
+  height: 15px;
+  width: 23%;
+  justify-self: center;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  z-index: 99999;
 }
   
 nav ul {
   list-style: none;
   margin: 0;
+  position: relative;
   padding: 0;
-  font-weight: 600;
+  justify-content: center;
+  display: flex;
+  left: 50%;
+  transform: translateX(-47%);
 }
   
 nav li {
-  margin-right: 1rem;
+  margin-right: .89rem;
   position: relative;
-  font-family: Inter;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1rem;
   transition: 0.2s;
-  float: right;
-}
-
-li.title {
-  font-size: 30px;
-  float: left;
-  margin-top: -6px;
-  margin-right: 300px;
+  bottom: 3.25px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
   
 nav a {
   color: white;
   text-decoration: none;
-  position: relative;
-  overflow: hidden;
+  display: block;
+  margin-top: -2px;
   font-family: Inter;
-  font-weight: 600;
-  top: 10px;
-  transition: 0.25s;
+  transition: 0.2s;
+  justify-content: center;
+  text-align: center;
+  scale: 1.1;
 }
 
 nav a:hover {
-  background-color: white;
-  padding-top: 10px;
-  color: black;
-  padding-bottom: 10px;
-  padding-right: 100px;
-  padding-left: 12px;
+  transform: scale(1.105);
   border-radius: 1500px;
   cursor: pointer;
-}
-
-nav a p {
-  opacity: 0;
-  transition: .2s;
-  color: black;
-  position: fixed;
-  display: none;
-  margin-left: 50px;
-  margin-top: -24px;
-  transition: .3s;
-  transition-delay: .2s;
-}
-
-nav a:hover p {
-  opacity: 1;
-  display: block;
-  position: fixed;
-
-}
-
-nav a.disabled:hover {
-  cursor: default;
-  background-color: gray;
-  color: white;
-}
-
-nav a.disabled {
-  color: gray;
 }
 
 .github-icon {
@@ -323,7 +317,7 @@ button.inner {
   border-bottom-right-radius: 19px;
   max-width: 130px;
   font-family: Inter;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .game-card:hover .game-title-overlay {
@@ -422,20 +416,17 @@ a {
   width: 600px;
   border-radius: 20px;
   border-width: 0px;
-  background: #363636;
+  background: rgba(255, 255, 255, 0.08);
   text-align: center;
   color: white;
   font-size: 17px;
   font-family: Inter;
   margin-bottom: 10px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .games-search:focus {
-  width: 675px;
   outline: none;
-  background-color: #3f3f3f;
-
 }
 
 .material-symbols-outlined {
@@ -454,7 +445,6 @@ a {
 #cloack-tab {
   background-color: dodgerblue;
   border: none;
-  border-radius: 10px;
   color: white;
   font-family: Inter;
   height: 30px;
@@ -623,9 +613,9 @@ p.invis {
   display: none;
 }
 
-.uv a {
-  color: dodgerblue;
-  text-decoration: none 1.5px;
+.uv {
+  color: white;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   font-weight: 500;
   transition: 0.2s;
@@ -636,7 +626,7 @@ p.invis {
 }
 
 #urlInput {
-  background-color: #363636;
+  background-color: #ffffff1c;
   color: white;
   font-family: Inter;
   border-radius: 20px;
@@ -650,13 +640,8 @@ p.invis {
   font-size: 17px;
 }
 
-#urlInput:focus {
-  width: 675px;
-  background-color: #3d3d3d;
-}
-
 #searchButton {
-  background-color: dodgerblue;
+  background: linear-gradient(to bottom right, #1d7c73, #0f1786);
   border-radius: 17px;
   border: none;
   height: 48px;
@@ -703,29 +688,25 @@ p.invis {
 
 #searchButton:active {
   scale: 0.9;
-  background-color: rgb(0, 128, 255);
 }
 
 .cloakButton {
   height: 50px;
   padding: 15px;
   border: none;
-  background-color: dodgerblue;
   color: white;
   font-size: 17px;
-  border-radius: 20px;
   transition: .2s;
 }
 
 .cloakButton:hover {
   cursor: pointer;
   scale: 1.2;
-  background-color: rgb(0, 128, 255);
 }
 
 .settings-card {
-  background-color: #363636;
-  border-radius: 30px;
+  background-color: #ffffff11;
+  border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -744,10 +725,10 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 15px;
+  border-radius: 7.5px;
   height: 25px;
   transition: .2s;
-  background-color: #464646;
+  background-color: #ffffff21;
   font-family: Inter;
   font-size: 15px;
   text-align: center;
@@ -756,7 +737,6 @@ p.invis {
 }
 
 .settings-card input[type="text"]:focus {
-  background-color: #565656;
   outline: none;
   caret-shape: underscore;
 }
@@ -791,11 +771,9 @@ p.invis {
 }
 
 .settings-card button {
-  background-color: dodgerblue;
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
   transition: .2s;
