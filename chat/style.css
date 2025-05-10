@@ -1,5 +1,5 @@
 body {
-  background-color: #1d1d1d;
+  background: linear-gradient(to bottom right, #061917, #04061f);
   color: #f1f1f1;
   font-family: Inter;
   margin: 0;
@@ -23,8 +23,8 @@ body {
   width: 800px;
   margin: 20px auto;
   padding: 20px;
-  border-radius: 30px;
-  background-color: #3d3d3d;
+  border-radius: 12.5px;
+  background-color: #ffffff17;
   transition: 0.3s;
   transition: height 0.3s ease;
   position: fixed;
@@ -55,42 +55,68 @@ h1 {
   font-family: Inter;
 }
 
-#auth-section input,
 #auth-section button,
-#chat-section input,
 #chat-section button {
   padding: 15px;
   margin: 10px 0;
   font-size: 1.1em;
-  border-radius: 17px;
+  border-radius: 7.5px;
   border: none;
   box-sizing: border-box;
 }
 
+#chat-section input,
+#auth-section input {
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border-radius: 7.5px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #ffffff1e;
+  color: white;
+  transition: 0.1s;
+  justify-content: center;
+  text-align: center;
+}
+
+#chat-section input:focus,
+#auth-section input:focus {
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border-radius: 7.5px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #ffffff2c;
+  outline: none;
+}
+
 button {
-  background-color: #1f51ff;
+  background: linear-gradient(to bottom right, #1d7c73, #0f1786);
   color: #fff;
   cursor: pointer;
   border: none;
   transition: 0.2s ease;
   width: 200px;
+  border-radius: 7.5px;
 }
 
 button:hover {
-  scale: 1.05;
+  filter: brightness(.9);
 }
 
 #chat-box {
   height: 350px;
   overflow-y: auto;
   overflow-x: auto;
-  background-color: white;
+  background-color: #ffffff17;
   padding: 0px;
   padding-left: 20px;
   padding-bottom: 5px;
   margin: 0;
-  border-radius: 25px;
-  color: black;
+  border-radius: 10px;
+  color: white;
 }
 
 #message-input {
@@ -100,12 +126,11 @@ button:hover {
 }
 
 #send-btn {
-  width: 47px;
+  width: 40px;
   padding: 14px;
-  font-size: 1.1em;
-  border-radius: 12px;
-  height: 47px;
-  margin-top: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  height: 40px;
   z-index: 99999;
 }
 
@@ -170,10 +195,10 @@ button:hover {
 .toast {
   visibility: hidden;
   min-width: 250px;
-  background-color: white;
-  color: black;
+  background-color: rgba(53, 53, 53, 0.288);
+  color: white;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 7.5px;
   font-family: Inter;
   padding: 20px;
   position: fixed;
@@ -182,20 +207,20 @@ button:hover {
   z-index: 1;
   font-size: 16px;
   opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s ease;
+  transition: visibility 0.5s, opacity 0.5s ease;
 }
 
 .toast.show {
   visibility: visible;
   right: 10px;
   opacity: 1;
-  animation: slideInRight 0.5s, slideOutRight 0.5s 5.5s; /* Slide out after 2.5 seconds */
+  animation: slideInRight 0.3s, slideOutRight 0.4s 5.75s; /* Slide out after 2.5 seconds */
 }
 
 @keyframes slideInRight {
   from {
     right: -500px;
-    opacity: 0;
+    opacity: 1;
   }
   to {
     right: 10px;
@@ -210,17 +235,19 @@ button:hover {
   }
   to {
     right: -500px;
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 #room-id:hover {
   cursor: pointer;
-  color: #1f51ff;
+  background: linear-gradient(to bottom right, #3cffec, #1f2eff);
+  color: transparent;
+  background-clip: text;
 }
 
 #room-id {
-  transition: 0.2s ease;
+  transition: 0.1s ease;
 }
 
 .toast2 {

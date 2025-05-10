@@ -95,7 +95,7 @@ function listenForMessages() {
         const { username, text } = change.doc.data();
         const msgEl = document.createElement("p");
         const usernameSpan = document.createElement("span");
-        usernameSpan.style.color = "#1f51ff";
+        usernameSpan.style.color = "white";
         usernameSpan.textContent = username;
         usernameSpan.style.fontWeight = "bold";
         const messageText = document.createTextNode(`: ${text}`);
