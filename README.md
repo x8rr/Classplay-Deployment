@@ -1,5 +1,5 @@
 ## a lot of this website's design and functionality was inspired by rednotsus's 55gms, thank you red
-### also disregard the "forked from bahabryra", i am the original owner of classplay, he forked it from the deleted repo
+also disregard the "forked from bahabryra", i am the original owner of classplay, he forked it from the deleted repo
 
 
 ## features
