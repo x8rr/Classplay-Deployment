@@ -1,9 +1,8 @@
 ## a lot of this website's design and functionality was inspired by rednotsus's 55gms, thank you red
+### also disregard the "forked from bahabryra", i am the original owner of classplay, he forked it from the deleted repo
 
-## ```Welcome to Classplay!```
-Here at Classplay, we strive to get you the best places for games, apps, and other things you might need. We're constantly updating the website, with greater and greater features every time. You can see some things we have right now!
 
-## ```Features:```
+## features
 - Games
 - Apps
 - Proxies
@@ -14,42 +13,23 @@ Here at Classplay, we strive to get you the best places for games, apps, and oth
 - Movies
 - More to come!
 
-## ```Getting Help```
+## getting help
 Fill out an issue.
 
-## `Update Schedule`
+## update schedule
 whenever i feel like it! :)
 
+## alternate links
 
-## `Links`
+https://useclassplay.vercel.app/
 
-### On Github:
+https://math-for-dummies.vercel.app/
 
-https://freereads-lite.github.io
+https://amazingmath.vercel.app/
 
-https://learnthatlanguage.github.io
+https://coolmathskills.vercel.app/
 
-https://pngchanger.github.io
-
-https://themathcafe.github.io
-
-### On Vercel:
-
-https://math-for-dummies.vercel.app
-
-https://amazingmath.vercel.app
-
-https://coolmathskills.vercel.app
-
-### On Railway:
-
-https://useclassplay.up.railway.app
-
-### On Render:
-
-https://useclassplay.onrender.com
-
-## `Stats`
+## stats
 
 ![Alt](https://repobeats.axiom.co/api/embed/83e2b6b982b07c01e1b89c22d68fc9ab0f03d6e2.svg "Repobeats analytics image")
 
