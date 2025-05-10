@@ -287,7 +287,7 @@ function convertDate(date_str) {
   );
 }
 
-fetch("https://api.github.com/repos/useclassplay/useclassplay.github.io/commits")
+fetch("https://api.github.com/repos/useclassplay/useclassplay/commits")
   .then((response) => response.json())
   .then((data) => {
     var unformatted = new Date(data[0].commit.author.date)
