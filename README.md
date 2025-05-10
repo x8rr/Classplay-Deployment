@@ -1,17 +1,16 @@
 ## a lot of this website's design and functionality was inspired by rednotsus's 55gms, thank you red
-also disregard the "forked from bahabryra", i am the original owner of classplay, he forked it from the deleted repo
+also disregard the "forked from bahabryra", i (yk4ndrew) am the original owner of classplay, he forked it from the deleted repo
 
 
 ## features
-- Games
-- Apps
-- Proxies
-- Youtube Downloaders
+- games
+- apps
+- proxies
+- youtube
 - about:blank cloaker
-- Chatroom
-- Soundboard
-- Movies
-- More to come!
+- chatroom
+- soundboard
+- movies
 
 ## getting help
 Fill out an issue.
