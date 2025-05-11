@@ -6,7 +6,7 @@
     <title id="title">Settings - Classplay</title>
     <link rel="stylesheet" id="theme-style" href="style.css">
     <script src="themes.js"></script>
-    <link rel="shortcut icon" href="/img/favicon.png" id="favicon" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" id="favicon" type="image/x-icon">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
     <meta name="description" content="A game hub built for students, by students" property="og:description">
     <meta name="title" content="Classplay" property="og:title">
@@ -54,7 +54,7 @@
 
             <h1><b>About</b></h1>
             <p id="updated">Last Updated:</p>
-            <p>Version: v2.2.0</p>
+            <p>Version: <span id="version"></span></p>
 
         </div>
 
@@ -79,17 +79,6 @@
 
         <div class="settings-card">
 
-           <h1><b>Tab Cloaker</b></h1>
-
-            <form>
-                <input class="tab-cloaker-form" type="text" id="icon" placeholder="Title" onkeyup="setTitle(this.value)" name="icon">
-                <input class="tab-cloaker-form" type="text" id="name" name="name" placeholder="Icon" onkeyup="setFavicon(this.value.trim())">
-            </form>
-
-        </div>
-
-        <div class="settings-card">
-
             <h1>Panic Button</h1>
 
             <form>
@@ -99,8 +88,26 @@
 
         </div>
 
+        <div class="settings-card">
 
+            <h1>Theme</h1>
 
+            <select id="theme-selector">
+                <option value="style.css">Aurora (Default)</option>
+                <option value="themes/blurple.css">Blurple</option>
+                <option value="themes/chroma-glow.css">Chroma Glow</option>
+                <option value="themes/crimson-moon.css">Crimson Moon</option>
+                <option value="themes/neon-nights.css">Neon Nights</option>
+                <option value="themes/retro-storm.css">Retro Storm</option>
+            </select>
+
+            <br>
+
+            <p style="margin-top: 25px;"><i>*Themes do not work on the chatroom</i></p>
+
+        </div>
+
+    </div>
     
 </body>
 </html>

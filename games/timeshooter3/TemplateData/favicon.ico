@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Unblocked Games - Free online games for school</title>
+    <title id="title">Unblocked Games - Free online games for school</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Welcome to Unblocked Games website. We have a huge collection of free unblocked games for play at school and work. Let's play and have fun!">
     <meta name="keywords" content="unblocked games, free unblocked games, unblocked games 66, unblocked games 76, unblocked games for school, fun unblocked games, best unblocked games, unblocked, games unblocked, funblocked">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <link rel="stylesheet" href="/style/style.css?13">
     <link rel="stylesheet" href="/style/star-rating-svg.css">
-    <link rel="shortcut icon" href="/style/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/style/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://unblockeds-games.com">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/app.js?7"></script>

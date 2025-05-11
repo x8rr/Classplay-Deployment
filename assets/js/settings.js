@@ -11,13 +11,13 @@ if (tab) {
   var tabData = {};
 }
 
-var titleElement = document.getElementById("title");
-var iconElement = document.getElementById("icon");
+const titleElement = document.getElementById("title");
+const iconElement = document.getElementById("icon");
 
 if (tabData.title && titleElement) titleElement.value = tabData.title;
 if (tabData.icon && iconElement) iconElement.value = tabData.icon;
 
-var settingsDefaultTab = {
+const settingsDefaultTab = {
   title: "Google",
   icon: "/img/favicon.ico",
 };
@@ -182,8 +182,9 @@ document.addEventListener("keydown", function (e) {
 });
 
 function setPanicKey() {
-  var key = document.getElementById("key").value;
+  const key = document.getElementById("key").value;
   localStorage.setItem("panicKey", key);
+  console.log(localStorage.getItem("panicKey"));
 }
 
 function setPanicLink() {
@@ -287,16 +288,22 @@ function convertDate(date_str) {
   );
 }
 
-fetch("https://api.github.com/repos/useclassplay/useclassplay/commits")
-  .then((response) => response.json())
-  .then((data) => {
-    var unformatted = new Date(data[0].commit.author.date)
-      .toISOString()
-      .split("T")[0];
-    var lastCommitDate = convertDate(unformatted);
-    document.querySelector(
-      "#updated"
-    ).textContent = `Last Updated: ${lastCommitDate}`;
-});
-
-document.getElementById('updated').textContext = `Last Updated: ${lastCommitDate}`;
+Promise.all([
+    fetch('https://api.github.com/repos/useclassplay/useclassplay/commits'),
+    fetch('https://api.github.com/repos/useclassplay/useclassplay/releases/latest')
+  ])
+    .then(([commitsResponse, releasesResponse]) => {
+      return Promise.all([commitsResponse.json(), releasesResponse.json()])
+    })
+    .then(([commitsData, releasesData]) => {
+      var unformatted = new Date(commitsData[0].commit.author.date)
+        .toISOString()
+        .split('T')[0];
+      var lastCommitDate = convertDate(unformatted);
+      document.querySelector('#updated').textContent = `Last Updated: ${lastCommitDate}`;
+      
+      document.querySelector('#version').textContent = releasesData.tag_name || 'No release tag';
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    })

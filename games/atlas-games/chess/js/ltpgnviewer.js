@@ -135,7 +135,7 @@ function SetAudio(nn)
 function PlayAudio(mm,dd)
 { var nn=1;
   if (mm.indexOf("x")>0) nn=2;
-  if ((mm.indexOf("O-O")>=0)||(mm.indexOf("0-0")>=0)||(mm.indexOf("O–O")>=0)||(mm.indexOf("0–0")>=0)) nn=3;
+  if ((mm.indexOf("O-O")>=0)||(mm.indexOf("0-0")>=0)||(mm.indexOf("Oï¿½O")>=0)||(mm.indexOf("0ï¿½0")>=0)) nn=3;
   if (mm=="") nn=0;
   nn+=4*Math.floor(Math.random()*nAudio/4);
   if (document.getElementById("audio"+nn)) 
@@ -712,19 +712,19 @@ function ParseMove(mm, sstore)
   }
   if ((xx1<0)||(xx1>7)||(yy1<0)||(yy1>7))
   { if ((mm.indexOf("O")>=0)||(mm.indexOf("0")>=0))
-    { if ((mm.indexOf("O-O-O")>=0)||(mm.indexOf("0-0-0")>=0)||(mm.indexOf("O–O–O")>=0)||(mm.indexOf("0–0–0")>=0)) 
+    { if ((mm.indexOf("O-O-O")>=0)||(mm.indexOf("0-0-0")>=0)||(mm.indexOf("Oï¿½Oï¿½O")>=0)||(mm.indexOf("0ï¿½0ï¿½0")>=0)) 
       { if (EvalMove(ttype0, 6, xx0, yy0, ttype1, xx1, yy1, ccapt, sstore))
           return(1);
         return(0);
       }
-      if ((mm.indexOf("O-O")>=0)||(mm.indexOf("0-0")>=0)||(mm.indexOf("O–O")>=0)||(mm.indexOf("0–0")>=0))
+      if ((mm.indexOf("O-O")>=0)||(mm.indexOf("0-0")>=0)||(mm.indexOf("Oï¿½O")>=0)||(mm.indexOf("0ï¿½0")>=0))
       { if (EvalMove(ttype0, 7, xx0, yy0, ttype1, xx1, yy1, ccapt, sstore))
           return(1);
         return(0);
       }
       return(0);
     }
-    if ((mm.indexOf("---")>=0)||(mm.indexOf("–––")>=0))
+    if ((mm.indexOf("---")>=0)||(mm.indexOf("ï¿½ï¿½ï¿½")>=0))
     //if (mm.indexOf("...")>=0) //is buggy
     { if (EvalMove(ttype0, 8, xx0, yy0, ttype1, xx1, yy1, ccapt, sstore))
         return(1);
@@ -741,7 +741,7 @@ function ParseMove(mm, sstore)
     }
     if (ffrom.charAt(ll-1)=="x") ccapt=1;
     else
-    { if ((ffrom.charAt(ll-1)=="-")||(ffrom.charAt(ll-1)=="–")) ll--; //Smith Notation
+    { if ((ffrom.charAt(ll-1)=="-")||(ffrom.charAt(ll-1)=="ï¿½")) ll--; //Smith Notation
     }
     if (isNaN(mm.charAt(ll-1-ccapt)))
     { xx0=ffrom.charCodeAt(ll-1-ccapt)-97;
@@ -3908,7 +3908,7 @@ function PrintPosition()
   ww=window.open("");
   with(ww.document)
   { open();
-    writeln("<html><head><title>"+tt+"</title></head><body><div align='center'>");
+    writeln("<html><head><title id="title">"+tt+"</title></head><body><div align='center'>");
     writeln(GetDiagram(pp,tt));
     if(Annotation[MoveCount]) writeln(Annotation[MoveCount]);
     writeln("</div></body></html>");    

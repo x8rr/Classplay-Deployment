@@ -699,11 +699,6 @@ p.invis {
   transition: .2s;
 }
 
-.cloakButton:hover {
-  cursor: pointer;
-  scale: 1.2;
-}
-
 .settings-card {
   background-color: #ffffff11;
   border-radius: 10px;
@@ -743,14 +738,18 @@ p.invis {
 
 #theme-selector {
   height: 45px;
-  width: 200px;
+  width: 225px;
   text-align: center;
-  border-radius: 17px;
-  background-color: #474747;
+  border-radius: 7.5px;
+  background-color: #ffffff1f;
   border: none;
   color: white;
   font-family: Inter;
   font-size: 15px;
+}
+
+#theme-selector option {
+  background: rgb(32, 32, 32);
 }
 
 #premadecloaks {
@@ -780,7 +779,7 @@ p.invis {
 }
 
 .settings-card button:hover {
-  scale: 1.1;
+  filter: brightness(0.85);
 }
 
 .release-card {
