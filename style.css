@@ -37,6 +37,11 @@ button {
 }
 
 @font-face {
+  font-family: ginto;
+  src: url(/fonts/ginto.otf);
+}
+
+@font-face {
   font-family: Inter;
   src: url(/fonts/ggsans.ttf);
 }
@@ -136,7 +141,7 @@ nav a:hover {
 }
 
 .home-title {
-  font-family: Inter;
+  font-family: ginto;
   font-size: 65px;
 }
 
@@ -338,6 +343,7 @@ button.inner {
 
 .title {
   font-size: 55px;
+  font-family: ginto;
 }
 
 .games-container {
