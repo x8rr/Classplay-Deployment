@@ -57,7 +57,7 @@ nav {
   border-radius: 270px;
   font-family: Inter;
   height: 17.5px;
-  width: 240px;
+  width: 260px;
   justify-self: center;
   position: fixed;
   bottom: 2%;
@@ -482,20 +482,22 @@ li.right {
   border: none;
   font-family: Inter;
   transition: 0.15s;
+  background-color: #ffffff1c;
+  color: white;
+  font-size: 17px;
 }
 
 #register input:focus {
-  outline: solid white 2.5px;
-  outline-offset: 2px;
-  box-shadow: 0 0 20px white;
+  outline: none;
+  background-color: #ffffff31;
 }
 
 #register button {
   height: 50px;
   width: 125px;
-  border-radius: 12px;
+  border-radius: 7.5px;
   border: none;
-  background: dodgerblue;
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -505,7 +507,7 @@ li.right {
 }
 
 #register button:hover {
-  scale: 1.15;
+  filter: brightness(0.85);
 }
 
 #register h1 {
@@ -529,20 +531,22 @@ li.right {
   border: none;
   font-family: Inter;
   transition: 0.15s;
+  background-color: #ffffff1c;
+  color: white;
+  font-size: 17px;
 }
 
 #login input:focus {
-  outline: solid white 2.5px;
-  outline-offset: 2px;
-  box-shadow: 0 0 20px white;
+  outline: none;
+  background-color: #ffffff31;
 }
 
 #login button {
   height: 50px;
   width: 125px;
-  border-radius: 12px;
+  border-radius: 7.5px;
   border: none;
-  background: dodgerblue;
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -552,7 +556,7 @@ li.right {
 }
 
 #login button:hover {
-  scale: 1.15;
+  filter: brightness(0.85);
 }
 
 #login h1 {
@@ -571,10 +575,10 @@ li.right {
 .toast {
   visibility: hidden;
   min-width: 250px;
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.158);
+  color: rgb(255, 255, 255);
   text-align: center;
-  border-radius: 15px;
+  border-radius: 7.5px;
   font-family: Inter;
   padding: 20px;
   position: fixed;
@@ -596,7 +600,7 @@ li.right {
 @keyframes slideInRight {
   from {
     right: -500px;
-    opacity: 0;
+    opacity: 1;
   }
   to {
     right: 10px;
@@ -611,7 +615,7 @@ li.right {
   }
   to {
     right: -500px;
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -1072,4 +1076,19 @@ p.invis {
 
 .announcements h1 {
   margin-top: 15px;
+}
+
+.username.owner {
+  background: linear-gradient(to bottom right, rgb(255, 233, 109), rgb(192, 138, 0));
+  padding: 2px 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+}
+.username.owner .material-symbols-rounded {
+  color: white;
+  font-size: 20px;
+  scale: 1.2;
 }
