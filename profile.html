@@ -48,7 +48,7 @@
             <h1 style="font-family: ginto;">Register an Account</h1>
             <input type="text" id="register-username" placeholder="Username"><br><br>
             <input type="password" id="register-password" placeholder="Password"><br><br>
-            <button id="register-btn">Register</button>
+            <button id="register-btn" onclick="register(document.getElementById('register-username').Value, document.getElementById('register-password').Value)">Register</button>
             <br><br><br>
             <p>Already have an account? <a onclick="displayLogin()">Login</a></p>
         </div>
@@ -76,7 +76,13 @@
         OWNER
     </span>
 
+<script type="module">
+    import { register } from '/assets/js/profile.js';
+    import { login } from '/assets/js/profile.js';
 
+    window.register = register;
+    window.login = login;
+</script>
     
 </body>
 </html>
