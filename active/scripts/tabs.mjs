@@ -255,7 +255,9 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has("inject")) {
   let tab = {};
   const injection = urlParams.get("inject");
-  
-  addTab(injection)
-  focusTab()
+
+  setTimeout(() => {
+    addTab(injection)
+    focusTab()
+  }, 100);
 }
