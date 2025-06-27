@@ -14,7 +14,27 @@ export function search(input, template) {
     if (url.hostname.includes(".")) return url.toString();
   } catch (err) {}
 
+  try {
+    const urlparams = new URLSearchParams(inject);
+
+    console.log(inject)
+
+    if (urlparams) {
+      const injectionURL = urlparams.get(inject)
+      const url = new URL(`http://${injectionURL}`)
+      return url.toString()
+    }
+
+  } catch (err) {}
+
   return template.replace("%s", encodeURIComponent(input));
+}
+
+export function app(route) {
+  const url = new URL(route)
+  if (url.hostname.includes(".")) {
+    return url.toString();
+  }
 }
 
 export async function getUV(input) {
