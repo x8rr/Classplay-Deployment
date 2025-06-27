@@ -21,7 +21,7 @@ html {
 
 button {
   background: linear-gradient(to bottom right, rgb(0, 129, 250), rgb(0, 64, 124));
-  border-radius: 7.5px;
+  border-radius: 15px;
 }
 
 @font-face {
@@ -43,47 +43,40 @@ nav {
   display: block;
   justify-content: center;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0);
-  outline: 2px solid white;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  background-color: rgba(10, 10, 10, 0.9);
+  outline: 1px white solid;
   outline-offset: -5px;
   color: white;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 270px;
   font-family: Inter;
-  height: fit-content;
-  width: 17.5px;
-  flex-direction: column;
+  height: 17.5px;
+  width: 260px;
   justify-self: center;
   position: fixed;
-  bottom: 50%;
-  left: -0.9%;
-  transform: translateY(50%);
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -10%);
   z-index: 99999;
-  scale: 0.8;
 }
   
 nav ul {
   list-style: none;
-  margin: 0px;
+  margin: 0;
   position: relative;
   padding: 0;
   justify-content: center;
   display: flex;
   left: 50%;
-  flex-direction: column;
   transform: translateX(-47%);
 }
   
 nav li {
-  margin-right: 1px;
+  margin-right: .89rem;
   position: relative;
-  font-size: 2rem;
+  font-size: 1rem;
   transition: 0.2s;
-  bottom: -7.5px;
+  bottom: 2px;
   display: flex;
-  margin-bottom: 20px;
   text-align: center;
   justify-content: center;
 }
@@ -92,19 +85,17 @@ nav a {
   color: white;
   text-decoration: none;
   display: block;
-  margin-top: 0px;
+  margin-top: -2px;
   font-family: Inter;
   transition: 0.2s;
   justify-content: center;
   text-align: center;
-  scale: 1.5;
-  border-radius: 1500px;
-  padding-left: 7px;
-  padding-right: 7px;
+  scale: 1.1;
 }
 
 nav a:hover {
-  background: #0099ff5d;
+  transform: scale(1.105);
+  border-radius: 1500px;
   cursor: pointer;
 }
 
@@ -713,7 +704,7 @@ p.invis {
 
 .settings-card {
   background-color: #ffffff11;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -732,7 +723,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 7.5px;
+  border-radius: 15px;
   height: 25px;
   transition: .2s;
   background-color: #ffffff21;
@@ -752,7 +743,7 @@ p.invis {
   height: 45px;
   width: 225px;
   text-align: center;
-  border-radius: 7.5px;
+  border-radius: 15px;
   background-color: #ffffff1f;
   border: none;
   color: white;
@@ -1182,4 +1173,44 @@ p.invis {
 	top: calc(89vh - 200px);
 	position: fixed;
     z-index: -1;
+}
+
+input#searchinject {
+  width: 450px;
+  height: 50px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.45rem;
+  font-family: Inter;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+input#searchinject:focus {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 500px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.815);
+  font-style: italic;
+}
+
+.homepagebtn {
+  width: 65px;
+  height: 65px;
+  border-radius: 35%;
+  background: linear-gradient(to bottom right, rgba(0, 153, 255, 0.671), rgba(91, 208, 255, 0.651));
+  border: none;
+  margin: 7.5px;
+  transition: 0.2s;
+}
+
+.homepagebtn:hover {
+  scale: 1.1;
+  cursor: pointer;
 }

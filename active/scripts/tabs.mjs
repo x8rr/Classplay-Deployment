@@ -51,7 +51,7 @@ pageRefresh.onclick = () => {
 };
 
 newTabButton.onclick = () => {
-  addTab("uvsearch.rhw.one");
+  addTab("google.com");
 };
 
 // Options (opt menu)
@@ -75,7 +75,7 @@ abcOption.onclick = () => {
 };
 
 gitOption.onclick = () => {
-  window.open("https://github.com/rhenryw/UV-Static-2.0", "_blank");
+  window.open("https://github.com/useclassplay/useclassplay", "_blank");
 };
 
 urlForm.onsubmit = async (e) => {
@@ -248,8 +248,6 @@ async function addTab(link) {
   focusTab(tab);
 }
 
-addTab("uvsearch.rhw.one");
-
 const urlParams = new URLSearchParams(window.location.search);
 
 if (urlParams.has("inject")) {
@@ -260,4 +258,6 @@ if (urlParams.has("inject")) {
     addTab(injection)
     focusTab()
   }, 100);
+} else {
+  addTab("google.com");
 }

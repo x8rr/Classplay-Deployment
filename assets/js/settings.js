@@ -1,4 +1,4 @@
-/*
+
 var cloakElement;
 
 var tab = localStorage.getItem("tab");
@@ -308,5 +308,3 @@ Promise.all([
     .catch((error) => {
       console.error('Error fetching data:', error);
     })
-
-*/

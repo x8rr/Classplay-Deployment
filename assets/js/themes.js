@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getThemeFromCookie = () => {
         const match = document.cookie.match(/(^| )theme=([^;]+)/);
-        return match ? match[2] : 'style.css';
+        return match ? match[2] : 'v3.css';
     };
 
     const applyStoredTheme = () => {

@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title">Classplay - Search</title>
+  <title id="title">Classplay</title>
   <link rel="stylesheet" href="/themes/v3.css">
   <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <meta name="description" content="A game hub built for students, by students" property="og:description">
     <meta name="title" content="Classplay" property="og:title">
     <meta name="image" content="https://useclassplay.github.io/img/banner.png" property="og:image">
-  <!-- <script src="/assets/js/themes.js"></script> -->
+  <script src="/assets/js/themes.js"></script>
   <script src="/assets/js/particles.js" defer></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/settings.js"></script>
@@ -20,7 +21,7 @@
 </head>
 <body style="margin: 0;"> 
 
-<iframe src="https://uvv2.rhw.one/active/" frameborder="0" style="height: 100vh; width: 100%; margin: 0; padding: 0;"></iframe>
+
 
 <nav>
     <ul class="navbar">
@@ -28,13 +29,83 @@
         <li><a href="apps.html"><span class="material-symbols-rounded">category</span></a></li>
         <li><a href="/active/"><span class="material-symbols-rounded">search</span></a></li>
         <li><a href="chat/"><span class="material-symbols-rounded" style="margin-left: -2px;">business_messages</span></a></li>
-        <li><a href="movies/"><span class="material-symbols-rounded">movie</span></a></li>
+        <li><a href="/active/?inject=movies.ch3n.cc"><span class="material-symbols-rounded">movie</span></a></li>
         <li><a href="lnk.html"><span class="material-symbols-rounded">link</span></a></li>
         <li><a href="settings.html"><span class="material-symbols-rounded">settings</span></a></li>
     </ul>   
 </nav>
 
+<style>
+
+  button span {
+    color: white;
+    scale: 1.5;
+  }
+
+</style>
+
 <div id="particles-js"></div>
+
+<div class="blob"></div>
+    <div class="blobbig"></div>
+    <div class="blobsmall"></div>
+    <div class="blobtop"></div>
+
+<center style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);">
+
+  <h1 style="font-size: 81px; margin-bottom: 0;">Classplay</h1>
+  <br>
+  <input type="text" id="searchinject" placeholder="search anything...">
+  <br>
+  <br>
+  <button class="homepagebtn" contextmenu="games">
+    <a href="/g.html">
+    </a>
+    <span class="material-symbols-rounded">stadia_controller</span>
+  </button>
+
+  <button class="homepagebtn" contextmenu="apps">
+    <a href="/apps.html"></a>
+    <span class="material-symbols-rounded">apps</span>
+  </button>
+
+  <button class="homepagebtn" contextmenu="proxy/search">
+    <a href="/active/"></a>
+    <span class="material-symbols-rounded">search</span>
+  </button>
+
+  <button class="homepagebtn" contextmenu="chatroom">
+    <a href="/chat/"></a>
+    <span class="material-symbols-rounded">chat</span>
+  </button>
+
+  <button class="homepagebtn" contextmenu="alt links">
+    <a href="/lnk.html"></a>
+    <span class="material-symbols-rounded">link</span>
+  </button>
+
+  <button class="homepagebtn" contextmenu="settings">
+    <a href="/settings.html"></a>
+    <span class="material-symbols-rounded">settings</span>
+  </button>
+
+</center>
+
+<script>
+
+  const urlInput = document.getElementById('searchinject');
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && urlInput.value.includes('.')) {
+      const searchTerm = urlInput.value;
+      window.location.href = `/active/?inject=${searchTerm}`;
+    } else if (event.key === 'Enter' && !urlInput.value.includes('.')) {
+      const searchTerm = urlInput.value.replaceAll(/\s/g, '+');
+      window.location.href = `/active/?inject=google.com/search?q=${searchTerm}`;
+    }
+  });
+
+</script>
 
 </body>
 </html>

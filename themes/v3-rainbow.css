@@ -1,15 +1,8 @@
-body {
-  background: linear-gradient(to bottom right, #0c1734, #200526, #071c2d);
+html {
+  background: black;
   color: white;
   font-family: Inter;
   background-size: cover;
-  background-attachment: fixed
-}
-
-html {
-  background: linear-gradient(to bottom right, #0c1734, #200526, #071c2d);
-  background-size: cover;
-  background-repeat: no-repeat; 
   background-attachment: fixed
 }
 
@@ -26,9 +19,102 @@ html {
   height: 0px;
 }
 
+@keyframes rainbow {
+
+  10% {
+    background: red;
+  }
+
+  20% {
+    background: orange;
+  }
+
+  30% {
+    background: rgb(179, 179, 0);
+  }
+
+  40% {
+    background: rgb(0, 177, 0);
+  }
+
+  50% {
+    background: dodgerblue;
+  }
+
+  60% {
+    background: blue;
+  }
+
+  70% {
+    background: indigo;
+  }
+
+  80% {
+    background: violet;
+  }
+
+  90% {
+    background: magenta;
+  }
+
+  100% {
+    background: red;
+  }
+
+}
+
+@keyframes rainbow-shadow {
+
+  0% {
+    box-shadow: 0 0 150px 100px  red;
+  }
+
+  10% {
+    box-shadow: 0 0 150px 100px  red;
+  }
+
+  20% {
+    box-shadow:0 0 150px 100px  orange;
+  }
+
+  30% {
+    box-shadow:0 0 150px 100px  rgb(179, 179, 0);
+  }
+
+  40% {
+    box-shadow:0 0 150px 100px  rgb(0, 177, 0);
+  }
+
+  50% {
+    box-shadow:0 0 150px 100px  dodgerblue;
+  }
+
+  60% {
+    box-shadow:0 0 150px 100px  blue;
+  }
+
+  70% {
+    box-shadow:0 0 150px 100px  indigo;
+  }
+
+  80% {
+    box-shadow:0 0 150px 100px  violet;
+  }
+
+  90% {
+    box-shadow:0 0 150px 100px  magenta;
+  }
+
+  100% {
+    box-shadow:0 0 150px 100px  red;
+  }
+
+}
+
 button {
-  background: linear-gradient(to bottom right, #520d61, #11436d);
-  border-radius: 7.5px;
+  background: red;
+  animation: rainbow 10s infinite linear;
+  border-radius: 15px;
 }
 
 @font-face {
@@ -43,21 +129,21 @@ button {
 
 @font-face {
   font-family: Inter;
-  src: url(/fonts/ggsans.ttf);
+  src: url(/fonts/inter.ttf);
 }
 
 nav {
   display: block;
   justify-content: center;
   padding: 1rem 2rem;
-  background-color: rgba(10, 10, 10, 1);
+  background-color: rgba(10, 10, 10, 0.9);
   outline: 1px white solid;
   outline-offset: -5px;
   color: white;
   border-radius: 270px;
   font-family: Inter;
   height: 17.5px;
-  width: 240px;
+  width: 260px;
   justify-self: center;
   position: fixed;
   bottom: 2%;
@@ -141,7 +227,7 @@ nav a:hover {
 }
 
 .home-title {
-  font-family: Inter;
+  font-family: ginto;
   font-size: 65px;
 }
 
@@ -258,7 +344,7 @@ nav a:hover {
   border: 1px solid white;
   width: 150px;
   height: 175px;
-  border-radius: 35px;
+  border-radius: 55px;
   justify-content: center;
   display: flex;
   transition: 0.4s;
@@ -322,7 +408,7 @@ button.inner {
   border-bottom-right-radius: 19px;
   max-width: 130px;
   font-family: Inter;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .game-card:hover .game-title-overlay {
@@ -343,7 +429,7 @@ button.inner {
 
 .title {
   font-size: 55px;
-  font-family: Ginto;
+  font-family: ginto;
 }
 
 .games-container {
@@ -482,20 +568,22 @@ li.right {
   border: none;
   font-family: Inter;
   transition: 0.15s;
+  background-color: #ffffff1c;
+  color: white;
+  font-size: 17px;
 }
 
 #register input:focus {
-  outline: solid white 2.5px;
-  outline-offset: 2px;
-  box-shadow: 0 0 20px white;
+  outline: none;
+  background-color: #ffffff31;
 }
 
 #register button {
   height: 50px;
   width: 125px;
-  border-radius: 12px;
+  border-radius: 7.5px;
   border: none;
-  background: dodgerblue;
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -505,7 +593,7 @@ li.right {
 }
 
 #register button:hover {
-  scale: 1.15;
+  filter: brightness(0.85);
 }
 
 #register h1 {
@@ -529,20 +617,22 @@ li.right {
   border: none;
   font-family: Inter;
   transition: 0.15s;
+  background-color: #ffffff1c;
+  color: white;
+  font-size: 17px;
 }
 
 #login input:focus {
-  outline: solid white 2.5px;
-  outline-offset: 2px;
-  box-shadow: 0 0 20px white;
+  outline: none;
+  background-color: #ffffff31;
 }
 
 #login button {
   height: 50px;
   width: 125px;
-  border-radius: 12px;
+  border-radius: 7.5px;
   border: none;
-  background: dodgerblue;
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -552,7 +642,7 @@ li.right {
 }
 
 #login button:hover {
-  scale: 1.15;
+  filter: brightness(0.85);
 }
 
 #login h1 {
@@ -571,8 +661,8 @@ li.right {
 .toast {
   visibility: hidden;
   min-width: 250px;
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.158);
+  color: rgb(255, 255, 255);
   text-align: center;
   border-radius: 15px;
   font-family: Inter;
@@ -596,7 +686,7 @@ li.right {
 @keyframes slideInRight {
   from {
     right: -500px;
-    opacity: 0;
+    opacity: 1;
   }
   to {
     right: 10px;
@@ -611,7 +701,7 @@ li.right {
   }
   to {
     right: -500px;
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -707,7 +797,7 @@ p.invis {
 
 .settings-card {
   background-color: #ffffff11;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -726,7 +816,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 7.5px;
+  border-radius: 15px;
   height: 25px;
   transition: .2s;
   background-color: #ffffff21;
@@ -746,7 +836,7 @@ p.invis {
   height: 45px;
   width: 225px;
   text-align: center;
-  border-radius: 7.5px;
+  border-radius: 15px;
   background-color: #ffffff1f;
   border: none;
   color: white;
@@ -1072,4 +1162,157 @@ p.invis {
 
 .announcements h1 {
   margin-top: 15px;
+}
+
+.username.owner {
+  background: linear-gradient(to bottom right, rgb(255, 233, 109), rgb(192, 138, 0));
+  padding: 2px 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+}
+.username.owner .material-symbols-rounded {
+  color: white;
+  font-size: 20px;
+  scale: 1.2;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 30%;
+  background-color: none;
+  background: none;
+}
+
+.blob {
+	box-shadow: 0 0 150px 100px rgb(251, 255, 0);
+	border-radius: 50%;
+	height: 290px;
+	width: 290px;
+	background-image: radial-gradient(
+		farthest-corner at 50% 50%,
+		#ffffff,
+		rgb(251, 255, 0)
+	);
+	background-blend-mode: multiply;
+	filter: blur(50px) contrast(1.1);
+	position: fixed;
+	transform: translate(-50%, -50%);
+	left: 47vw;
+	top: 100vh;
+	position: fixed;
+  animation: rainbow 10s infinite ;
+  animation: rainbow-shadow 10s infinite ;
+}
+
+.blobbig {
+	box-shadow: 0 0 150px 100px rgb(249, 255, 171);
+	border-radius: 100%;
+	height: 45vh;
+	width: 75vw;
+	opacity: 0.15;
+	background-image: radial-gradient(
+		farthest-corner at 50% 50%,
+		#ffffff,
+		rgb(255, 251, 0)
+	);
+	background-blend-mode: multiply;
+	filter: blur(50px) contrast(1.1);
+  animation: rainbow 10s infinite ;
+	position: fixed;
+	transform: translate(-50%, -35%);
+	left: 47vw;
+	top: 100vh;
+	position: fixed;
+  animation: rainbow-shadow 10s infinite ;
+}
+
+.blobsmall {
+	box-shadow: 0 0 150px 50px rgb(245, 255, 102);
+  animation: rainbow 10s infinite ;
+	border-radius: 50%;
+	height: 50px;
+	width: 340px;
+	background-image: radial-gradient(
+		farthest-corner at 50% 50%,
+		#ffffff,
+		rgb(238, 255, 0)
+	);
+	background-blend-mode: multiply;
+	filter: blur(50px) contrast(1.2);
+	position: fixed;
+	transform: translate(-50%, -50%);
+	left: 60vw;
+	top: 100vh;
+	position: fixed;
+  animation: rainbow-shadow 10s infinite ;
+}
+
+.blobtop {
+	box-shadow: 0 0 1px 20px rgb(200, 255, 0);
+  animation: rainbow 10s infinite;
+	border-radius: 50%;
+	height: 230px;
+	width: 20px;
+	background: radial-gradient(
+		farthest-corner at 50% 50%,
+		#ffffff,
+		rgb(251, 255, 0)
+	);
+	background-blend-mode: multiply;
+	filter: blur(50px) contrast(1.1);
+	position: fixed;
+	transform: translate(-50%, -50%);
+	rotate: -20deg;
+	left: 41.6vw;
+	top: calc(89vh - 200px);
+	position: fixed;
+    z-index: -1;
+    animation: rainbow-shadow 10s infinite;
+}
+
+input#searchinject {
+  width: 450px;
+  height: 50px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.45rem;
+  font-family: Inter;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+input#searchinject:focus {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 500px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.815);
+  font-style: italic;
+}
+
+.homepagebtn {
+  width: 65px;
+  height: 65px;
+  border-radius: 35%;
+  background: red;
+  animation: rainbow 10s infinite linear;
+  border: none;
+  margin: 7.5px;
+  transition: 0.2s;
+}
+
+.homepagebtn:hover {
+  scale: 1.1;
+  cursor: pointer;
 }
