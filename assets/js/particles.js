@@ -10,14 +10,20 @@ particlesJS("particles-js", {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.2
+      "value": 0.8
     },
     "size": {
       "value": 1
     },
     "move": {
       "enable": true,
-      "speed": 0.5
+      "speed": 1
+    },
+
+    "line_linked": {
+      "color": "#ffffff",
+      "width": "2",
+      "distance": "100"
     }
   },
   "interactivity": {
@@ -25,7 +31,9 @@ particlesJS("particles-js", {
       "onhover": {
         "enable": true
       }
-    }
+    },
+
+    "detectsOn": "window",
   },
   "retina_detect": true
 });

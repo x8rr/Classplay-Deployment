@@ -11,6 +11,7 @@
     <meta name="title" content="Classplay" property="og:title">
     <meta name="image" content="https://useclassplay.github.io/img/banner.png" property="og:image">
   <script src="/assets/js/themes.js"></script>
+  <script src="/assets/js/update.js"></script>
   <script src="/assets/js/particles.js" defer></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/settings.js"></script>
@@ -21,14 +22,12 @@
 </head>
 <body style="margin: 0;"> 
 
-
-
 <nav>
     <ul class="navbar">
         <li><a href="g.html"><span class="material-symbols-rounded">sports_esports</span></a></li>
-        <li><a href="apps.html"><span class="material-symbols-rounded">category</span></a></li>
+        <li><a href="apps.html"><span class="material-symbols-rounded">apps</span></a></li>
         <li><a href="/active/"><span class="material-symbols-rounded">search</span></a></li>
-        <li><a href="chat/"><span class="material-symbols-rounded" style="margin-left: -2px;">business_messages</span></a></li>
+        <li><a href="chat/"><span class="material-symbols-rounded" style="margin-left: -2px;">chat</span></a></li>
         <li><a href="/active/?inject=movies.ch3n.cc"><span class="material-symbols-rounded">movie</span></a></li>
         <li><a href="lnk.html"><span class="material-symbols-rounded">link</span></a></li>
         <li><a href="settings.html"><span class="material-symbols-rounded">settings</span></a></li>
@@ -41,11 +40,17 @@
     color: white;
     scale: 1.5;
     text-decoration: none;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-72.5%, -80.5%);
   }
 
 </style>
 
 <div id="particles-js"></div>
+
+
 
 <div class="blob"></div>
     <div class="blobbig"></div>
@@ -102,6 +107,15 @@
   </button>
 
 </center>
+
+<div id="updToast">
+  A new version (<span id="updToastSpan"></span>) is available! Would you like to install it?
+  <br>
+  <div class="container">
+    <button onclick="window.location.reload()">Install</button>
+    <button style="background: none; color: dodgerblue; outline: 1px solid dodgerblue;" onclick="hideToast()">Ignore</button>
+  </div>
+</div>
 
 <script>
 
