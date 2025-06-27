@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at bottom, #001233, #000);
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: none;
+  background: none;
+}
+
+.content {
+  z-index: 1;
+  text-align: center;
+}
+
+button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 16px;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+}
+
+.blue {
+  color: #0f6fff;
+  text-shadow: 0 0 8px #0f6fff;
+}
+
+
+    </style>
+
+<div id="particles-js"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.2
+    },
+    "size": {
+      "value": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.5
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+ 
+    
+</body>
+</html>
