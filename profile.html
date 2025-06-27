@@ -18,10 +18,12 @@
   <script src="/assets/js/profile.js" type="module" defer></script>
   <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
   <script src="/assets/js/particles.js" defer></script>
+  <script src="/assets/js/update.js"></script>
 </head>
 <body>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBPYWSE933"></script>
+    
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -91,6 +93,15 @@
     <div class="blobtop"></div>
 
     <div id="particles-js"></div>
+
+    <div id="updToast" class="updToast">
+  A new version (<span id="updToastSpan"></span>) is available! Would you like to install it?
+  <br>
+  <div class="container">
+    <button onclick="window.location.reload()">Install</button>
+    <button style="background: none; color: dodgerblue; outline: 1px solid dodgerblue;" onclick="hideToast()">Ignore</button>
+  </div>
+</div>
     
 </body>
 </html>

@@ -8,6 +8,7 @@
      <script src="/assets/js/themes.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/assets/js/update.js"></script>
     <script src="/assets/js/settings.js"></script>
     <script src="/assets/js/particles.js" defer></script>
     <script src="/assets/js/geoblocker.js"></script>
@@ -54,6 +55,15 @@
 <center>
     <h1 class="title">Apps</h1>
 </center>
+
+<div id="updToast" class="updToast">
+  A new version (<span id="updToastSpan"></span>) is available! Would you like to install it?
+  <br>
+  <div class="container">
+    <button onclick="window.location.reload()">Install</button>
+    <button style="background: none; color: dodgerblue; outline: 1px solid dodgerblue;" onclick="hideToast()">Ignore</button>
+  </div>
+</div>
 
 <div class="games-container">
    

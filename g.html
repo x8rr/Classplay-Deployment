@@ -10,6 +10,7 @@
   <meta name="title" content="Classplay" property="og:title">
   <meta name="image" content="https://useclassplay.github.io/img/banner.png" property="og:image">
  <script src="/assets/js/themes.js"></script>
+ <script src="/assets/js/update.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/settings.js"></script>
   <script src="/assets/js/geoblocker.js"></script>
@@ -113,6 +114,7 @@ button .ripple {
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBPYWSE933"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -144,6 +146,15 @@ button .ripple {
 </center>
 
 <br>
+
+<div id="updToast" class="updToast">
+  A new version (<span id="updToastSpan"></span>) is available! Would you like to install it?
+  <br>
+  <div class="container">
+    <button onclick="window.location.reload()">Install</button>
+    <button style="background: none; color: dodgerblue; outline: 1px solid dodgerblue;" onclick="hideToast()">Ignore</button>
+  </div>
+</div>
 
 <div class="games-container">
 

@@ -12,6 +12,7 @@
      <script src="/assets/js/themes.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/update.js"></script>
+    
     <script src="/assets/js/settings.js"></script>
     <script src="/assets/js/geoblocker.js"></script>
     <script src="/assets/js/profile.js" type="module"></script>
@@ -71,6 +72,15 @@
     <div class="blobtop"></div>
 
     <div id="particles-js"></div>
+
+    <div id="updToast" class="updToast">
+  A new version (<span id="updToastSpan"></span>) is available! Would you like to install it?
+  <br>
+  <div class="container">
+    <button onclick="window.location.reload()">Install</button>
+    <button style="background: none; color: dodgerblue; outline: 1px solid dodgerblue;" onclick="hideToast()">Ignore</button>
+  </div>
+</div>
 
 </body>
 </html>

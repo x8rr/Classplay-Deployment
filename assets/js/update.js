@@ -2,7 +2,7 @@ const CHECK_INTERVAL_SECONDS = 30;
 let currentVersion = null; 
 
 // ui elements
-const updToast = document.getElementById('updToast');
+const updToast = document.querySelector('.updToast');
 const updToastSpan = document.getElementById('updToastSpan');
 
 async function checkForUpdates() {
@@ -30,8 +30,8 @@ async function checkForUpdates() {
 }
 
 function updateSite(newVersion) {
-  updToastSpan.textContent = newVersion;
-  updToast.style.right = '1%';
+  document.querySelector('.updToast').style.right = '1%';
+  document.getElementById('updToastSpan') = newVersion;
 }
 
 checkForUpdates();
