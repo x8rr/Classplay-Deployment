@@ -1214,3 +1214,38 @@ input::placeholder {
   scale: 1.1;
   cursor: pointer;
 }
+
+#updToast {
+  position: absolute;
+  top: 15px;
+  right: -40%;
+  height: 80px;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 15px;
+  border-radius: 25px;
+  color: black;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#updToast button {
+  height: 35px;
+  width: 100px;
+  border-radius: 100px;
+  color: white;
+  background: rgb(24, 145, 0);
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+#updToast button:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
