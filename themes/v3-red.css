@@ -1217,7 +1217,7 @@ input::placeholder {
 }
 
 #updToast {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: -40%;
   height: 80px;
