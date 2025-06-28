@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const setTheme = (theme) => {
         const themeLink = document.getElementById('theme-style');
         console.log(`Setting theme to: ${theme}`);
-        themeLink.href = `/${theme}`;
+        themeLink.href = `/themes/${theme}`;
         document.cookie = `theme=${theme}; path=/; max-age=31536000`;
     };
 
     const getThemeFromCookie = () => {
         const match = document.cookie.match(/(^| )theme=([^;]+)/);
-        return match ? match[2] : 'v3.css';
+        return match ? match[2] : '/themes/v3.css';
     };
 
     const applyStoredTheme = () => {
