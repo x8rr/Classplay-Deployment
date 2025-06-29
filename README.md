@@ -39,4 +39,4 @@ movies: rednotsus
 
 ## `Credits`
 
-[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay.github.io)](https://github.com/yk4ndrew/classplay2/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay.github.io)](https://github.com/d3faultedd/classplay2/graphs/contributors)
