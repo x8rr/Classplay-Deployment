@@ -26,8 +26,11 @@ https://coolmathskills.vercel.app/
 
 ## credits
 uv proxy static - rhenryw
+
 website inspo: rednotsus
+
 movies: rednotsus
+
 
 ## stats
 
