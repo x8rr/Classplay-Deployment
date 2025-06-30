@@ -1119,7 +1119,7 @@ input::placeholder {
 }
 
 .homepagebtn:hover {
-  scale: 1.1;
+  filter: brightness(.8);
   cursor: pointer;
 }
 
