@@ -1232,6 +1232,14 @@ input::placeholder {
   transition: 0.3s;
 }
 
+#premadecloaks option {
+  background: rgb(32, 32, 32);
+}
+
+#premadecloaks:focus {
+  outline: none;
+}
+
 button:focus {
   outline: none;
 }

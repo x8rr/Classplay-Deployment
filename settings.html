@@ -6,7 +6,7 @@
     <title id="title">Settings - Classplay</title>
     <link rel="stylesheet" id="theme-style" href="/themes/v3.css">
     <script src="themes.js"></script>
-    <link rel="icon" href="/img/favicon.png" id="favicon" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" id="icon" type="image/x-icon">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
     <meta name="description" content="A game hub built for students, by students" property="og:description">
     <meta name="title" content="Classplay" property="og:title">
@@ -48,8 +48,6 @@
         <div class="settings-card">
 
             <h1>about:blank</h1><br>
-
-            <p style="margin-top: -25px;">This feature is currently out of order. We're working on it!</p>
 
             <button onclick="openGame()" class="cloakButton">Open Popup</button>
 
@@ -109,6 +107,34 @@
             <br>
 
             <p style="margin-top: 25px;"><i>*Themes do not apply to chatroom</i></p>
+
+        </div>
+
+        <div class="settings-card">
+
+            <h1>Cloaks (testing)</h1>
+
+            <select id="premadecloaks">
+                <option value="search">Google Search</option>
+                <option value="wikipedia">Wikipedia</option>
+                <option value="bsite">Billibilli</option>
+                <option value="drive">Google Drive</option>
+                <option value="gmail">Gmail</option>
+                <option value="calendar">Google Calendar</option>
+                <option value="meets">Google Meets</option>
+                <option value="classroom">Google Classroom</option>
+                <option value="canvas">Canvas</option>
+                <option value="zoom">Zoom</option>
+                <option value="khan">Khan Academy</option>
+                <option value="itchio">itch.io</option>
+                <option value="deltamath">Deltamath</option>
+                <option value="ed">Edpuzzle</option>
+            </select>
+
+            <br><br>
+
+            <button onclick="setCloak()" style="margin-right: 10px;">Set Cloak</button>
+            <button onclick="resetTab()">Reset Cloak</button>
 
         </div>
 

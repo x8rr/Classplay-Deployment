@@ -53,9 +53,9 @@ function setTitle(title = "") {
 
 function setFavicon(icon) {
   if (icon) {
-    document.querySelector("link[rel='icon']").href = icon;
+    document.getElementById("icon").href = icon;
   } else {
-    document.querySelector("link[rel='icon']").href = settingsDefaultTab.icon;
+    document.getElementById("icon").href = settingsDefaultTab.icon;
   }
 
   var tab = localStorage.getItem("tab");
@@ -143,7 +143,7 @@ function setCloak() {
 }
 function resetTab() {
   document.title = "Dashboard";
-  document.querySelector("link[rel='icon']").href = "/img/favicon.ico";
+  document.getElementById("icon").href = "/img/cloaks/canvas.png";
   document.getElementById("title").value = "";
   document.getElementById("icon").value = "";
   localStorage.setItem("tab", JSON.stringify({}));
@@ -307,4 +307,4 @@ Promise.all([
     })
     .catch((error) => {
       console.error('Error fetching data:', error);
-    })
+    });
