@@ -11,7 +11,7 @@ body {
 
 @font-face {
   font-family: Inter;
-  src: url(/fonts/ggsans.ttf);
+  src: url(/fonts/inter.ttf);
 }
 
 * {
@@ -342,6 +342,11 @@ nav a:hover {
   font-style: italic;
   margin-top: -10px;
   top: -10px;
+}
+
+@font-face {
+  font-family: ginto;
+  src: url(/fonts/ginto.otf);
 }
 
 .general {

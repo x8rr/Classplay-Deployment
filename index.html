@@ -24,6 +24,7 @@
 
 <nav>
     <ul class="navbar">
+        <li><a href="/"><span class="material-symbols-rounded">cottage</span></a></li>
         <li><a href="g.html"><span class="material-symbols-rounded">sports_esports</span></a></li>
         <li><a href="apps.html"><span class="material-symbols-rounded">apps</span></a></li>
         <li><a href="/active/"><span class="material-symbols-rounded">search</span></a></li>
@@ -40,10 +41,16 @@
     color: white;
     scale: 1.5;
     text-decoration: none;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-72.5%, -80.5%);
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  button.homepagebtn {
+    border-radius: 1000px;
+  }
+
+  input#searchinject {
+    border-radius: 10000px;
   }
 
 </style>
@@ -127,7 +134,7 @@
       window.location.href = `/active/?inject=${searchTerm}`;
     } else if (event.key === 'Enter' && !urlInput.value.includes('.')) {
       const searchTerm = urlInput.value.replaceAll(/\s/g, '+');
-      window.location.href = `/active/?inject=google.com/search?q=${searchTerm}`;
+      window.location.href = `/active/?inject=https://www.startpage.com/sp/search?q=${searchTerm}`;
     }
   });
 

@@ -51,7 +51,7 @@ pageRefresh.onclick = () => {
 };
 
 newTabButton.onclick = () => {
-  addTab("google.com");
+  addTab("startpage.com");
 };
 
 // Options (opt menu)
@@ -259,5 +259,5 @@ if (urlParams.has("inject")) {
     focusTab()
   }, 100);
 } else {
-  addTab("google.com");
+  addTab("startpage.com");
 }

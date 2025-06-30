@@ -21,7 +21,11 @@ html {
 
 button {
   background: linear-gradient(to bottom right, rgb(158, 0, 250), rgb(95, 0, 124));
-  border-radius: 7.5px;
+  border-radius: 150px;
+}
+
+button:focus {
+  outline: none;
 }
 
 @font-face {
@@ -136,107 +140,6 @@ nav a:hover {
 .home-title {
   font-family: ginto;
   font-size: 65px;
-}
-
-.rainbow-button {
-  font-family: "Inter", Arial, sans-serif;
-  cursor: pointer;
-  background-color: #413d3d;
-  border: none;
-  color: rgb(248, 244, 244);
-  padding: 10px 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 15px;
-  transition: all 0.2s ease;
-}
-.rainbow-button:hover {
-  scale: 1.1;
-  transition: 0.2s;
-}
-
-.rainbow-button {
-  width: 250px;
-  height: 60px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 15px;
-  font-family: SF Pro-Medium, Arial, sans-serif;
-  font-size: 20px;
-  transition: transform 0.2s ease-in-out, scale 0.2s ease-in-out, border-radius 0.2s ease;
-}
-.rainbow-button:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 15px;
-}
-.rainbow-button:active {
-  color: #fc8585;
-  scale: 0.9;
-  border-radius: 12px;
-}
-.rainbow-button:active:after {
-  background: transparent;
-}
-.rainbow-button:hover {
-  transform: scale(1.05);
-  border-radius: 8px;
-}
-.rainbow-button:hover:before {
-  opacity: 1;
-}
-.rainbow-button:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #494949;
-  left: 0;
-  top: 0;
-  border-radius: 15px;
-}
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
 }
 
 .material-symbols-outlined {
@@ -704,7 +607,7 @@ p.invis {
 
 .settings-card {
   background-color: #ffffff11;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -723,7 +626,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 7.5px;
+  border-radius: 150px;
   height: 25px;
   transition: .2s;
   background-color: #ffffff21;
@@ -743,12 +646,16 @@ p.invis {
   height: 45px;
   width: 225px;
   text-align: center;
-  border-radius: 7.5px;
+  border-radius: 150px;
   background-color: #ffffff1f;
   border: none;
   color: white;
   font-family: Inter;
   font-size: 15px;
+}
+
+#theme-selector:focus {
+  outline: none;
 }
 
 #theme-selector option {
@@ -760,7 +667,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 15px;
+  border-radius: 150px;
   height: 50px;
   transition: .2s;
   background-color: #474747;
@@ -819,7 +726,7 @@ p.invis {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 15px;
+  border-radius: 150px;
   cursor: pointer;
   font-size: 16px;
   transition: .2s;

@@ -21,7 +21,7 @@ html {
 
 button {
   background: linear-gradient(to bottom right, rgb(0, 129, 250), rgb(0, 64, 124));
-  border-radius: 15px;
+  border-radius: 150px;
 }
 
 @font-face {
@@ -151,7 +151,7 @@ nav a:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 15px;
+  border-radius: 150px;
   transition: all 0.2s ease;
 }
 .rainbow-button:hover {
@@ -169,7 +169,7 @@ nav a:hover {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 15px;
+  border-radius: 150px;
   font-family: SF Pro-Medium, Arial, sans-serif;
   font-size: 20px;
   transition: transform 0.2s ease-in-out, scale 0.2s ease-in-out, border-radius 0.2s ease;
@@ -199,7 +199,7 @@ nav a:hover {
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 15px;
+  border-radius: 150px;
 }
 .rainbow-button:active {
   color: #fc8585;
@@ -225,7 +225,7 @@ nav a:hover {
   background: #494949;
   left: 0;
   top: 0;
-  border-radius: 15px;
+  border-radius: 150px;
 }
 @keyframes glowing {
   0% {
@@ -723,7 +723,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 15px;
+  border-radius: 150px;
   height: 25px;
   transition: .2s;
   background-color: #ffffff21;
@@ -743,7 +743,7 @@ p.invis {
   height: 45px;
   width: 225px;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 150px;
   background-color: #ffffff1f;
   border: none;
   color: white;
@@ -760,7 +760,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 15px;
+  border-radius: 150px;
   height: 50px;
   transition: .2s;
   background-color: #474747;
@@ -819,7 +819,7 @@ p.invis {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 15px;
+  border-radius: 150px;
   cursor: pointer;
   font-size: 16px;
   transition: .2s;
@@ -1214,6 +1214,14 @@ input::placeholder {
 .homepagebtn:hover {
   scale: 1.1;
   cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+#theme-selector:focus {
+  outline: none;
 }
 
 #updToast {
