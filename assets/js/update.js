@@ -34,6 +34,10 @@ function updateSite(newVersion) {
   document.getElementById('updToastSpan') = newVersion;
 }
 
+function hideToast() {
+  document.getElementById('updToast').style.right = '-40%';
+}
+
 checkForUpdates();
 
 setInterval(checkForUpdates, CHECK_INTERVAL_SECONDS * 1000);
