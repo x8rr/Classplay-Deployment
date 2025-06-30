@@ -25,11 +25,8 @@ https://amazingmath.vercel.app/
 https://coolmathskills.vercel.app/
 
 ## credits
-uv proxy static - rhenryw
-
-website inspo: rednotsus
-
-movies: rednotsus
+- movies/website inspo: rednotsus
+- uv static: rhenryw
 
 
 ## stats
