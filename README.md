@@ -31,9 +31,9 @@ https://coolmathskills.vercel.app/
 
 ## stats
 
-![Alt](https://repobeats.axiom.co/api/embed/b166cbe2b08b6f1b7ed6c4bf5001dcb932ca3fda.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/dba2e85b03b71cd08c71b2235e5b96e087945cd9.svg "Repobeats analytics image")
 
 
 ## `Credits`
 
-[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay.github.io)](https://github.com/d3faultedd/classplay2/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay)](https://github.com/useclassplay/useclassplay/graphs/contributors)
