@@ -92,8 +92,8 @@
             <h1>Panic Button</h1>
 
             <form>
-                <input class="tab-cloaker-form" type="text" id="key" placeholder="Panic Key" onkeyup="setPanicKey()" name="icon">
-                <input class="tab-cloaker-form" type="text" id="link" name="name" placeholder="Panic Link" onkeyup="setPanicLink()">
+                <input class="tab-cloaker-form" type="text" id="key" placeholder="panic key" onkeyup="setPanicKey()" name="icon">
+                <input class="tab-cloaker-form" type="text" id="link" name="name" placeholder="panic link" onkeyup="setPanicLink()">
             </form>
 
         </div>
@@ -152,6 +152,11 @@
   <div class="container">
     <button onclick="window.location.reload()">Install</button>
     <button style="background: none; color: black; outline: 1px solid black;" onclick="hideToast()">Ignore</button>
+  </div>
+
+  <div id="toast">
+    <p>Error fetching version data (403)</p>
+    <div id="timer"></div>
   </div>
 </div>
     

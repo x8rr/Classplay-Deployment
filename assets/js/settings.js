@@ -241,7 +241,8 @@ function convertDate(date_str) {
   );
 }
 
-Promise.all([
+if (window.location.href.includes('settings.html')) {
+  Promise.all([
     fetch('https://api.github.com/repos/useclassplay/useclassplay/commits'),
     fetch('https://api.github.com/repos/useclassplay/useclassplay/releases/latest')
   ])
@@ -258,7 +259,13 @@ Promise.all([
       document.querySelector('#version').textContent = releasesData.tag_name || 'No release tag';
     })
     .catch((error) => {
-      console.error('Error fetching data:', error);
+      document.getElementById('toast').style.right = '1%'
+      document.getElementById('timer').style.animation = 'countdown 7.5s linear'
+      
+      setTimeout(() => {
+        document.getElementById('toast').style.right = '-40%'
+      }, 7500);
     });
+}
 
 setFavicon(localStorage.getItem("cloak"));

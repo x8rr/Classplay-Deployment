@@ -1105,10 +1105,56 @@ input#searchinject:focus {
   width: 500px;
 }
 
-input::placeholder {
+input#searchinject::placeholder {
   color: rgba(255, 255, 255, 0.815);
   font-style: italic;
   font-size: 1.25rem;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.815);
+  font-style: italic;
+  font-size: 16px;
+}
+
+#toast {
+  position: fixed;
+  top: 15px;
+  right: -40%;
+  height: 80px;
+  width: 220px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0px;
+  border-radius: 15px;
+  color: black;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#toast p {
+  margin: 15px;
+}
+
+#toast .timer {
+  position: relative;
+  bottom: -9%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(174, 0, 255);
+}
+
+@keyframes countdown {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 .homepagebtn {
