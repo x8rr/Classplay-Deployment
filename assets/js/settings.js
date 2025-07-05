@@ -1,178 +1,108 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdown = document.getElementById('premadecloaks');
+  const favicon = document.getElementById('icon');
+  const pageTitle = document.title;
 
-var cloakElement;
+  const themes = {
+    billibilli: {
+      favicon: '/img/cloaks/bb.png',
+      title: 'Billibilli'
+    },
+    calendar: {
+      favicon: '/img/cloaks/calendar.png',
+      title: 'Google Calendar'
+    },
+    canvas: {
+      favicon: '/img/cloaks/canvas.png',
+      title: 'Canvas'
+    },
+    deltamath: {
+      favicon: '/img/cloaks/deltamath.png',
+      title: 'DeltaMath Student Application'
+    },
+    edpuzzle: {
+      favicon: '/img/cloaks/edpuzzle.png',
+      title: 'Edpuzzle'
+    },
+    classroom: {
+      favicon: '/img/cloaks/gclassroom.png',
+      title: 'Home'
+    },
+    drive: {
+      favicon: '/img/cloaks/gdrive.png',
+      title: 'My Drive'
+    },
+    gmail: {
+      favicon: '/img/cloaks/gmail.png',
+      title: 'Gmail'
+    },
+    itchio: {
+      favicon: '/img/cloaks/itch.png',
+      title: 'Download the latest indie games - itch.io'
+    },
+    khan: {
+      favicon: '/img/cloaks/khan.png',
+      title: 'Dashboard | Khan Academy'
+    },
+    meet: {
+      favicon: '/img/cloaks/meet.png',
+      title: 'Google Meet'
+    },
+    search: {
+      favicon: '/img/cloaks/gsearch.png',
+      title: 'Google'
+    },
+    wiki: {
+      favicon: '/img/cloaks/wiki.png',
+      title: 'Wikipedia, the free encyclopedia'
+    },
+    zoom: {
+      favicon: '/img/cloaks/zoom.png',
+      title: 'Zoom'
+    } 
+  };
 
-var tab = localStorage.getItem("tab");
-if (tab) {
-  try {
-    var tabData = JSON.parse(tab);
-  } catch {
-    var tabData = {};
-  }
-} else {
-  var tabData = {};
-}
-
-const titleElement = document.getElementById("title");
-const iconElement = document.getElementById("icon");
-
-if (tabData.title && titleElement) titleElement.value = tabData.title;
-if (tabData.icon && iconElement) iconElement.value = tabData.icon;
-
-const settingsDefaultTab = {
-  title: "Google",
-  icon: "/img/favicon.ico",
-};
-
-function setTitle(title = "") {
-  if (title) {
-    document.title = title;
-  } else {
-    document.title = settingsDefaultTab.title;
-  }
-
-  var tab = localStorage.getItem("tab");
-
-  if (tab) {
-    try {
-      var tabData = JSON.parse(tab);
-    } catch {
-      var tabData = {};
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
     }
-  } else {
-    var tabData = {};
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
   }
 
-  if (title) {
-    tabData.title = title;
-  } else {
-    delete tabData.title;
-  }
-
-  localStorage.setItem("tab", JSON.stringify(tabData));
-}
-
-function setFavicon(icon) {
-  if (icon) {
-    document.getElementById("icon").href = icon;
-  } else {
-    document.getElementById("icon").href = settingsDefaultTab.icon;
-  }
-
-  var tab = localStorage.getItem("tab");
-
-  if (tab) {
-    try {
-      var tabData = JSON.parse(tab);
-    } catch {
-      var tabData = {};
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
+    return null;
+  }
+
+  function applyTheme(themeKey) {
+    const theme = themes[themeKey];
+    if (!theme) return;
+
+    document.title = theme.title;
+    favicon.href = theme.favicon;
+  }
+
+  const savedTheme = getCookie('selectedTheme');
+  if (savedTheme && themes[savedTheme]) {
+    dropdown.value = savedTheme;
+    applyTheme(savedTheme);
   } else {
-    var tabData = {};
+    applyTheme(dropdown.value);
   }
 
-  if (icon) {
-    tabData.icon = icon;
-  } else {
-    delete tabData.icon;
-  }
-
-  localStorage.setItem("tab", JSON.stringify(tabData));
-}
-
-function setCloak() {
-  var cloak = cloakElement.value;
-
-  switch (cloak) {
-    case "search":
-      setTitle('Google');
-      setFavicon("/img/cloaks/gsearch.png");
-      break;
-    case "wikipedia":
-      setTitle("Wikipedia, the free encyclopedia");
-      setFavicon("/img/cloaks/wiki.png");
-      break;
-    case "bsite":
-      setTitle("Billibilli");
-      setFavicon("/img/cloaks/bb.png");
-      break;
-    case "drive":
-      setTitle("My Drive - Google Drive");
-      setFavicon("/img/cloaks/gdrive.png");
-      break;
-    case "gmail":
-      setTitle("Gmail");
-      setFavicon("/img/cloaks/gmail.png");
-      break;
-    case "calendar":
-      setTitle("Google Calendar");
-      setFavicon("/img/cloaks/calendar.png");
-      break;
-    case "meets":
-      setTitle("Google Meet");
-      setFavicon("/img/cloaks/meet.png");
-      break;
-    case "classroom":
-      setTitle("Classes");
-      setFavicon("/img/gclassroom.png");
-      break;
-    case "canvas":
-      setTitle("Dashboard");
-      setFavicon("/img/cloaks/canvas.png");
-      break;
-    case "zoom":
-      setTitle("Zoom");
-      setFavicon("/img/cloaks/zoom.png");
-      break;
-    case "khan":
-      setTitle("Dashboard | Khan Academy");
-      setFavicon("/img/cloaks/khan.png");
-      break;
-    case "itchio":
-      setTitle("Download the latest indie games - itch.io");
-      setFavicon("/assets/cloaks/itch.png");
-      break;
-    case "deltamath":
-      setTitle("DeltaMath Student Application");
-      setFavicon("/img/cloaks/deltamath.png");
-      break;
-    case "ed":
-      setTitle("Edpuzzle");
-      setFavicon("/img/cloaks/edpuzzle.png");
-      break;
-  }
-}
-function resetTab() {
-  document.title = "Dashboard";
-  document.getElementById("icon").href = "/img/cloaks/canvas.png";
-  document.getElementById("title").value = "";
-  document.getElementById("icon").value = "";
-  localStorage.setItem("tab", JSON.stringify({}));
-}
-
-var panicKey = localStorage.getItem("panicKey") || "`";
-var panicLink = localStorage.getItem("PanicLink") || "https://google.com/";
-
-var toggled = localStorage.getItem("aboutBlank") || "false";
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("key").value = panicKey;
-  document.getElementById("link").value = panicLink;
-  cloakElement = document.getElementById("premadecloaks");
-
-  const toggle = document.getElementById("toggle");
-  if (toggled === "true") {
-    toggle.checked = true;
-  } else {
-    toggle.checked = false;
-  }
-  toggle.addEventListener("change", function () {
-    if (toggle.checked) {
-      localStorage.setItem("aboutBlank", "true");
-      toggle.checked = true;
-    } else {
-      localStorage.setItem("aboutBlank", "false");
-      toggle.checked = false;
-    }
+  dropdown.addEventListener('change', function() {
+    const selectedTheme = this.value;
+    setCookie('selectedTheme', selectedTheme, 9999);
+    applyTheme(selectedTheme);
   });
 });
 
@@ -192,6 +122,28 @@ function setPanicLink() {
   var link = document.getElementById("link").value;
   localStorage.setItem("PanicLink", link);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("key").value = panicKey;
+  document.getElementById("link").value = panicLink;
+  cloakElement = document.getElementById("premadecloaks");
+
+  const toggle = document.getElementById("abtToggle");
+  if (toggled === "true") {
+    toggle.checked = true;
+  } else {
+    toggle.checked = false;
+  }
+  toggle.addEventListener("change", function () {
+    if (toggle.checked) {
+      localStorage.setItem("aboutBlank", "true");
+      toggle.checked = true;
+    } else {
+      localStorage.setItem("aboutBlank", "false");
+      toggle.checked = false;
+    }
+  });
+});
 
 function cloak() {
   let inFrame;
@@ -308,3 +260,5 @@ Promise.all([
     .catch((error) => {
       console.error('Error fetching data:', error);
     });
+
+setFavicon(localStorage.getItem("cloak"));

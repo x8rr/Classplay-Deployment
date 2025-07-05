@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">Settings - Classplay</title>
+    <title id="title">Classplay - Settings</title>
     <link rel="stylesheet" id="theme-style" href="/themes/v3.css">
     <script src="themes.js"></script>
     <link rel="icon" href="/img/favicon.png" id="icon" type="image/x-icon">
@@ -28,7 +28,7 @@
 
 <nav>
     <ul class="navbar">
-          <li><a href="/"><span class="material-symbols-rounded">cottage</span></a></li>
+        <li><a href="/"><span class="material-symbols-rounded">cottage</span></a></li>
         <li><a href="g.html"><span class="material-symbols-rounded">sports_esports</span></a></li>
         <li><a href="apps.html"><span class="material-symbols-rounded">apps</span></a></li>
         <li><a href="/active/"><span class="material-symbols-rounded">search</span></a></li>
@@ -51,6 +51,8 @@
 
             <button onclick="openGame()" class="cloakButton">Open Popup</button>
 
+            <br><br>
+
         </div>
 
         
@@ -59,6 +61,10 @@
             <h1>About</h1>
             <p id="updated">Last Updated:</p>
             <p>Version: <span id="version"></span></p>
+
+            <a href="about.html">
+                <button>More...</button>
+            </a>
 
         </div>
 
@@ -112,29 +118,24 @@
 
         <div class="settings-card">
 
-            <h1>Cloaks (testing)</h1>
+            <h1>Premade Cloaks</h1>
 
             <select id="premadecloaks">
                 <option value="search">Google Search</option>
-                <option value="wikipedia">Wikipedia</option>
-                <option value="bsite">Billibilli</option>
+                <option value="wiki">Wikipedia</option>
+                <option value="billibilli">Billibilli</option>
                 <option value="drive">Google Drive</option>
                 <option value="gmail">Gmail</option>
                 <option value="calendar">Google Calendar</option>
-                <option value="meets">Google Meets</option>
+                <option value="meet">Google Meet</option>
                 <option value="classroom">Google Classroom</option>
                 <option value="canvas">Canvas</option>
                 <option value="zoom">Zoom</option>
                 <option value="khan">Khan Academy</option>
                 <option value="itchio">itch.io</option>
                 <option value="deltamath">Deltamath</option>
-                <option value="ed">Edpuzzle</option>
+                <option value="edpuzzle">Edpuzzle</option>
             </select>
-
-            <br><br>
-
-            <button onclick="setCloak()" style="margin-right: 10px;">Set Cloak</button>
-            <button onclick="resetTab()">Reset Cloak</button>
 
         </div>
 
