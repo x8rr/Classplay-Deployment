@@ -1225,6 +1225,8 @@ input::placeholder {
   }
 }
 
+.ignore { background: none; color: black; outline: 1px solid black; }
+
 .homepagebtn {
   width: 65px;
   height: 65px;

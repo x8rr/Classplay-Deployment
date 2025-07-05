@@ -45,37 +45,41 @@
 
     <div class="container">
 
-        <div class="settings-card">
+        <div class="settings-card glass" style="backdrop-filter: blur(10px);">
 
-            <h1>about:blank</h1><br>
+            <center>
 
-            <button onclick="openGame()" class="cloakButton">Open Popup</button>
+                <h1>about:blank</h1><br>
+
+                <button onclick="openGame()" class="cloakButton glass">Open Popup</button>
+
+            </center>
 
             <br><br>
 
         </div>
 
         
-        <div class="settings-card">
+        <div class="settings-card glass">
 
             <h1>About</h1>
             <p id="updated">Last Updated:</p>
             <p>Version: <span id="version"></span></p>
 
             <a href="about.html">
-                <button>More...</button>
+                <button class="glass">More...</button>
             </a>
 
         </div>
 
-        <div class="settings-card">
+        <div class="settings-card glass">
 
             <h1>Saves</h1>
 
-            <button onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-export"></i> Export Data Save</button>
+            <button class="glass" onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-export"></i> Export Data Save</button>
             <input type="file" id="importFile" accept=".ucpconfig" style="display: none;" onchange="handleFileImport(this.files[0])">
             <br><br>
-            <button onclick="document.getElementById('importFile').click()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-import"></i> Load Data Save</button>
+            <button class="glass" onclick="document.getElementById('importFile').click()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-import"></i> Load Data Save</button>
 
         </div>
 
@@ -87,27 +91,28 @@
 
     <div class="container">
 
-        <div class="settings-card">
+        <div class="settings-card glass">
 
             <h1>Panic Button</h1>
 
             <form>
-                <input class="tab-cloaker-form" type="text" id="key" placeholder="panic key" onkeyup="setPanicKey()" name="icon">
-                <input class="tab-cloaker-form" type="text" id="link" name="name" placeholder="panic link" onkeyup="setPanicLink()">
+                <input class="tab-cloaker-form glass" type="text" id="key" placeholder="panic key" onkeyup="setPanicKey()" name="icon">
+                <input class="tab-cloaker-form glass" type="text" id="link" name="name" placeholder="panic link" onkeyup="setPanicLink()">
             </form>
 
         </div>
 
-        <div class="settings-card">
+        <div class="settings-card glass">
 
             <h1>Theme</h1>
 
-            <select id="theme-selector">
+            <select id="theme-selector" class="glass">
                 <option value="themes/v3.css">v3</option>
                 <option value="themes/v3-green.css">v3 (Green)</option>
                 <option value="themes/v3-red.css">v3 (Red)</option>
                 <option value="themes/v3-yellow.css">v3 (Yellow)</option>
                 <option value="themes/v3-purple.css">v3 (Purple)</option>
+                <option value="themes/v4.css">v4 (Liquid Glass)</option>
             </select>
 
             <br>
@@ -116,11 +121,11 @@
 
         </div>
 
-        <div class="settings-card">
+        <div class="settings-card glass">
 
             <h1>Premade Cloaks</h1>
 
-            <select id="premadecloaks">
+            <select id="premadecloaks" class="glass">
                 <option value="search">Google Search</option>
                 <option value="wiki">Wikipedia</option>
                 <option value="billibilli">Billibilli</option>

@@ -1238,6 +1238,8 @@ input::placeholder {
   background-color: rgb(180, 168, 0);
 }
 
+.ignore { background: none; color: black; outline: 1px solid black; }
+
 @keyframes countdown {
   0% {
     width: 100%;

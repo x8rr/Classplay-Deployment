@@ -67,50 +67,40 @@
 <center style="padding: 50px;" style="z-index: 9999999;">
   <h1 style="font-size: 81px; margin-bottom: 0; font-size: Ginto;">About Us</h1>
   <div class="container">
-    <div class="settings-card">
+    <div class="settings-card glass">
       <h1>Contact Us</h1>
 
       Discord: d3faultedd <br>
       <br>
       <a href="https://github.com/useclassplay/useclassplay" target="_blank" style="color: white;">
-        <button>Github Repo</button>
+        <button class="glass">Github Repo</button>
       </a>
     </div>
 
-    <div class="settings-card" style="height: fit-content;">
+    <div class="settings-card glass">
       <h1>Changelog</h1>
       <a href="https://github.com/useclassplay/useclassplay/releases?page=1" target="_blank">
-        <button>Changelog Page 1</button>
+        <button class="glass">Changelog Page 1</button>
       </a><br><br>
       <a href="https://github.com/useclassplay/useclassplay/releases?page=2" target="_blank">
-        <button>Changelog Page 2</button>
+        <button class="glass">Changelog Page 2</button>
       </a>
     </div>
   </div>
 </center>
 
-<div id="updToast" class="updToast">
+<div id="updToast" class="updToast glass">
   A new version is available! Would you like to install it?
   <br>
   <div class="container">
-    <button onclick="window.location.reload()">Install</button>
-    <button style="background: none; color: black; outline: 1px solid black;" onclick="hideToast()">Ignore</button>
+    <button class="glass" onclick="window.location.reload()">Install</button>
+    <button class="glass ignore" onclick="hideToast()">Ignore</button>
   </div>
 </div>
 
 <script>
 
   const urlInput = document.getElementById('searchinject');
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' && urlInput.value.includes('.')) {
-      const searchTerm = urlInput.value;
-      window.location.href = `/active/?inject=${searchTerm}`;
-    } else if (event.key === 'Enter' && !urlInput.value.includes('.')) {
-      const searchTerm = urlInput.value.replaceAll(/\s/g, '+');
-      window.location.href = `/active/?inject=https://www.startpage.com/sp/search?q=${searchTerm}`;
-    }
-  });
 
 </script>
 

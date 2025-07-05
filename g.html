@@ -143,17 +143,17 @@ button .ripple {
 
 <center>
   <h1 class="title" style="margin-bottom: 15px">Games</h1>  
-  <input type="text" name="search" class="games-search" id="gameSearch" placeholder="Search through our games!" onkeyup="filterGames()" />
+  <input type="text" name="search" class="games-search glass" id="gameSearch" placeholder="Search through our games!" onkeyup="filterGames()" />
 </center>
 
 <br>
 
-<div id="updToast" class="updToast">
+<div id="updToast" class="updToast glass">
   A new version is available! Would you like to install it?
   <br>
   <div class="container">
-    <button onclick="window.location.reload()">Install</button>
-    <button style="background: none; color: black; outline: 1px solid black;" onclick="hideToast()">Ignore</button>
+    <button class="glass" onclick="window.location.reload()">Install</button>
+    <button class="glass ignore" onclick="hideToast()">Ignore</button>
   </div>
 </div>
 
