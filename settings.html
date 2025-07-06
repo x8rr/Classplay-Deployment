@@ -26,7 +26,7 @@
 
 <div id="particles-js"></div>
 
-<nav>
+<nav class="glass">
     <ul class="navbar">
         <li><a href="/"><span class="material-symbols-rounded">cottage</span></a></li>
         <li><a href="g.html"><span class="material-symbols-rounded">sports_esports</span></a></li>
@@ -113,6 +113,7 @@
                 <option value="themes/v3-yellow.css">v3 (Yellow)</option>
                 <option value="themes/v3-purple.css">v3 (Purple)</option>
                 <option value="themes/v4.css">v4 (Liquid Glass)</option>
+                <option value="themes/v4-dark.css">v4 (Liquid Glass Dark)</option>
             </select>
 
             <br>
@@ -140,6 +141,7 @@
                 <option value="itchio">itch.io</option>
                 <option value="deltamath">Deltamath</option>
                 <option value="edpuzzle">Edpuzzle</option>
+                <option value="default">No Cloak</option>
             </select>
 
         </div>
@@ -151,19 +153,20 @@
     <div class="blobsmall"></div>
     <div class="blobtop"></div>
 
-        <div id="updToast" class="updToast">
+<div id="updToast" class="updToast glass">
   A new version is available! Would you like to install it?
   <br>
   <div class="container">
-    <button onclick="window.location.reload()">Install</button>
-    <button style="background: none; color: black; outline: 1px solid black;" onclick="hideToast()">Ignore</button>
+    <button onclick="window.location.reload()" class="glass">Install</button>
+    <button onclick="hideToast()" class="glass ignore">Ignore</button>
   </div>
+</div>
 
   <div id="toast" class="glass">
     <p>Error fetching version data (403)</p>
     <div id="timer"></div>
   </div>
-</div>
+
     
 </body>
 </html>

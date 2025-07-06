@@ -1,5 +1,5 @@
 html {
-  background: black;
+  background: url(/img/v4-liquid-glass.jpg);
   color: white;
   font-family: Inter;
   background-size: cover;
@@ -20,7 +20,6 @@ html {
 }
 
 button {
-  background: linear-gradient(to bottom right, rgb(0, 167, 0), rgb(0, 124, 52));
   border-radius: 150px;
 }
 
@@ -31,7 +30,7 @@ button {
 
 @font-face {
   font-family: ginto;
-  src: url(/fonts/ginto.otf);
+  src: url(/fonts/inter.ttf);
 }
 
 @font-face {
@@ -42,10 +41,8 @@ button {
 nav {
   display: block;
   justify-content: center;
-  padding: 1rem 2rem;
-  background-color: rgba(10, 10, 10, 0.9);
-  outline: 1px white solid;
-  outline-offset: -5px;
+  padding: 1rem;
+  outline: 0;
   color: white;
   border-radius: 270px;
   font-family: Inter;
@@ -57,13 +54,6 @@ nav {
   left: 50%;
   transform: translate(-50%, -10%);
   z-index: 99999;
-}
-
-button {
-  border-radius: 150px;
-  padding: 10px 20px;
-  color: white;
-  font-size: 17px;
 }
   
 nav ul {
@@ -86,6 +76,13 @@ nav li {
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+button {
+  border-radius: 150px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 17px;
 }
   
 nav a {
@@ -478,26 +475,22 @@ li.right {
   height: 25px;
   width: 325px;
   padding: 10px;
-  border-radius: 13px;
   border: none;
+  border-radius: 1000px;
   font-family: Inter;
   transition: 0.15s;
-  background-color: #ffffff1c;
   color: white;
   font-size: 17px;
 }
 
 #register input:focus {
   outline: none;
-  background-color: #ffffff31;
 }
 
 #register button {
   height: 50px;
   width: 125px;
-  border-radius: 7.5px;
   border: none;
-  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -516,7 +509,7 @@ li.right {
 }
 
 #register a {
-  color: dodgerblue;
+  color: white;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -527,26 +520,22 @@ li.right {
   height: 25px;
   width: 325px;
   padding: 10px;
-  border-radius: 13px;
   border: none;
   font-family: Inter;
   transition: 0.15s;
-  background-color: #ffffff1c;
   color: white;
   font-size: 17px;
+  border-radius: 1000px;
 }
 
 #login input:focus {
   outline: none;
-  background-color: #ffffff31;
 }
 
 #login button {
   height: 50px;
   width: 125px;
-  border-radius: 7.5px;
   border: none;
-  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -565,7 +554,7 @@ li.right {
 }
 
 #login a {
-  color: dodgerblue;
+  color: white;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -742,7 +731,6 @@ p.invis {
   width: 225px;
   text-align: center;
   border-radius: 150px;
-  background-color: #ffffff1f;
   border: none;
   color: white;
   font-family: Inter;
@@ -1073,23 +1061,24 @@ p.invis {
 
 #particles-js {
   position: absolute;
+  display: none;
   width: 100%;
   height: 100%;
   z-index: -2;
-  opacity: 30%;
+  opacity: 50%;
   background-color: none;
   background: none;
 }
 
 .blob {
-	box-shadow: 0 0 150px 100px rgb(0, 255, 106);
+	box-shadow: 0 0 150px 100px rgb(0, 110, 255);
 	border-radius: 50%;
 	height: 290px;
 	width: 290px;
 	background-image: radial-gradient(
 		farthest-corner at 50% 50%,
 		#ffffff,
-		rgb(0, 255, 136)
+		rgb(0, 110, 255)
 	);
 	background-blend-mode: multiply;
 	filter: blur(50px) contrast(1.1);
@@ -1098,10 +1087,11 @@ p.invis {
 	left: 47vw;
 	top: 100vh;
 	position: fixed;
+    display: none;
 }
 
 .blobbig {
-	box-shadow: 0 0 150px 100px rgb(171, 255, 223);
+	box-shadow: 0 0 150px 100px rgb(171, 207, 255);
 	border-radius: 100%;
 	height: 45vh;
 	width: 75vw;
@@ -1109,7 +1099,7 @@ p.invis {
 	background-image: radial-gradient(
 		farthest-corner at 50% 50%,
 		#ffffff,
-		rgb(0, 255, 115)
+		rgb(0, 110, 255)
 	);
 	background-blend-mode: multiply;
 	filter: blur(50px) contrast(1.1);
@@ -1118,17 +1108,18 @@ p.invis {
 	left: 47vw;
 	top: 100vh;
 	position: fixed;
+    display: none;
 }
 
 .blobsmall {
-	box-shadow: 0 0 150px 50px rgb(102, 255, 196);
+	box-shadow: 0 0 150px 50px rgb(102, 168, 255);
 	border-radius: 50%;
 	height: 50px;
 	width: 340px;
 	background-image: radial-gradient(
 		farthest-corner at 50% 50%,
 		#ffffff,
-		rgb(0, 255, 157)
+		rgb(0, 110, 255)
 	);
 	background-blend-mode: multiply;
 	filter: blur(50px) contrast(1.2);
@@ -1137,17 +1128,18 @@ p.invis {
 	left: 60vw;
 	top: 100vh;
 	position: fixed;
+    display: none;
 }
 
 .blobtop {
-	box-shadow: 0 0 1px 20px rgb(0, 255, 213);
+	box-shadow: 0 0 1px 20px rgb(0, 110, 255);
 	border-radius: 50%;
 	height: 230px;
 	width: 20px;
 	background: radial-gradient(
 		farthest-corner at 50% 50%,
 		#ffffff,
-		rgb(0, 255, 98)
+		rgb(0, 110, 255)
 	);
 	background-blend-mode: multiply;
 	filter: blur(50px) contrast(1.1);
@@ -1158,6 +1150,7 @@ p.invis {
 	top: calc(89vh - 200px);
 	position: fixed;
     z-index: -1;
+    display: none;
 }
 
 input#searchinject {
@@ -1165,10 +1158,9 @@ input#searchinject {
   height: 50px;
   border-radius: 20px;
   color: white;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   font-family: Inter;
   border: none;
-  background: rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: 0.3s;
 }
@@ -1192,51 +1184,19 @@ input::placeholder {
   font-size: 16px;
 }
 
-.homepagebtn {
-  width: 65px;
-  height: 65px;
-  border-radius: 35%;
-  background: linear-gradient(to bottom right, rgba(0, 255, 85, 0.671), rrgba(91, 255, 178, 0.651));
-  border: none;
-  margin: 7.5px;
-  transition: 0.2s;
-}
-
-.homepagebtn:hover {
-  filter: brightness(0.8);
-  cursor: pointer;
-}
-
-#updToast {
-  position: fixed;
-  top: 15px;
-  right: -40%;
-  height: 80px;
-  width: 220px;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 15px;
-  border-radius: 25px;
-  color: black;
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
 #toast {
   position: fixed;
   top: 15px;
   right: -40%;
   height: 80px;
   width: 220px;
-  background-color: rgba(255, 255, 255, 1);
   padding: 0px;
   border-radius: 15px;
-  color: black;
+  color: white;
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
-  transition: 0.3s;
+  transition: 0.4s;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -1245,16 +1205,15 @@ input::placeholder {
   margin: 15px;
 }
 
-#toast .timer {
+#toast #timer {
   position: relative;
   bottom: -9%;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: rgb(31, 189, 0);
+  border-radius: 5000px;
+  background-color: rgb(255, 255, 255);
 }
-
-.ignore { background: none; color: black; outline: 1px solid black; }
 
 @keyframes countdown {
   0% {
@@ -1265,6 +1224,21 @@ input::placeholder {
   }
 }
 
+.homepagebtn {
+  width: 65px;
+  height: 65px;
+  border-radius: 35%;
+  background: linear-gradient(to bottom right, rgba(0, 153, 255, 0.671), rgba(91, 208, 255, 0.651));
+  border: none;
+  margin: 7.5px;
+  transition: 0.2s;
+}
+
+.homepagebtn:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
 button:focus {
   outline: none;
 }
@@ -1273,12 +1247,26 @@ button:focus {
   outline: none;
 }
 
+#updToast {
+  position: fixed;
+  top: 15px;
+  right: -40%;
+  height: 80px;
+  width: 220px;
+  padding: 15px;
+  border-radius: 25px;
+  color: white;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
 #updToast button {
   height: 35px;
   width: 100px;
   border-radius: 100px;
   color: white;
-  background: rgb(24, 145, 0);
   border: none;
   font-size: 16px;
   margin-top: 10px;
@@ -1290,4 +1278,12 @@ button:focus {
 #updToast button:hover {
   scale: 1.05;
   cursor: pointer;
+}
+
+.glass {
+  background: rgba(54, 54, 54, 0.178);
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 0.75px rgba(223, 223, 223, 0.171),0 16px 32px rgba(0,0,0,.12);
+  backdrop-filter: blur(10px);
+  outline: 0;
 }

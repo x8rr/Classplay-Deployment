@@ -1,109 +1,116 @@
+const themes = {
+  billibilli: {
+    favicon: '/img/cloaks/bb.png',
+    title: 'Billibilli'
+  },
+  calendar: {
+    favicon: '/img/cloaks/calendar.png',
+    title: 'Google Calendar'
+  },
+  canvas: {
+    favicon: '/img/cloaks/canvas.png',
+    title: 'Canvas'
+  },
+  deltamath: {
+    favicon: '/img/cloaks/deltamath.png',
+    title: 'DeltaMath Student Application'
+  },
+  edpuzzle: {
+    favicon: '/img/cloaks/edpuzzle.png',
+    title: 'Edpuzzle'
+  },
+  classroom: {
+    favicon: '/img/cloaks/gclassroom.png',
+    title: 'Home'
+  },
+  drive: {
+    favicon: '/img/cloaks/gdrive.png',
+    title: 'My Drive'
+  },
+  gmail: {
+    favicon: '/img/cloaks/gmail.png',
+    title: 'Gmail'
+  },
+  itchio: {
+    favicon: '/img/cloaks/itch.png',
+    title: 'Download the latest indie games - itch.io'
+  },
+  khan: {
+    favicon: '/img/cloaks/khan.png',
+    title: 'Dashboard | Khan Academy'
+  },
+  meet: {
+    favicon: '/img/cloaks/meet.png',
+    title: 'Google Meet'
+  },
+  search: {
+    favicon: '/img/cloaks/gsearch.png',
+    title: 'Google'
+  },
+  wiki: {
+    favicon: '/img/cloaks/wiki.png',
+    title: 'Wikipedia, the free encyclopedia'
+  },
+  zoom: {
+    favicon: '/img/cloaks/zoom.png',
+    title: 'Zoom'
+  },
+  default: {
+    favicon: '/img/favicon.png',
+    title: 'Classplay'
+  } 
+};
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function applyTheme(themeKey) {
+  const theme = themes[themeKey] || themes['default'];
+ 
+  document.title = theme.title;
+
+  let favicon = document.querySelector('link[rel="icon"]');
+  if (!favicon) {
+    favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    document.head.appendChild(favicon);
+  }
+  favicon.href = theme.favicon;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  const dropdown = document.getElementById('premadecloaks');
-  const favicon = document.getElementById('icon');
-  const pageTitle = document.title;
-
-  const themes = {
-    billibilli: {
-      favicon: '/img/cloaks/bb.png',
-      title: 'Billibilli'
-    },
-    calendar: {
-      favicon: '/img/cloaks/calendar.png',
-      title: 'Google Calendar'
-    },
-    canvas: {
-      favicon: '/img/cloaks/canvas.png',
-      title: 'Canvas'
-    },
-    deltamath: {
-      favicon: '/img/cloaks/deltamath.png',
-      title: 'DeltaMath Student Application'
-    },
-    edpuzzle: {
-      favicon: '/img/cloaks/edpuzzle.png',
-      title: 'Edpuzzle'
-    },
-    classroom: {
-      favicon: '/img/cloaks/gclassroom.png',
-      title: 'Home'
-    },
-    drive: {
-      favicon: '/img/cloaks/gdrive.png',
-      title: 'My Drive'
-    },
-    gmail: {
-      favicon: '/img/cloaks/gmail.png',
-      title: 'Gmail'
-    },
-    itchio: {
-      favicon: '/img/cloaks/itch.png',
-      title: 'Download the latest indie games - itch.io'
-    },
-    khan: {
-      favicon: '/img/cloaks/khan.png',
-      title: 'Dashboard | Khan Academy'
-    },
-    meet: {
-      favicon: '/img/cloaks/meet.png',
-      title: 'Google Meet'
-    },
-    search: {
-      favicon: '/img/cloaks/gsearch.png',
-      title: 'Google'
-    },
-    wiki: {
-      favicon: '/img/cloaks/wiki.png',
-      title: 'Wikipedia, the free encyclopedia'
-    },
-    zoom: {
-      favicon: '/img/cloaks/zoom.png',
-      title: 'Zoom'
-    } 
-  };
-
-  function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-      const date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-  }
-
-  function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-  }
-
-  function applyTheme(themeKey) {
-    const theme = themes[themeKey];
-    if (!theme) return;
-
-    document.title = theme.title;
-    favicon.href = theme.favicon;
-  }
-
   const savedTheme = getCookie('selectedTheme');
   if (savedTheme && themes[savedTheme]) {
-    dropdown.value = savedTheme;
     applyTheme(savedTheme);
-  } else {
-    applyTheme(dropdown.value);
   }
 
-  dropdown.addEventListener('change', function() {
-    const selectedTheme = this.value;
-    setCookie('selectedTheme', selectedTheme, 9999);
-    applyTheme(selectedTheme);
-  });
+  const dropdown = document.getElementById('premadecloaks');
+  if (dropdown) {
+    dropdown.value = savedTheme || 'default';
+    dropdown.addEventListener('change', function() {
+      const selectedTheme = this.value;
+      setCookie('selectedTheme', selectedTheme, 365);
+      applyTheme(selectedTheme);
+    });
+  }
 });
 
 document.addEventListener("keydown", function (e) {
@@ -259,13 +266,15 @@ if (window.location.href.includes('settings.html')) {
       document.querySelector('#version').textContent = releasesData.tag_name || 'No release tag';
     })
     .catch((error) => {
+      console.error(error)
+
       document.getElementById('toast').style.right = '1%'
       document.getElementById('timer').style.animation = 'countdown 7.5s linear'
       
       setTimeout(() => {
         document.getElementById('toast').style.right = '-40%'
-      }, 7500);
+      }, 7400);
     });
 }
 
-setFavicon(localStorage.getItem("cloak"));
+applyTheme(getCookie('selectedTheme'));

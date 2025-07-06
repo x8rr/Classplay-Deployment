@@ -19,6 +19,8 @@
   <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
   <script src="/assets/js/particles.js" defer></script>
   <script src="/assets/js/update.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
 </head>
 <body>
 
@@ -31,6 +33,12 @@
 
   gtag('config', 'G-GBPYWSE933');
 </script>
+
+<style>
+    #g-signin2 {
+        border-radius: 10000px;
+    }
+</style>
 
 <nav class="glass">
     <ul class="navbar">
@@ -45,6 +53,8 @@
         <li><a href="settings.html"><span class="material-symbols-rounded">account_circle</span></a></li>
     </ul>   
 </nav>
+
+<div id="firebaseui-auth-container"></div>
 
 <br><br><br><br><br><br><br><br>
 
@@ -70,6 +80,10 @@
             <p>Need an account? <a onclick="displayRegister()">Register</a></p>
         </div>
     </center>
+
+    <center>
+        
+    </center>
     
     <div id="logout" style="display: none;">
         <h2>Welcome!</h2>
@@ -81,22 +95,14 @@
 
     </span>
 
-<script type="module">
-    import { register } from '/assets/js/profile.js';
-    import { login } from '/assets/js/profile.js';
-
-    window.register = register;
-    window.login = login;
-</script>
-
-<div class="blob"></div>
+    <div class="blob"></div>
     <div class="blobbig"></div>
     <div class="blobsmall"></div>
     <div class="blobtop"></div>
 
     <div id="particles-js"></div>
 
-    <div id="updToast" class="updToast glass">
+<div id="updToast" class="updToast glass">
   A new version is available! Would you like to install it?
   <br>
   <div class="container">
@@ -104,6 +110,69 @@
     <button class="glass ignore" onclick="hideToast()">Ignore</button>
   </div>
 </div>
-    
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAuth, getFirestore, doc, setDoc, addDoc, collection, onSnapshot, serverTimestamp, query, orderBy, getDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
+    // firebase config
+    const firebaseConfig = {
+        apiKey: "AIzaSyDMGCzjVLZUVZHCCxBDql5npVz_wcKxEX4",
+        authDomain: "chat-room-eda59.firebaseapp.com",
+        projectId: "chat-room-eda59",
+        storageBucket: "chat-room-eda59.appspot.com",
+        messagingSenderId: "1063922969354",
+        appId: "1:1063922969354:web:c1693925c907a1681368f3"
+    };
+
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+    ui.start('#firebaseui-auth-container', {
+        signInOptions: [
+            {
+                provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                requireDisplayName: true
+            }
+        ],
+        // Other config options...
+    });
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app)
+
+    // get html elements
+    const registerUser = document.getElementById("register-username");
+    const registerPass = document.getElementById("register-password");
+
+    const loginUser = document.getElementById("login-username");
+    const loginPass = document.getElementById("login-password");
+
+    const loginBtn = document.getElementById("login-btn");
+    const registerBtn = document.getElementById("register-btn");
+
+    // view functions
+    function displayLogin() {
+        document.getElementById("register").style.display = "none";
+        document.getElementById("login").style.display = "block";
+    }
+
+    function displayRegister() {
+        document.getElementById("register").style.display = "block";
+        document.getElementById("login").style.display = "none";
+    }
+
+    // register functions
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+
+            console.log(errorCode, errorMessage);
+        })
+</script>
 </body>
 </html>

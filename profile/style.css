@@ -1,0 +1,359 @@
+body {
+  background: linear-gradient(to bottom right, #061917, #04061f);
+  color: #f1f1f1;
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(/fonts/inter.ttf);
+}
+
+* {
+  font-family: Inter;
+}
+
+#auth-section, 
+#chat-section {
+  width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12.5px;
+  background-color: #ffffff17;
+  transition: 0.3s;
+  transition: height 0.3s ease;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#auth-section {
+  width: 400px;
+  transition: 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#room-title {
+  text-align: center;
+  color: white;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-size: 35px;
+  font-family: Inter;
+}
+
+#auth-section button,
+#chat-section button {
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border-radius: 7.5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+#chat-section input,
+#auth-section input {
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border-radius: 7.5px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #ffffff1e;
+  color: white;
+  transition: 0.1s;
+  justify-content: center;
+  text-align: center;
+}
+
+#chat-section input:focus,
+#auth-section input:focus {
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1.1em;
+  border-radius: 7.5px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #ffffff2c;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(to bottom right, #1d7c73, #0f1786);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+  width: 200px;
+  border-radius: 7.5px;
+}
+
+button:hover {
+  filter: brightness(.9);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+nav {
+  display: block;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: rgba(10, 10, 10, 1);
+  outline: 1px white solid;
+  outline-offset: -5px;
+  color: white;
+  border-radius: 270px;
+  font-family: Inter;
+  height: 17.5px;
+  width: 240px;
+  justify-self: center;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  z-index: 99999;
+}
+  
+nav ul {
+  list-style: none;
+  margin: 0;
+  position: relative;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  left: 50%;
+  transform: translateX(-47%);
+}
+  
+nav li {
+  margin-right: .89rem;
+  position: relative;
+  font-size: 1rem;
+  transition: 0.2s;
+  bottom: 2px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+  
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: -2px;
+  font-family: Inter;
+  transition: 0.2s;
+  justify-content: center;
+  text-align: center;
+  scale: 1.1;
+}
+
+nav a:hover {
+  transform: scale(1.105);
+  border-radius: 1500px;
+  cursor: pointer;
+}
+
+#chat-box {
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: auto;
+  background-color: #ffffff17;
+  padding: 0px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  margin: 0;
+  border-radius: 10px;
+  color: white;
+}
+
+#message-input {
+  width: 800px;
+  font-size: 1.1em;
+  z-index: 0;
+}
+
+#send-btn {
+  width: 40px;
+  padding: 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  height: 40px;
+  z-index: 99999;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#leave-room-btn {
+  margin-top: 10px;
+  background-color: #ff4c4c;
+  width: 300px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: #ccc;
+  font-size: 21px;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.madeby {
+  color: white;
+  font-size: 14;
+  font-weight: 500;
+  padding: 10px;
+  position: fixed;
+  width: 99%;
+  bottom: 0;
+  justify-self: center;
+  text-align: center;
+  background-color: #1f51ff;
+}
+
+.madeby a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: rgba(53, 53, 53, 0.288);
+  color: white;
+  text-align: center;
+  border-radius: 7.5px;
+  font-family: Inter;
+  padding: 20px;
+  position: fixed;
+  top: 20px;
+  right: -300px;
+  z-index: 1;
+  font-size: 16px;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease;
+}
+
+.toast.show {
+  visibility: visible;
+  right: 10px;
+  opacity: 1;
+  animation: slideInRight 0.3s, slideOutRight 0.4s 5.75s; /* Slide out after 2.5 seconds */
+}
+
+@keyframes slideInRight {
+  from {
+    right: -500px;
+    opacity: 1;
+  }
+  to {
+    right: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    right: 10px;
+    opacity: 1;
+  }
+  to {
+    right: -500px;
+    opacity: 1;
+  }
+}
+
+#room-id:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #3cffec, #1f2eff);
+  color: transparent;
+  background-clip: text;
+}
+
+#room-id {
+  transition: 0.1s ease;
+}
+
+.toast2 {
+  position: fixed;
+  top: 20px;
+  right: -460px; /* Initially hidden, off-screen */
+  background-color: white;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  z-index: 9999;
+  transition: right 0.3s ease-in-out; /* Slide-in animation */
+}
+
+.toast2.show {
+  right: 10px; /* Moves the toast into view */
+}
+
+#clicktocopy {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  font-style: italic;
+  margin-top: -10px;
+  top: -10px;
+}
+
+@font-face {
+  font-family: ginto;
+  src: url(/fonts/ginto.otf);
+}
+
+.general {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  font-style: italic;
+  margin-top: -5px;
+  margin-bottom: -25px;
+}

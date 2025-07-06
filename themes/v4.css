@@ -21,6 +21,9 @@ html {
 
 button {
   border-radius: 150px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 17px;
 }
 
 @font-face {
@@ -41,18 +44,14 @@ button {
 nav {
   display: block;
   justify-content: center;
-  padding: 1rem 2rem;
-  background: rgba(255,255,255,.08);
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 0.75px rgba(255,255,255,.3),0 16px 32px rgba(0,0,0,.12);
-  backdrop-filter: blur(10px);
+  padding: 1rem;
   cursor: pointer;
   outline: 0;
   color: white;
   border-radius: 270px;
   font-family: Inter;
   height: 17.5px;
-  width: 260px;
+  width: fit-content;
   justify-self: center;
   position: fixed;
   bottom: 2%;
@@ -473,26 +472,22 @@ li.right {
   height: 25px;
   width: 325px;
   padding: 10px;
-  border-radius: 13px;
+  border-radius: 130px;
   border: none;
   font-family: Inter;
   transition: 0.15s;
-  background-color: #ffffff1c;
   color: white;
   font-size: 17px;
 }
 
 #register input:focus {
   outline: none;
-  background-color: #ffffff31;
 }
 
 #register button {
   height: 50px;
   width: 125px;
-  border-radius: 7.5px;
   border: none;
-  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -511,7 +506,7 @@ li.right {
 }
 
 #register a {
-  color: dodgerblue;
+  color: white;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -522,26 +517,22 @@ li.right {
   height: 25px;
   width: 325px;
   padding: 10px;
-  border-radius: 13px;
+  border-radius: 130px;
   border: none;
   font-family: Inter;
   transition: 0.15s;
-  background-color: #ffffff1c;
   color: white;
   font-size: 17px;
 }
 
 #login input:focus {
   outline: none;
-  background-color: #ffffff31;
 }
 
 #login button {
   height: 50px;
   width: 125px;
-  border-radius: 7.5px;
   border: none;
-  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -560,7 +551,7 @@ li.right {
 }
 
 #login a {
-  color: dodgerblue;
+  color: white;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -737,7 +728,6 @@ p.invis {
   width: 225px;
   text-align: center;
   border-radius: 150px;
-  background-color: #ffffff1f;
   border: none;
   color: white;
   font-family: Inter;
@@ -1052,13 +1042,12 @@ p.invis {
 }
 
 .username.owner {
-  background: linear-gradient(to bottom right, rgb(255, 233, 109), rgb(192, 138, 0));
-  padding: 2px 6px;
-  border-radius: 6px;
+  padding: 4px;
+  border-radius: 60px;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-weight: bold;
+  font-weight: medium;
 }
 .username.owner .material-symbols-rounded {
   color: white;
@@ -1219,6 +1208,7 @@ input::placeholder {
   left: 0;
   width: 100%;
   height: 3px;
+  border-radius: 10000px;
   background-color: rgb(255, 255, 255);
 }
 

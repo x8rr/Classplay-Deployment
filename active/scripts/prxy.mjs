@@ -40,7 +40,7 @@ export function app(route) {
 export async function getUV(input) {
   try {
     await registerSW();
-    rAlert("SW ✓");
+    rAlert("SW Registered");
   } catch (err) {
     rAlert(`SW failed to register.<br>${err.toString()}`);
     throw err;
@@ -51,11 +51,6 @@ export async function getUV(input) {
   let wispUrl = "wss://gointospace.app/wisp/";
   if ((await connection.getTransport()) !== "/active/prxy/epoxy/index.mjs") {
     await connection.setTransport("/active/prxy/epoxy/index.mjs", [
-      { wisp: wispUrl },
-    ]);
-  }
-  if ((await connection.getTransport()) !== "/activeprxy/libcurl/libcurl.mjs") {
-    await connection.setTransport("/active/prxy/libcurl/libcurl.mjs", [
       { wisp: wispUrl },
     ]);
   }
