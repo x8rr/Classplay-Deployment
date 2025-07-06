@@ -36,4 +36,4 @@ https://coolmathskills.vercel.app/
 
 ## `developers`
 
-[![Contributors](https://contrib.rocks/image?repo=useclassplay/useclassplay)](https://github.com/useclassplay/useclassplay/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=d3faultedd/classplay2)](https://github.com/d3faultedd/classplay2/graphs/contributors)
