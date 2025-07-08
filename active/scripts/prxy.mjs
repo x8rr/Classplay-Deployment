@@ -54,6 +54,11 @@ export async function getUV(input) {
       { wisp: wispUrl },
     ]);
   }
+  if ((await connection.getTransport()) !== "/activeprxy/libcurl/libcurl.mjs") {
+    await connection.setTransport("/active/prxy/libcurl/libcurl.mjs", [
+      { wisp: wispUrl },
+    ]);
+  }
 
   let viewUrl = __uv$config.prefix + __uv$config.encodeUrl(url);
 
