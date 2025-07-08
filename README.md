@@ -37,3 +37,4 @@ https://coolmathskills.vercel.app/
 ## `developers`
 
 [![Contributors](https://contrib.rocks/image?repo=d3faultedd/classplay2)](https://github.com/d3faultedd/classplay2/graphs/contributors)
+(syntaxerror52 is a former developer)
