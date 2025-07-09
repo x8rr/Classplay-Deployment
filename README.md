@@ -1,3 +1,5 @@
+> ignore the `forked from bahabryra/useclassplay.github.io`, this is because the og repo was deleted and was forked from him to save it
+> 
 ## features
 - games
 - apps
@@ -27,8 +29,6 @@ https://coolmathskills.vercel.app/
 > ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
 
 > ### SprintingSnail69 <br> <sub style="font-weight: 200;">developer</sub>
-
-> ignore the `forked from bahabryra/useclassplay.github.io`, this is because the og repo was deleted and was forked from him to save it
 
 ## credits
 - movies/website inspo: rednotsus
