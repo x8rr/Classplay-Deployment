@@ -28,6 +28,8 @@ https://coolmathskills.vercel.app/
 
 > ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
 
+> ### TypeCorrect25 <br> <sub style="font-weight: 200;">helper, anonymous developer</sub>
+
 > ### SprintingSnail69 <br> <sub style="font-weight: 200;">developer</sub>
 
 ## credits
