@@ -7,3 +7,6 @@
 # 8/6/2025
 
 # Try checking out: https://eaglercraftextras.github.io
+
+Disallow: /settings.html
+Disallow: /chat/chat.html
