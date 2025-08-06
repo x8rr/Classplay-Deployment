@@ -247,11 +247,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let path = "/assets/json/a.min.json";
 if (g) {
-  path = "/assets/json/g.min.json";
+  path = "/assets/json/a.min.json";
 } else if (c) {
   path = "/assets/json/t.min.json";
 } else if (a) {
-  path = "/assets/json/a.min.json";
+  path = "/assets/json/g.min.json";
 }
 fetch(path)
   .then(response => {
