@@ -1,27 +1,32 @@
 {
-  "name": "classplay2",
-  "version": "1.0.0",
-  "description": "- games\r - apps\r - proxies\r - youtube\r - about:blank cloaker\r - chatroom\r - soundboard\r - movies",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
+  "name": "interstellar",
+  "version": "5.2.5",
+  "type": "module",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "format": "biome format --write .",
+    "precommit": "pnpm run format && biome check --write .",
+    "lint": "biome lint --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yk4ndrew/classplay2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/yk4ndrew/classplay2/issues"
-  },
-  "homepage": "https://github.com/yk4ndrew/classplay2#readme",
+  "author": "InterstellarNetwork",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@supabase/supabase-js": "^2.50.3"
-  }
+    "@nebula-services/bare-server-node": "^2.0.4",
+    "chalk": "^5.4.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-basic-auth": "^1.2.1",
+    "mime": "^4.0.7",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  },
+  "packageManager": "pnpm@9.10.0"
 }

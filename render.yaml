@@ -1,8 +1,5 @@
 services:
   - type: web
-    name: classplay
-    runtime: static
-    buildCommand: yarn build
-    staticPublishPath: ./
-    previews:
-      generation: automatic
+    name: edu
+    env: docker
+    plan: free
