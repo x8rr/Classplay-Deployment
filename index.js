@@ -98,12 +98,14 @@ app.use(express.static(path.join(__dirname, "static")));
 app.use("/ca", cors({ origin: true }));
 
 const routes = [
-  { path: "/b", file: "apps.html" },
-  { path: "/a", file: "games.html" },
-  { path: "/play.html", file: "games.html" },
-  { path: "/c", file: "settings.html" },
+  { path: "/a", file: "apps2.html" },
+  { path: "/g", file: "g.html" },
+  { path: "/play", file: "play.html" },
+  { path: "/s", file: "settings.html" },
   { path: "/d", file: "tabs.html" },
   { path: "/", file: "index.html" },
+  { path: "/c", file: "/chat/chat.html" },
+  { path: "/l", file: "/lnk.html" },
 ];
 
 // biome-ignore lint/complexity/noForEach:

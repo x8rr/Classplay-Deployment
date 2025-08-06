@@ -248,31 +248,37 @@ function convertDate(date_str) {
   );
 }
 
-if (window.location.href.includes('settings.html')) {
+if (window.location.href.includes("s")) {
   Promise.all([
-    fetch('https://api.github.com/repos/useclassplay/useclassplay/commits'),
-    fetch('https://api.github.com/repos/useclassplay/useclassplay/releases/latest')
+    fetch("https://api.github.com/repos/useclassplay/useclassplay/commits"),
+    fetch(
+      "https://api.github.com/repos/useclassplay/useclassplay/releases/latest"
+    ),
   ])
     .then(([commitsResponse, releasesResponse]) => {
-      return Promise.all([commitsResponse.json(), releasesResponse.json()])
+      return Promise.all([commitsResponse.json(), releasesResponse.json()]);
     })
     .then(([commitsData, releasesData]) => {
       var unformatted = new Date(commitsData[0].commit.author.date)
         .toISOString()
-        .split('T')[0];
+        .split("T")[0];
       var lastCommitDate = convertDate(unformatted);
-      document.querySelector('#updated').textContent = `Last Updated: ${lastCommitDate}`;
-      
-      document.querySelector('#version').textContent = releasesData.tag_name || 'No release tag';
+      document.querySelector(
+        "#updated"
+      ).textContent = `Last Updated: ${lastCommitDate}`;
+
+      document.querySelector("#version").textContent =
+        releasesData.tag_name || "No release tag";
     })
     .catch((error) => {
-      console.error(error)
+      console.error(error);
 
-      document.getElementById('toast').style.right = '1%'
-      document.getElementById('timer').style.animation = 'countdown 7.5s linear'
-      
+      document.getElementById("toast").style.right = "1%";
+      document.getElementById("timer").style.animation =
+        "countdown 7.5s linear";
+
       setTimeout(() => {
-        document.getElementById('toast').style.right = '-40%'
+        document.getElementById("toast").style.right = "-40%";
       }, 7400);
     });
 }

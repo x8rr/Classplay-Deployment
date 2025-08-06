@@ -1,36 +1,39 @@
 ---
-name: Bug Report
-about: Create a report to help us improve
-title: "[Bug] "
-labels: Bug Report
-assignees: xbubbo
+name: bug report
+about: use this template if you don't know how to structure your issue
+title: "[BUG] [...]"
+labels: bug, help wanted
+assignees: cobblesteve01
+
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+### **what's your issue?**
+describe this bug ⬇️
 
-**To Reproduce**
-Steps to reproduce the behavior:
-
+### **how can we make this issue happen again? (for testing)**
+please guide us through the process:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### **what function was it supposed to ACTUALLY perform (instead of bug)?**
+describe what was supposed to happen...
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+### **any screenshots?**
+please add pictures so we can better understand your problem
 
-**Device Information (please complete the following information):**
+### **computer**
+ - operating system: [e.g. windows]
+ - os version: [e.g. windows 10]
+ - browser: [e.g. chrome]
+ - browser version (go to settings > about to check): [e.g. 122]
 
-- Device: [Ex. Chromebook, iPad, etc.]
-- OS [Ex. ChromeOS, Windows, iOS]
-- Browser [Ex. Chrome, Safari]
+### **phone**
+ - device: [e.g. iphone 15]
+ - os: [e.g. ios 17]
+ - browser: [e.g. chrome]
+ - version: [e.g. 122]
 
-**Additional context**
-Add any other context about the problem here.
-
-> [!IMPORTANT]
-> Do not post your personal information here this includes but is not limited to email addresses, names, and age.
+### **notes and other stuff**
+add additional stuff
