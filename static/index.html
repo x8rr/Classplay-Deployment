@@ -51,10 +51,22 @@
 
     button.homepagebtn {
       border-radius: 1000px;
+      width: 200px;
+      font-size: 20px;
+      font-weight: 500;
     }
 
     input#searchinject {
       border-radius: 10000px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    p {
+      margin-top: 8%;
     }
   </style>
 
@@ -79,44 +91,57 @@
       <br>
       <br>
       <button class="homepagebtn glass" contextmenu="games">
-        <a href="/g">
-          <span class="material-symbols-rounded">stadia_controller</span>
-        </a>
-
+        <div class="container">
+          <a href="/g">
+            <p><span class="material-symbols-rounded">stadia_controller</span>&nbsp;&nbsp;Games</p>
+            </a>
+        </div>
       </button>
 
       <button class="homepagebtn glass" contextmenu="apps">
-        <a href="/a">
-          <span class="material-symbols-rounded">apps</span>
-        </a>
+        <div class="container">
+          <a href="/a">
+            <p><span class="material-symbols-rounded">apps</span>&nbsp;&nbsp;Apps</p>
+            </a>
+        </div>
 
       </button>
 
       <button class="homepagebtn glass" contextmenu="proxy/search">
-        <a href="/d">
-          <span class="material-symbols-rounded">search</span>
-        </a>
+        <div class="container">
+          <a href="/d">
+            <p><span class="material-symbols-rounded">search</span>&nbsp;&nbsp;Search</p>
+            </a>
+        </div>
 
       </button>
 
+      <br>
+
       <button class="homepagebtn glass" contextmenu="chatroom">
-        <a href="/chat/">
-          <span class="material-symbols-rounded">chat</span>
-        </a>
+        <div class="container">
+          <a href="/c">
+            <p><span class="material-symbols-rounded">chat</span>&nbsp;&nbsp;Chat</p>
+          </a>
+        </div>
 
       </button>
 
       <button class="homepagebtn glass" contextmenu="alt links">
-        <a href="/l">
-          <span class="material-symbols-rounded">link</span>
-        </a>
+        <div class="container">
+          <a href="/l">
+            <p><span class="material-symbols-rounded">link</span>&nbsp;&nbsp;Links</p>
+            </a>
+        </div>
 
       </button>
 
       <button class="homepagebtn glass" contextmenu="settings">
-        <a href="/s">
-          <span class="material-symbols-rounded">settings</span>
-        </a>
+        <div class="container">
+          <a href="/s">
+            <p><span class="material-symbols-rounded">settings</span>&nbsp;&nbsp;Settings</p>
+            </a>
+        </div>
 
       </button>
 
