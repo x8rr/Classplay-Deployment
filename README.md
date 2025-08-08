@@ -57,9 +57,12 @@ https://coolmathskills.vercel.app/
 
 > [!IMPORTANT]
 > You **cannot** deploy to static web hosts, including Netlify, Cloudflare Pages, and GitHub Pages.
+> You can also **not** deploy to Render or Railway anymore as they have banned Ultraviolet.
 
-> [!IMPORTANT]
-> Alternatively, you **can** deploy to Vercel by forking this repo, and deploying.
+> [!NOTE]
+> Alternatively, you **can** deploy to Vercel by forking this repo and deploying or clicking the button below.
+> 
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/d3faultedd/classplay)
 
 ### Password Protection
 
@@ -121,8 +124,6 @@ cd Interstellar
 git pull --force --allow-unrelated-histories # This may overwrite your local changes
 ```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/d3faultedd/classplay)
-
 #### What happened to Replit Deployment?
 
 As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/hosting-changes). Try GitHub Codespaces instead.
@@ -149,18 +150,12 @@ As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/host
 3. Go to the ports tab, Click Forward A Port, And type the port number.
 4. Right-click Visibility and set Port Visibility to Public.
 
-> [!NOTE]
-> We are committed to making Interstellar easy and personalized however, as of now we need your support in making it ad-free. Consider keeping ads so Interstellar can run freely or contribute by being a supporter.
-
 ## Report Issues
 
 If you encounter problems, open an issue on GitHub, and we'll address it promptly.
 
-> [!TIP]
-> If you're having trouble, don't hesitate to reach out to us on [Discord](https://discord.gg/interstellar) for personalized support.
-
 # Credits
 
-A huge thanks goes out to all of the people who have contributed to Interstellar.
+A huge thanks goes out to all of the people who have contributed to Classplay.
 
-[![Contributors](https://contrib.rocks/image?repo=UseInterstellar/Interstellar)](https://github.com/UseInterstellar/Interstellar/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=d3faultedd/classplay)](https://github.com/d3faultedd/classplay/graphs/contributors)
