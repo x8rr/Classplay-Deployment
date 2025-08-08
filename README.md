@@ -1,34 +1,65 @@
-<div align="center">
-    <img src="https://raw.githubusercontent.com/UseInterstellar/Interstellar/main/.github/branding/in.png">
-    <p>Serving over 8+ million users since 2023.<p>
-    <p>Interstellar is a web proxy with a Clean and Sleek UI and easy to use menus. Our goal is to provide the best user experience to everyone.</p>
-</div>
+> ignore the `forked from bahabryra/useclassplay.github.io`, this is because the og repo was deleted and was forked from him to save it
+>
 
-![inpreview](https://github.com/UseInterstellar/Interstellar/assets/89202835/2669efed-5186-4932-83c4-725acae60bd2)
+<center>
+    <h1>Classplay</h1>
+    <p>An easy to use, sleek, games website based on Interstellar.</p>
+</center>
 
-> [!IMPORTANT]
-> If you fork this project, consider giving it a star in the original repository!
+## features
+- games
+- apps
+- proxy
+- cloaks + about:blank
+- chatroom
+- movies
 
-**Join Our [Discord Community](https://discord.gg/interstellar) for support, more links, and an active community!**
+## proxy support for
+- nowgg
+- youtube
+- discord
+- geforce now
+- more!
 
-## Features
+## getting help
+- contact `d3faultedd` on discord @d3faultedd
+- open an issue
 
-- About:Blank Cloaking
-- Tab Cloaking
-- Wide collection of apps & games
-- Clean, Easy to use UI
-- Inspect Element
-- Various Themes
-- Password Protection (Optional)
-- Built-in Tab System
-- Now.gg Support
-- Fast Speeds
-- Geforce NOW Support
+## alternate links
 
-## Deployment
+https://useclassplay.vercel.app/
+
+https://math-for-dummies.vercel.app/
+
+https://amazingmath.vercel.app/
+
+https://coolmathskills.vercel.app/
+
+## developers
+
+> ### d3faultedd <br> <sub style="font-weight: 200;">owner, founder</sub>
+
+> ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
+
+> ### TypeCorrect25 <br> <sub style="font-weight: 200;">helper, anonymous developer</sub>
+
+> ### SprintingSnail69 <br> <sub style="font-weight: 200;">developer</sub>
+
+## credits
+- movies/website inspo: rednotsus
+- proxy: useinterstellar
+
+
+## stats
+
+![Alt](https://repobeats.axiom.co/api/embed/dba2e85b03b71cd08c71b2235e5b96e087945cd9.svg "Repobeats analytics image")
+
 
 > [!IMPORTANT]
 > You **cannot** deploy to static web hosts, including Netlify, Cloudflare Pages, and GitHub Pages.
+
+> [!IMPORTANT]
+> Alternatively, you **can** deploy to Vercel by forking this repo, and deploying.
 
 ### Password Protection
 
@@ -90,13 +121,7 @@ cd Interstellar
 git pull --force --allow-unrelated-histories # This may overwrite your local changes
 ```
 
-<a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/UseInterstellar/Interstellar"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
-<a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/UseInterstellar/Interstellar"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
-
-### Deployment Alternatives
-
-For more deployment options, join our [Discord Server](https://discord.gg/interstellar) for various ways to deploy Interstellar.
-This includes methods of deploying to Render/OnRender.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/d3faultedd/classplay)
 
 #### What happened to Replit Deployment?
 
