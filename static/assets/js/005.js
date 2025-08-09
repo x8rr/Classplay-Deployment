@@ -1,7 +1,7 @@
 // i.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js?v=2025-04-15", {
-    scope: "/a/",
+  navigator.serviceWorker.register("../mathematics/sw.js", {
+    scope: "/",
   });
 });
 
@@ -19,9 +19,10 @@ try {
 
 const form = document.getElementById("fv");
 const input = document.getElementById("iv");
+console.log("hi");
 
 if (form && input) {
-  form.addEventListener("submit", async event => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
@@ -34,7 +35,7 @@ if (form && input) {
 function processUrl(value, path) {
   let url = value.trim();
   const engine = localStorage.getItem("engine");
-  const searchUrl = engine ? engine : "https://www.google.com/search?q=";
+  const searchUrl = "https://www.startpage.com/search?q=";
 
   if (!isUrl(url)) {
     url = searchUrl + url;

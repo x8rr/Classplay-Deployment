@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const setTheme = (theme) => {
         const themeLink = document.getElementById('theme-style');
         console.log(`Setting theme to: ${theme}`);
-        themeLink.href = `${theme}`;
+        themeLink.href = `/${theme}`;
         document.cookie = `theme=${theme}; path=/; max-age=31536000`;
     };
 

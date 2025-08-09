@@ -6,6 +6,11 @@ html {
   background-attachment: fixed
 }
 
+.nav-icon {
+  scale: 110%;
+  margin-top: 20%;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

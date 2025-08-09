@@ -1160,6 +1160,11 @@ p.invis {
     z-index: -1;
 }
 
+.nav-icon {
+  scale: 110%;
+  margin-top: 20%;
+}
+
 input#searchinject {
   width: 450px;
   height: 50px;

@@ -1,15 +1,16 @@
 // t.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js?v=2025-04-15", { scope: "/a/" });
+  navigator.serviceWorker.register("../mathematics/sw.js", { scope: "/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("iv");
   if (form && input) {
-    form.addEventListener("submit", async event => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const formValue = input.value.trim();
+      const formValue = input.value.tr
+      im();
       const url = isUrl(formValue)
         ? prependHttps(formValue)
-        : `https://www.google.com/search?q=${formValue}`;
+        : `https://www.startpage.com/search?q=${formValue}`;
       processUrl(url);
     });
   }
