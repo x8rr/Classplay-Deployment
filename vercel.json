@@ -6,16 +6,15 @@
       "use": "@vercel/node"
     }
   ],
-  "rewrites": [
-    {
-      "source": "/play/:path*",
-      "destination": "https://ucp-games.vercel.app/:path*"
-    }
-  ],
   "routes": [
+    {
+      "src": "/play/(.*)",
+      "dest": "https://ucp-games.vercel.app/$1.html"
+    },
     {
       "src": "/(.*)",
       "dest": "index.js"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
