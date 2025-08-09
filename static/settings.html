@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
     <meta name="image" content="https://useclassplay.github.io/img/banner.png" property="og:image">
     <script src="/assets/js/themes.js"></script>
     <script src="/assets/js/main.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="/assets/js/settings.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="/assets/js/geoblocker.js"></script>
@@ -22,22 +24,23 @@
     <script src="/assets/js/update.js"></script>
     <script src="/assets/js/particles.js" defer></script>
 </head>
+
 <body>
 
-<div id="particles-js"></div>
+    <div id="particles-js"></div>
 
-<nav class="glass">
-    <ul class="navbar">
-        <li><a href="/"><i class="fa-solid fa-home nav-icon"></i></a></li>
-        <li><a href="/g"><i class="fa-solid fa-gamepad nav-icon"></i></a></li>
-        <li><a href="/a"><i class="fa-solid fa-icons nav-icon"></i></a></li>
-        <li><a href="/d"><i class="fa-solid fa-search nav-icon"></i></a></li>
-        <li><a href="/c"><i class="fa-solid fa-message nav-icon"></i></a></li>
-        <li><a href="/403.html"><i class="fa-solid fa-clapperboard nav-icon"></i></a></li>
-        <li><a href="/l"><i class="fa-solid fa-link nav-icon"></i></a></li>
-        <li><a href="/s"><i class="fa-solid fa-sliders nav-icon"></i></a></li>
+    <nav class="glass">
+        <ul class="navbar">
+            <li><a href="/"><i class="fa-solid fa-home nav-icon"></i></a></li>
+            <li><a href="/g"><i class="fa-solid fa-gamepad nav-icon"></i></a></li>
+            <li><a href="/a"><i class="fa-solid fa-icons nav-icon"></i></a></li>
+            <li><a href="/d"><i class="fa-solid fa-search nav-icon"></i></a></li>
+            <li><a href="/c"><i class="fa-solid fa-message nav-icon"></i></a></li>
+            <li><a href="/403.html"><i class="fa-solid fa-clapperboard nav-icon"></i></a></li>
+            <li><a href="/l"><i class="fa-solid fa-link nav-icon"></i></a></li>
+            <li><a href="/s"><i class="fa-solid fa-sliders nav-icon"></i></a></li>
         </ul>
-</nav><br><br>
+    </nav><br><br>
 
     <center>
         <h1 class="title">Settings</h1>
@@ -59,7 +62,7 @@
 
         </div>
 
-        
+
         <div class="settings-card glass">
 
             <h1>About</h1>
@@ -74,12 +77,17 @@
 
         <div class="settings-card glass">
 
-            <h1>Saves</h1>
+            <h1>Saves (W.I.P.)</h1>
 
-            <button class="glass" onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-export"></i> Export Data Save</button>
-            <input type="file" id="importFile" accept=".ucpconfig" style="display: none;" onchange="handleFileImport(this.files[0])">
+            <button class="glass" disabled onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i
+                    class="fa-solid fa-file-export"></i> Export Data
+                Save</button>
+            <input type="file" id="importFile" accept=".ucpconfig" style="display: none;"
+                onchange="handleFileImport(this.files[0])">
             <br><br>
-            <button class="glass" onclick="document.getElementById('importFile').click()" style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-import"></i> Load Data Save</button>
+            <button disabled class="glass" onclick="document.getElementById('importFile').click()"
+                style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-import"></i> Load Data
+                Save</button>
 
         </div>
 
@@ -96,8 +104,10 @@
             <h1>Panic Button</h1>
 
             <form>
-                <input class="tab-cloaker-form glass" type="text" id="key" placeholder="panic key" onkeyup="setPanicKey()" name="icon">
-                <input class="tab-cloaker-form glass" type="text" id="link" name="name" placeholder="panic link" onkeyup="setPanicLink()">
+                <input class="tab-cloaker-form glass" type="text" id="key" placeholder="disabled for now" disabled
+                    onkeyup="setPanicKey()" name="icon">
+                <input class="tab-cloaker-form glass" type="text" id="link" disabled name="name" placeholder="disabled for now"
+                    onkeyup="setPanicLink()">
             </form>
 
         </div>
@@ -107,13 +117,12 @@
             <h1>Theme</h1>
 
             <select id="theme-selector" class="glass">
-                <option value="themes/v3.css">v3</option>
-                <option value="themes/v3-green.css">v3 (Green)</option>
-                <option value="themes/v3-red.css">v3 (Red)</option>
-                <option value="themes/v3-yellow.css">v3 (Yellow)</option>
-                <option value="themes/v3-purple.css">v3 (Purple)</option>
-                <option value="themes/v4.css">v4 (Liquid Glass)</option>
-                <option value="themes/v4-dark.css">v4 (Liquid Glass Dark)</option>
+                <option value="themes/v3.css">Space Blue</option>
+                <option value="themes/v3-green.css">Space Green</option>
+                <option value="themes/v3-red.css">Space Red</option>
+                <option value="themes/v3-yellow.css">Space Yellow</option>
+                <option value="themes/v3-purple.css">Space Purple</option>
+                <option value="themes/v4.css">Liquid Glass</option>
             </select>
 
             <br>
@@ -153,20 +162,21 @@
     <div class="blobsmall"></div>
     <div class="blobtop"></div>
 
-<div id="updToast" class="updToast glass">
-  A new version is available! Would you like to install it?
-  <br>
-  <div class="container">
-    <button onclick="window.location.reload()" class="glass">Install</button>
-    <button onclick="hideToast()" class="glass ignore">Ignore</button>
-  </div>
-</div>
+    <div id="updToast" class="updToast glass">
+        A new version is available! Would you like to install it?
+        <br>
+        <div class="container">
+            <button onclick="window.location.reload()" class="glass">Install</button>
+            <button onclick="hideToast()" class="glass ignore">Ignore</button>
+        </div>
+    </div>
 
-  <div id="toast" class="glass">
-    <p>Error fetching version data (403)</p>
-    <div id="timer"></div>
-  </div>
+    <div id="toast" class="glass">
+        <p>Error fetching version data (403)</p>
+        <div id="timer"></div>
+    </div>
 
-    
+
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,35 +25,42 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
 </head>
+
 <body>
 
-<style>
-    #game {
-        width: 100vw;
-        height: 100vh;
-        border: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-    }
-</style>
+    <style>
+        #game {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+    </style>
 
-<iframe id="game" src="" type=""></iframe>
+    <iframe id="game" src="" type="" sandbox="allow-same-origin allow-pointer-lock a"></iframe>
 
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const gameUrl = params.get('g');
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const gameUrl = params.get('g');
 
-    const frame = document.getElementById('game');
+        const frame = document.getElementById('game');
 
-    frame.src = gameUrl
+        if (gameUrl.includes('/')) {
+            frame.src = `https://ucp-games.vercel.app/${gameUrl}`;
+        } else {
+            frame.src = `https://ucp-games.vercel.app/${gameUrl}/`;
+        }
 
-    console.log("Selected Game: " + gameUrl);
-</script>
+        console.log("Selected Game: " + gameUrl);
+        frame.focus();
+    </script>
 
 </body>
+
 </html>
