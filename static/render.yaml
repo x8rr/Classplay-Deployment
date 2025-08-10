@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: classplay
+    name: Nebulance
     runtime: static
     buildCommand: yarn build
     staticPublishPath: ./
