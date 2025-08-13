@@ -1,9 +1,29 @@
 html {
-  background: url(/img/v4-liquid-glass.jpg);
+  background: radial-gradient(at top, #03114a,black,black);
   color: white;
   font-family: Inter;
   background-size: cover;
-  background-attachment: fixed
+  background-attachment: fixed;
+}
+
+body {
+  background-size: 70px 70px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.017) 2px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.017) 2px, transparent 1px);
+  z-index: -99999999999;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+#theme-warning {
+  display: none;
+}
+
+.nav-icon {
+  scale: 110%;
+  margin-top: 20%;
 }
 
 .material-symbols-outlined {
@@ -20,7 +40,11 @@ html {
 }
 
 button {
-  border-radius: 150px;
+  background: #273dff;
+  border-radius: 12px;
+  outline: rgba(215, 215, 255, 0.24) 2px solid;
+  outline-offset: -2px;
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.178);
 }
 
 @font-face {
@@ -41,8 +65,8 @@ button {
 nav {
   display: block;
   justify-content: center;
-  padding: 1rem;
-  outline: 0;
+  padding: 1rem 1rem;
+  background-color: rgba(1, 1, 1, 0.9);
   color: white;
   border-radius: 270px;
   font-family: Inter;
@@ -54,6 +78,14 @@ nav {
   left: 50%;
   transform: translate(-50%, -10%);
   z-index: 99999;
+  filter: drop-shadow(0 0 25px #03114a65);
+}
+
+button {
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 17px;
 }
   
 nav ul {
@@ -76,13 +108,6 @@ nav li {
   display: flex;
   text-align: center;
   justify-content: center;
-}
-
-button {
-  border-radius: 150px;
-  padding: 10px 20px;
-  color: white;
-  font-size: 17px;
 }
   
 nav a {
@@ -155,7 +180,7 @@ nav a:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 150px;
+  border-radius: 12px;
   transition: all 0.2s ease;
 }
 .rainbow-button:hover {
@@ -173,7 +198,7 @@ nav a:hover {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 150px;
+  border-radius: 12px;
   font-family: SF Pro-Medium, Arial, sans-serif;
   font-size: 20px;
   transition: transform 0.2s ease-in-out, scale 0.2s ease-in-out, border-radius 0.2s ease;
@@ -203,7 +228,7 @@ nav a:hover {
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 150px;
+  border-radius: 12px;
 }
 .rainbow-button:active {
   color: #fc8585;
@@ -229,7 +254,7 @@ nav a:hover {
   background: #494949;
   left: 0;
   top: 0;
-  border-radius: 150px;
+  border-radius: 12px;
 }
 @keyframes glowing {
   0% {
@@ -475,22 +500,26 @@ li.right {
   height: 25px;
   width: 325px;
   padding: 10px;
+  border-radius: 13px;
   border: none;
-  border-radius: 1000px;
   font-family: Inter;
   transition: 0.15s;
+  background-color: #ffffff1c;
   color: white;
   font-size: 17px;
 }
 
 #register input:focus {
   outline: none;
+  background-color: #ffffff31;
 }
 
 #register button {
   height: 50px;
   width: 125px;
+  border-radius: 7.5px;
   border: none;
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -509,7 +538,7 @@ li.right {
 }
 
 #register a {
-  color: white;
+  color: dodgerblue;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -520,22 +549,26 @@ li.right {
   height: 25px;
   width: 325px;
   padding: 10px;
+  border-radius: 13px;
   border: none;
   font-family: Inter;
   transition: 0.15s;
+  background-color: #ffffff1c;
   color: white;
   font-size: 17px;
-  border-radius: 1000px;
 }
 
 #login input:focus {
   outline: none;
+  background-color: #ffffff31;
 }
 
 #login button {
   height: 50px;
   width: 125px;
+  border-radius: 7.5px;
   border: none;
+  background: linear-gradient(to bottom right, #1f8076, #141c94);
   font-family: Inter;
   cursor: pointer;
   transition: 0.15s;
@@ -554,7 +587,7 @@ li.right {
 }
 
 #login a {
-  color: white;
+  color: dodgerblue;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -674,15 +707,25 @@ p.invis {
 }
 
 .settings-card {
-  background-color: #ffffff11;
-  border-radius: 20px;
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0));
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0)), 
+              linear-gradient(to bottom, #2c3454, transparent);
+  background-clip: padding-box, border-box;
+  border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
   height: 175px;
   text-align: center;
   margin: 10px;
+  z-index: 100;
+  border: 2px solid transparent;
+  background-origin: border-box;
+}
+
+.settings-card {
+  position: relative;
+  z-index: 1;
 }
 
 .settings-card h1 {
@@ -694,7 +737,7 @@ p.invis {
   padding: 10px;
   margin-bottom: 10px;
   border: none;
-  border-radius: 150px;
+  border-radius: 12px;
   height: 25px;
   transition: .2s;
   background-color: #ffffff21;
@@ -714,7 +757,7 @@ p.invis {
   height: 45px;
   width: 225px;
   text-align: center;
-  border-radius: 150px;
+  border-radius: 12px;
   background-color: #ffffff1f;
   border: none;
   color: white;
@@ -730,7 +773,8 @@ p.invis {
   height: 45px;
   width: 225px;
   text-align: center;
-  border-radius: 150px;
+  border-radius: 12px;
+  background-color: #ffffff1f;
   border: none;
   color: white;
   font-family: Inter;
@@ -792,7 +836,7 @@ p.invis {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 150px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 16px;
   transition: .2s;
@@ -1061,7 +1105,6 @@ p.invis {
 
 #particles-js {
   position: absolute;
-  display: none;
   width: 100%;
   height: 100%;
   z-index: -2;
@@ -1087,7 +1130,6 @@ p.invis {
 	left: 47vw;
 	top: 100vh;
 	position: fixed;
-    display: none;
 }
 
 .blobbig {
@@ -1108,7 +1150,6 @@ p.invis {
 	left: 47vw;
 	top: 100vh;
 	position: fixed;
-    display: none;
 }
 
 .blobsmall {
@@ -1128,7 +1169,6 @@ p.invis {
 	left: 60vw;
 	top: 100vh;
 	position: fixed;
-    display: none;
 }
 
 .blobtop {
@@ -1150,12 +1190,6 @@ p.invis {
 	top: calc(89vh - 200px);
 	position: fixed;
     z-index: -1;
-    display: none;
-}
-
-.nav-icon {
-  scale: 110%;
-  margin-top: 20%;
 }
 
 input#searchinject {
@@ -1166,6 +1200,7 @@ input#searchinject {
   font-size: 1.25rem;
   font-family: Inter;
   border: none;
+  background: rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: 0.3s;
 }
@@ -1195,13 +1230,14 @@ input::placeholder {
   right: -40%;
   height: 80px;
   width: 220px;
+  background-color: rgba(255, 255, 255, 1);
   padding: 0px;
-  border-radius: 15px;
-  color: white;
+  border-radius: 12px;
+  color: black;
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
-  transition: 0.4s;
+  transition: 0.3s;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -1216,8 +1252,7 @@ input::placeholder {
   left: 0;
   width: 100%;
   height: 3px;
-  border-radius: 5000px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 132, 255);
 }
 
 @keyframes countdown {
@@ -1228,6 +1263,8 @@ input::placeholder {
     width: 0%;
   }
 }
+
+.ignore { background: none; color: black; outline: 1px solid black; }
 
 .homepagebtn {
   width: 65px;
@@ -1258,13 +1295,14 @@ button:focus {
   right: -40%;
   height: 80px;
   width: 220px;
+  background-color: rgba(255, 255, 255, 1);
   padding: 15px;
   border-radius: 25px;
-  color: white;
+  color: black;
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 #updToast button {
@@ -1272,6 +1310,7 @@ button:focus {
   width: 100px;
   border-radius: 100px;
   color: white;
+  background: dodgerblue;
   border: none;
   font-size: 16px;
   margin-top: 10px;
@@ -1283,26 +1322,4 @@ button:focus {
 #updToast button:hover {
   scale: 1.05;
   cursor: pointer;
-}
-
-.glass {
-  background: rgba(54, 54, 54, 0.178);
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 0.75px rgba(223, 223, 223, 0.171),0 16px 32px rgba(0,0,0,.12);
-  backdrop-filter: blur(10px);
-  outline: 0;
-}
-
-.column {
-  background: rgba(54, 54, 54, 0.178);
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 0.75px rgba(223, 223, 223, 0.171),0 16px 32px rgba(0,0,0,.12);
-  backdrop-filter: blur(10px);
-  outline: 0;
-  border-radius: 25px;
-}
-
-.column:hover {
-  scale: 1;
-  filter: brightness(0.8);
 }

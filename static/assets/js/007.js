@@ -1,6 +1,6 @@
 // t.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../mathematics/sw.js", { scope: "/" });
+  navigator.serviceWorker.register("../mathematics/sw.js", { scope: "/a/" });
   const form = document.getElementById("fv");
   const input = document.getElementById("iv");
   if (form && input) {
