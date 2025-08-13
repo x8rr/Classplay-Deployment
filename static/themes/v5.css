@@ -40,7 +40,7 @@ body {
 }
 
 button {
-  background: #273dff;
+  background: #2a36ff;
   border-radius: 12px;
   outline: rgba(215, 215, 255, 0.24) 2px solid;
   outline-offset: -2px;
@@ -54,12 +54,17 @@ button {
 
 @font-face {
   font-family: ginto;
-  src: url(/fonts/inter.ttf);
+  src: url(/fonts/pjs.ttf);
 }
 
 @font-face {
   font-family: Inter;
-  src: url(/fonts/inter.ttf);
+  src: url(/fonts/pjs.ttf);
+}
+
+@font-face {
+  font-family: pjs;
+  src: url(/fonts/pjs.ttf);
 }
 
 nav {
@@ -68,17 +73,16 @@ nav {
   padding: 1rem 1rem;
   background-color: rgba(1, 1, 1, 0.9);
   color: white;
-  border-radius: 270px;
+  border-radius: 0px;
   font-family: Inter;
-  height: 17.5px;
-  width: fit-content;
+  height: 5%;
+  width: 100%;
   justify-self: center;
   position: fixed;
+  left: 0;
+  top: 0;
   bottom: 2%;
-  left: 50%;
-  transform: translate(-50%, -10%);
   z-index: 99999;
-  filter: drop-shadow(0 0 25px #03114a65);
 }
 
 button {
@@ -91,16 +95,11 @@ button {
 nav ul {
   list-style: none;
   margin: 0;
-  position: relative;
   padding: 0;
-  justify-content: center;
-  display: flex;
-  left: 50%;
-  transform: translateX(-47%);
 }
   
 nav li {
-  margin-right: .89rem;
+  margin: 15px;
   position: relative;
   font-size: 1rem;
   transition: 0.2s;
@@ -108,6 +107,8 @@ nav li {
   display: flex;
   text-align: center;
   justify-content: center;
+  float: right;
+  vertical-align: middle;
 }
   
 nav a {
@@ -120,11 +121,17 @@ nav a {
   justify-content: center;
   text-align: center;
   scale: 1.1;
+  font-weight: 600;
+  background-color: transparent;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: 0.2s;
+  border-radius: 12.5px;
 }
 
 nav a:hover {
-  transform: scale(1.105);
-  border-radius: 1500px;
+  background-color: #2a35ff28;
   cursor: pointer;
 }
 
@@ -165,107 +172,6 @@ nav a:hover {
 .home-title {
   font-family: ginto;
   font-size: 65px;
-}
-
-.rainbow-button {
-  font-family: "Inter", Arial, sans-serif;
-  cursor: pointer;
-  background-color: #413d3d;
-  border: none;
-  color: rgb(248, 244, 244);
-  padding: 10px 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-  transition: all 0.2s ease;
-}
-.rainbow-button:hover {
-  scale: 1.1;
-  transition: 0.2s;
-}
-
-.rainbow-button {
-  width: 250px;
-  height: 60px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 12px;
-  font-family: SF Pro-Medium, Arial, sans-serif;
-  font-size: 20px;
-  transition: transform 0.2s ease-in-out, scale 0.2s ease-in-out, border-radius 0.2s ease;
-}
-.rainbow-button:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 12px;
-}
-.rainbow-button:active {
-  color: #fc8585;
-  scale: 0.9;
-  border-radius: 12px;
-}
-.rainbow-button:active:after {
-  background: transparent;
-}
-.rainbow-button:hover {
-  transform: scale(1.05);
-  border-radius: 8px;
-}
-.rainbow-button:hover:before {
-  opacity: 1;
-}
-.rainbow-button:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #494949;
-  left: 0;
-  top: 0;
-  border-radius: 12px;
-}
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
 }
 
 .material-symbols-outlined {
@@ -406,37 +312,6 @@ button {
 
 a {
   font-family: Inter;
-}
-
-.to {
-  height: 225px;
-  width: 175px;
-  border-radius: 25px;
-  border: none;
-  background: #585858;
-  box-shadow: 0 0 10px #585858;
-  transition: 0.2s ease-in-out;
-}
-
-.to:hover {
-  scale: 105%;
-  background-color: #b1b1b1;
-  box-shadow: 0 0 25px white;
-}
-
-.to:before {
-  background: linear-gradient(45deg, red, orange, yellow, lime, green, blue, purple, magenta);
-  position: absolute;
-  background-size: 400%;
-  z-index: -1;
-  width: calc(100%+10px);
-  height: calc(100%+10px);
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.to:hover:before {
-  opacity: 1;
 }
 
 .games-search {
@@ -1269,8 +1144,7 @@ input::placeholder {
 .homepagebtn {
   width: 65px;
   height: 65px;
-  border-radius: 35%;
-  background: linear-gradient(to bottom right, rgba(0, 153, 255, 0.671), rgba(91, 208, 255, 0.651));
+  border-radius: 15px;
   border: none;
   margin: 7.5px;
   transition: 0.2s;
@@ -1322,4 +1196,28 @@ button:focus {
 #updToast button:hover {
   scale: 1.05;
   cursor: pointer;
+}
+
+input.search-home {
+  border-radius: 12.5px;
+  width: 400px;
+  height: 20px;
+  border: 2px solid transparent;
+  background: rgba(1, 1, 1, 0.8);
+  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.384)), 
+              linear-gradient(to bottom, #2a35ff48, transparent);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  padding: 15px 20px;
+  font-family: pjs;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+input.search-home:focus {
+  outline: none;
+  border: 2px solid #2a35ff7a;
+  background-color: rgba(1, 1, 1, 0.9);
 }

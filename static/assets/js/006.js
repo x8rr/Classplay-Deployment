@@ -86,7 +86,7 @@ const dropdown = document.getElementById("dropdown");
 const options = dropdown.getElementsByTagName("option");
 
 const sortedOptions = Array.from(options).sort((a, b) =>
-  a.textContent.localeCompare(b.textContent),
+  a.textContent.localeCompare(b.textContent)
 );
 
 while (dropdown.firstChild) {
@@ -148,7 +148,7 @@ function redirectToMainDomain() {
   } else window.location.href = mainDomainUrl + window.location.pathname;
 }
 
-document.addEventListener("DOMContentLoaded", event => {
+document.addEventListener("DOMContentLoaded", (event) => {
   const icon = document.getElementById("tab-favicon");
   const name = document.getElementById("t");
   const selectedValue = localStorage.getItem("selectedOption") || "Default";
@@ -213,7 +213,7 @@ if (window.localStorage.getItem("particles") !== "") {
   }
 }
 
-switches.addEventListener("change", event => {
+switches.addEventListener("change", (event) => {
   if (event.currentTarget.checked) {
     window.localStorage.setItem("particles", "true");
   } else {
@@ -225,11 +225,11 @@ function EngineChange(dropdown) {
   const selectedEngine = dropdown.value;
 
   const engineUrls = {
-    Google: "https://www.startpage.com/search?q=",
-    Bing: "https://www.startpage.com/search?q=",
-    DuckDuckGo: "https://startpage.com/?q=",
-    Qwant: "https://www.startpage.com/?q=",
-    Startpage: "https://www.startpage.com/search?q=",
+    Google: "https://www.google.com/search?q=",
+    Bing: "https://www.google.com/search?q=",
+    DuckDuckGo: "https://google.com/?q=",
+    Qwant: "https://www.google.com/?q=",
+    Startpage: "https://www.google.com/search?q=",
     SearchEncrypt: "https://www.searchencrypt.com/search/?q=",
     Ecosia: "https://www.ecosia.org/search?q=",
   };
@@ -285,7 +285,7 @@ function exportSaveData() {
   function getCookies() {
     const cookies = document.cookie.split("; ");
     const cookieObj = {};
-    cookies.forEach(cookie => {
+    cookies.forEach((cookie) => {
       const [name, value] = cookie.split("=");
       cookieObj[name] = value;
     });
@@ -320,11 +320,11 @@ function importSaveData() {
   const input = document.createElement("input");
   input.type = "file";
   input.accept = "application/json";
-  input.onchange = event => {
+  input.onchange = (event) => {
     const file = event.target.files[0];
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = e => {
+    reader.onload = (e) => {
       try {
         const data = JSON.parse(e.target.result);
         if (data.cookies) {
@@ -339,7 +339,7 @@ function importSaveData() {
         }
         alert("Your save data has been imported. Please test it out.");
         alert(
-          "If you find any issues then report it in GitHub or the Interstellar Discord.",
+          "If you find any issues then report it in GitHub or the Interstellar Discord."
         );
       } catch (error) {
         console.error("Error parsing JSON file:", error);

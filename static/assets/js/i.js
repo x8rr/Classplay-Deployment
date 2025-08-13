@@ -1,41 +1,26 @@
-// i.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../mathematics/sw.js", {
-    scope: "/",
+  navigator.serviceWorker.register("../sw.js?v=10-02-2024", {
+    scope: "/a/",
   });
 });
 
-let xl;
-
-try {
-  xl = window.top.location.pathname === "/d";
-} catch {
-  try {
-    xl = window.parent.location.pathname === "/d";
-  } catch {
-    xl = false;
-  }
-}
-
 const form = document.getElementById("fv");
 const input = document.getElementById("iv");
-console.log("hi");
 
 if (form && input) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    try {
-      if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/d");
-    } catch {
-      processUrl(input.value, "/d");
+    if (window.top.location.pathname === "/rx") {
+      processUrl(input.value, "");
+    } else {
+      processUrl(input.value, "/rx");
     }
   });
 }
 function processUrl(value, path) {
   let url = value.trim();
   const engine = localStorage.getItem("engine");
-  const searchUrl = "https://www.google.com/search?q=";
+  const searchUrl = engine ? engine : "https://www.google.com/search?q=";
 
   if (!isUrl(url)) {
     url = searchUrl + url;
@@ -56,7 +41,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/d");
+  processUrl(value, "/rx");
 }
 
 function blank(value) {

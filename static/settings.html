@@ -24,6 +24,7 @@
     <script src="/assets/js/update.js"></script>
     <script src="/assets/js/particles.js" defer></script>
 </head>
+
 <body>
 
     <div class="grid-background"></div>
@@ -37,7 +38,7 @@
             <li><a href="/"><i class="fa-solid fa-home nav-icon"></i></a></li>
             <li><a href="/g"><i class="fa-solid fa-gamepad nav-icon"></i></a></li>
             <li><a href="/a"><i class="fa-solid fa-icons nav-icon"></i></a></li>
-            <li><a href="/d"><i class="fa-solid fa-search nav-icon"></i></a></li>
+            <li><a href="/rx"><i class="fa-solid fa-search nav-icon"></i></a></li>
             <li><a href="/c"><i class="fa-solid fa-message nav-icon"></i></a></li>
             <li><a href="/403.html"><i class="fa-solid fa-clapperboard nav-icon"></i></a></li>
             <li><a href="/l"><i class="fa-solid fa-link nav-icon"></i></a></li>
@@ -84,8 +85,8 @@
 
             <h1>Saves (W.I.P.)</h1>
 
-            <button class="glass" disabled onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i
-                    class="fa-solid fa-file-export"></i> Export Data
+            <button class="glass" disabled onclick="exportWebsiteData()"
+                style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-export"></i> Export Data
                 Save</button>
             <input type="file" id="importFile" accept=".ucpconfig" style="display: none;"
                 onchange="handleFileImport(this.files[0])">
@@ -111,8 +112,8 @@
             <form>
                 <input class="tab-cloaker-form glass" type="text" id="key" placeholder="disabled for now" disabled
                     onkeyup="setPanicKey()" name="icon">
-                <input class="tab-cloaker-form glass" type="text" id="link" disabled name="name" placeholder="disabled for now"
-                    onkeyup="setPanicLink()">
+                <input class="tab-cloaker-form glass" type="text" id="link" disabled name="name"
+                    placeholder="disabled for now" onkeyup="setPanicLink()">
             </form>
 
         </div>
@@ -162,7 +163,7 @@
 
     </div>
 
-    
+
 
     <div id="updToast" class="updToast glass">
         A new version is available! Would you like to install it?

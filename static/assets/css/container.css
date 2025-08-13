@@ -3,23 +3,18 @@
    transition: all 0.2s ease;
    cursor: pointer;
    background: var(--background-column);
-   border-radius: 20px;
-   padding-left: 20px;
-   padding-right: 20px;
-   padding-top: 20px;
+   border-radius: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 5px;
    margin: 0;
-}
-
-@font-face {
-   font-family: Inter;
-   src: url(/fonts/inter.ttf);
 }
 
 .column img {
    position: absolute;
    width: 145px;
    height: 145px;
-   border-radius: 45px;
+   border-radius: 0px;
    transition: all 0.2s ease;
    border-radius: 10px;
 }
@@ -36,6 +31,10 @@
    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
    padding-top: 136px;
    padding-bottom: 12px;
+}
+
+.column:hover {
+   transform: scale(1.2);
 }
 
 .column:hover .label {
@@ -60,8 +59,9 @@
 }
 
 input {
+   padding: 20px;
    width: 550px;
-   border-radius: 5000px;
+   border-radius: 5px;
    background: var(--background-column);
    text-align: center;
    font-size: 20px;
@@ -69,30 +69,17 @@ input {
    outline: none;
    color: var(--text-primary);
    transition: 0.4s;
-   height: 50px;
-   font-size: 17px;
-   font-family: Inter;
 }
 
 select {
-   padding: 10px;
-   border-radius: 5000px;
+   padding: 20px;
+   border-radius: 5px;
    background: var(--background-column);
    color: var(--text-primary);
-   font-size: 17px;
-   height: 50px;
+   font-size: 20px;
    border: 0px;
    outline: none;
    cursor: pointer;
-   font-family: Inter;
-}
-
-option {
-   background-color: #1d1d1d;
-}
-
-.column button {
-   display: none;
 }
 
 .input-c {
