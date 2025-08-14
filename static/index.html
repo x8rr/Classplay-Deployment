@@ -9,13 +9,20 @@
   <link rel="shortcut icon" id="tab-favicon" href="img/favicon.png" />
   <title id="t">Home</title>
   <link rel="stylesheet" id="theme-style" href="">
-  <script src="assets/js/themes.js"></script>
-  <script src="assets/js/settings.js"></script>
-  <script src="assets/js/update.js"></script>
-  <script src="assets/js/music.js"></script>
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
-    crossorigin="anonymous"></script>
+  <script src="/assets/js/themes.js"></script>
+  <script src="/assets/js/update.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/settings.js"></script>
+  <script src="/assets/js/geoblocker.js"></script>
+  <script src="/assets/js/particles.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="/assets/js/profile.js" type="module"></script>
+  <script src="/assets/js/ripple.js" defer></script>
+  <script src="/assets/js/mc-download-popup.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="/assets/fontawesome/css/all.css" rel="stylesheet" />
 </head>
 
 <style>
@@ -35,19 +42,26 @@
 
 <body class="center" onload="SplashT">
 
-  <nav>
+  <nav class="glass">
     <ul class="navbar">
-      <li><a href="/"><i class="fa-solid fa-home nav-icon"></i>&nbsp;&nbsp;Home</a></li>
-      <li><a href="/g"><i class="fa-solid fa-gamepad nav-icon"></i>&nbsp;&nbsp;Games</a></li>
-      <li><a href="/a"><i class="fa-solid fa-icons nav-icon"></i>&nbsp;&nbsp;Apps</a></li>
-      <li><a href="/rx"><i class="fa-solid fa-search nav-icon"></i>&nbsp;&nbsp;Search</a></li>
-      <li><a href="/c"><i class="fa-solid fa-message nav-icon"></i>&nbsp;&nbsp;Chat</a></li>
-      <li><a href="/403.html"><i class="fa-solid fa-clapperboard nav-icon"></i>&nbsp;&nbsp;Movies</a></li>
-      <li><a href="/l"><i class="fa-solid fa-link nav-icon"></i>&nbsp;&nbsp;Links</a></li>
-      <li><a href="/s"><i class="fa-solid fa-sliders nav-icon"></i>&nbsp;&nbsp;Settings</a></li>
+      <li>&nbsp;&nbsp;</li> <!-- spacer -->
+      <li><a href="/s"><i class="fa-solid fa-sliders"></i>&nbsp;&nbsp;Settings</a></li>
+      <li><a href="/l"><i class="fa-solid fa-link"></i>&nbsp;&nbsp;Links</a></li>
+      <li><a href="/403.html"><i class="fa-solid fa-clapperboard"></i>&nbsp;&nbsp;Movies</a></li>
+      <li><a href="/c"><i class="fa-solid fa-message"></i>&nbsp;&nbsp;Chat</a></li>
+      <li><a href="/rx"><i class="fa-solid fa-search"></i>&nbsp;&nbsp;Search</a></li>
+      <li><a href="/a"><i class="fa-solid fa-icons"></i>&nbsp;&nbsp;Apps</a></li>
+      <li><a href="/g"><i class="fa-solid fa-gamepad "></i>&nbsp;&nbsp;Games</a></li>
+      <li><a href="/"><i class="fa-solid fa-home"></i>&nbsp;&nbsp;Home</a></li>
     </ul>
   </nav>
-
+  <center>
+    <h1 style="font-size: xx-large; color: red;" id="warning-thing">YOU ARE SEEING THIS BECAUSE YOU HAVE NO THEME
+      <br><br>
+      PLEASE SELECT A
+      THEME FROM <a href="/s#theme-selector">SETTINGS</a>
+    </h1>
+  </center>
   <style>
     button.homepagebtn {
       width: 200px;
@@ -56,10 +70,6 @@
     }
 
 
-    a {
-      text-decoration: none;
-      color: white;
-    }
 
     p {
       margin-top: 8%;
@@ -72,7 +82,7 @@
 
     <div>
 
-      <h1 style="font-size: 81px; margin-bottom: 0;">Nebulance</h1>
+      <h1 style="font-size: 81px; margin-bottom: 0;">Classplay</h1>
       <br>
       <div class="main">
         <div class="search-container">
@@ -145,7 +155,6 @@
   <script src="/assets/js/home.js?v=00"></script>
   <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
   <script src="./assets/ultra/config.js?v=10-02-2024"></script>
-  <script src="assets/js/f.js"></script>
   <script src="/assets/js/m.js?v=08"></script>
   <!-- DO NOT REMOVE-->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>

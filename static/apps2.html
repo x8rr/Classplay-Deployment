@@ -31,32 +31,39 @@
     <link rel="stylesheet" href="chrome-extension://ihcjicgdanjaechkgeegckofjjedodee/app/content-style.css">
 </head>
 
-<center>
-    <h1 class="title" style="margin-bottom: -120px; margin-top: 70px;">Apps</h1>
-</center>
 
-<div id="updToast" class="updToast glass">
-    A new version is available! Would you like to install it?
-    <br>
-    <div class="container">
-        <button class="glass" onclick="window.location.reload()">Install</button>
-        <button class="glass ignore" onclick="hideToast()">Ignore</button>
-    </div>
-</div>
 
 <body>
+    <center>
+        <h1 style="font-size: xx-large; color: red;" id="warning-thing">YOU ARE SEEING THIS BECAUSE YOU HAVE NO THEME
+            <br><br> PLEASE SELECT A
+            THEME FROM <a href="/s#theme-selector">SETTINGS</a></h1>
+    </center>
     <nav class="glass">
         <ul class="navbar">
-            <li><a href="/"><i class="fa-solid fa-home nav-icon"></i></a></li>
-            <li><a href="/g"><i class="fa-solid fa-gamepad nav-icon"></i></a></li>
-            <li><a href="/a"><i class="fa-solid fa-icons nav-icon"></i></a></li>
-            <li><a href="/rx"><i class="fa-solid fa-search nav-icon"></i></a></li>
-            <li><a href="/c"><i class="fa-solid fa-message nav-icon"></i></a></li>
-            <li><a href="/403.html"><i class="fa-solid fa-clapperboard nav-icon"></i></a></li>
-            <li><a href="/l"><i class="fa-solid fa-link nav-icon"></i></a></li>
-            <li><a href="/s"><i class="fa-solid fa-sliders nav-icon"></i></a></li>
+            <li>&nbsp;&nbsp;</li> <!-- spacer -->
+            <li><a href="/s"><i class="fa-solid fa-sliders"></i>&nbsp;&nbsp;Settings</a></li>
+            <li><a href="/l"><i class="fa-solid fa-link"></i>&nbsp;&nbsp;Links</a></li>
+            <li><a href="/403.html"><i class="fa-solid fa-clapperboard"></i>&nbsp;&nbsp;Movies</a></li>
+            <li><a href="/c"><i class="fa-solid fa-message"></i>&nbsp;&nbsp;Chat</a></li>
+            <li><a href="/rx"><i class="fa-solid fa-search"></i>&nbsp;&nbsp;Search</a></li>
+            <li><a href="/a"><i class="fa-solid fa-icons"></i>&nbsp;&nbsp;Apps</a></li>
+            <li><a href="/g"><i class="fa-solid fa-gamepad "></i>&nbsp;&nbsp;Games</a></li>
+            <li><a href="/"><i class="fa-solid fa-home"></i>&nbsp;&nbsp;Home</a></li>
         </ul>
     </nav>
+    <br><br><br><br>
+    <center>
+        <h1 class="title" style="margin-bottom: -120px; margin-top: 70px;">Apps</h1>
+    </center>
+    <div id="updToast" class="updToast glass">
+        A new version is available! Would you like to install it?
+        <br>
+        <div class="container">
+            <button class="glass" onclick="window.location.reload()">Install</button>
+            <button class="glass ignore" onclick="hideToast()">Ignore</button>
+        </div>
+    </div>
     <div class="input-c">
         <input class="glass" type="text" id="search" onkeyup="bar()" placeholder="Search">
         <select class="glass" title="Category" id="category" name="category" onchange="category()">
@@ -76,23 +83,24 @@
         </select>
     </div>
     <div class="pinned">
-        <div class="apps">
+    </div>
+    <div class="apps">
 
-        </div>
-        <script src="assets/js/002.js"></script>
-        <script src="assets/js/001.js"></script>
-        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
-        <!-- DO NOT REMOVE-->
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+    </div>
+    <script src="assets/js/002.js"></script>
+    <script src="assets/js/001.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"></script>
+    <!-- DO NOT REMOVE-->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-            gtag("config", "G-WKJQ5QHQTJ");
-        </script>
-        <!-- DO NOT REMOVE-->
+        gtag("config", "G-WKJQ5QHQTJ");
+    </script>
+    <!-- DO NOT REMOVE-->
 
 
 </body>
