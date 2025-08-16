@@ -340,23 +340,6 @@ a {
   font-family: Inter;
 }
 
-.games-search {
-  height: 50px;
-  width: 600px;
-  border-radius: 20px;
-  border-width: 0px;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  color: white;
-  font-size: 17px;
-  font-family: Inter;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.games-search:focus {
-  outline: none;
-}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -1224,7 +1207,7 @@ button:focus {
   cursor: pointer;
 }
 
-input.search-home {
+input {
   border-radius: 12.5px;
   width: 400px;
   height: 20px;
@@ -1242,7 +1225,55 @@ input.search-home {
   transition: 0.2s;
 }
 
-input.search-home:focus {
+input:focus {
+  outline: none;
+  border: 2px solid #2a35ff7a;
+  background-color: rgba(1, 1, 1, 0.9);
+}
+
+input#search {
+  border-radius: 12.5px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid transparent;
+  background: rgba(1, 1, 1, 0.8);
+  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.384)), 
+              linear-gradient(to bottom, #2a35ff48, transparent);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  padding: 15px 20px;
+  font-family: pjs;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+input#search:focus {
+  outline: none;
+  border: 2px solid #2a35ff7a;
+  background-color: rgba(1, 1, 1, 0.9);
+}
+
+#category {
+  border-radius: 12.5px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid transparent;
+  background: rgba(1, 1, 1, 0.8);
+  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.384)), 
+              linear-gradient(to bottom, #2a35ff48, transparent);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  padding: 15px 20px;
+  font-family: pjs;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+#category:focus {
   outline: none;
   border: 2px solid #2a35ff7a;
   background-color: rgba(1, 1, 1, 0.9);
