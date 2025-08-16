@@ -340,23 +340,6 @@ a {
   font-family: Inter;
 }
 
-.games-search {
-  height: 50px;
-  width: 600px;
-  border-radius: 20px;
-  border-width: 0px;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  color: white;
-  font-size: 17px;
-  font-family: Inter;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.games-search:focus {
-  outline: none;
-}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -1131,10 +1114,12 @@ input::placeholder {
   right: 1%;
   height: 80px;
   width: 220px;
-  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.404)), 
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0)), 
               linear-gradient(to bottom, #2c3454);
   background-clip: padding-box, border-box;
   background-origin: border-box;
+  border: 2px solid transparent;
+  padding: 0px;
   border-radius: 12px;
   color: white;
   font-family: Inter;
@@ -1143,7 +1128,7 @@ input::placeholder {
   transition: 0.3s;
   overflow-y: hidden;
   overflow-x: hidden;
-  z-index: 999999999;
+  z-index: 9999999999;
 }
 
 #toast p {
@@ -1152,12 +1137,11 @@ input::placeholder {
 
 #toast #timer {
   position: relative;
-  bottom: -10%;
+  bottom: -11%;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: rgb(214, 211, 255);
-  border-radius: 10000px;
+  background-color: rgb(199, 217, 255);
 }
 
 @keyframes countdown {
@@ -1197,33 +1181,54 @@ button:focus {
   right: -40%;
   height: 80px;
   width: 220px;
-  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.404)), 
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0));
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0)), 
               linear-gradient(to bottom, #2c3454);
-  padding: 15px;
   background-clip: padding-box, border-box;
-  background-origin: border-box;
-  border: 2px solid transparent;
+  padding: 15px;
   border-radius: 12.5px;
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
   transition: 0.3s;
-  z-index: 999999999;
+  z-index: 999999999999;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
 #updToast button {
   height: 35px;
   width: 100px;
-  border-radius: 12.5px;
   color: white;
   background: #2a36ff;
+  border-radius: 12px;
+  outline: rgba(215, 215, 255, 0.24) 2px solid;
+  outline-offset: -2px;
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.178);
   border: none;
+  transition: 0.2s;
   font-size: 16px;
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+#updToast button.ignore {
+  height: 35px;
+  width: 100px;
+  background: transparent;
+  border-radius: 12px;
+  outline: rgba(215, 215, 255, 0.24) 2px solid;
+  outline-offset: -2px;
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.178);
+  border: none;
   transition: 0.2s;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #updToast button.ignore {
@@ -1239,7 +1244,7 @@ button:focus {
   cursor: pointer;
 }
 
-input.search-home {
+input {
   border-radius: 12.5px;
   width: 400px;
   height: 20px;
@@ -1257,7 +1262,55 @@ input.search-home {
   transition: 0.2s;
 }
 
-input.search-home:focus {
+input:focus {
+  outline: none;
+  border: 2px solid #2a35ff7a;
+  background-color: rgba(1, 1, 1, 0.9);
+}
+
+input#search {
+  border-radius: 12.5px;
+  width: 500px;
+  height: 50px;
+  border: 2px solid transparent;
+  background: rgba(1, 1, 1, 0.8);
+  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.384)), 
+              linear-gradient(to bottom, #2a35ff48, transparent);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  padding: 15px 20px;
+  font-family: pjs;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+input#search:focus {
+  outline: none;
+  border: 2px solid #2a35ff7a;
+  background-color: rgba(1, 1, 1, 0.9);
+}
+
+#category {
+  border-radius: 12.5px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid transparent;
+  background: rgba(1, 1, 1, 0.8);
+  background: linear-gradient(to bottom, #121428, rgba(0, 0, 0, 0.384)), 
+              linear-gradient(to bottom, #2a35ff48, transparent);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  padding: 15px 20px;
+  font-family: pjs;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+#category:focus {
   outline: none;
   border: 2px solid #2a35ff7a;
   background-color: rgba(1, 1, 1, 0.9);

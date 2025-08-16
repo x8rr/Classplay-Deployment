@@ -220,6 +220,18 @@ switches.addEventListener("change", (event) => {
     window.localStorage.setItem("particles", "false");
   }
 });
+// AB Cloak
+
+function toggleAB() {
+  ab = localStorage.getItem("ab");
+  if (!ab) {
+    localStorage.setItem("ab", "false");
+  } else if (ab === "true") {
+    localStorage.setItem("ab", "false");
+  } else {
+    localStorage.setItem("ab", "false");
+  }
+}
 // Search Engine
 function EngineChange(dropdown) {
   const selectedEngine = dropdown.value;

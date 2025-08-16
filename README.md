@@ -4,31 +4,70 @@
     <p>Interstellar is a web proxy with a Clean and Sleek UI and easy to use menus. Our goal is to provide the best user experience to everyone.</p>
 </div>
 
-![inpreview](https://github.com/UseInterstellar/Interstellar/assets/89202835/2669efed-5186-4932-83c4-725acae60bd2)
-
-> [!IMPORTANT]
-> If you fork this project, consider giving it a star in the original repository!
-
-**Join Our [Discord Community](https://discord.gg/interstellar) for support, more links, and an active community!**
+<center>
+    <h1>Nebulance</h1>
+    <p>An easy to use, sleek, games website based on Interstellar.</p>
+</center>
 
 ## Features
+- Games
+- Apps
+- Proxy
+- Cloaks + about:blank
+- Chatroom
+- Movies (work in progress)
 
-- About:Blank Cloaking
-- Tab Cloaking
-- Wide collection of apps & games
-- Clean, Easy to use UI
-- Inspect Element
-- Various Themes
-- Password Protection (Optional)
-- Built-in Tab System
-- Now.gg Support
-- Fast Speeds
-- Geforce NOW Support
+## Proxy support
+- now.gg
+- Youtube
+- Discord
+- Geforce Now
+- easyfun.gg
+- ...and more!
+
+## Contact
+- contact `afterddark` on Discord
+- open an issue
+
+## Links
+
+https://usenebulance.vercel.app/
+
+https://math-for-dummies.vercel.app/
+
+https://amazingmath.vercel.app/
+
+https://coolmathskills.vercel.app/
+
+## Developers
+
+> ### afterddark <br> <sub style="font-weight: 200;">owner, founder</sub>
+
+> ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
+
+> ### TypeCorrect25 <br> <sub style="font-weight: 200;">helper, anonymous developer</sub>
+
+> ### SprintingSnail69 <br> <sub style="font-weight: 200;">developer</sub>
+
+## credits
+- movies/website inspo: rednotsus
+- Proxy: UseInterstellar
+
+
+## stats
+
+![Alt](https://repobeats.axiom.co/api/embed/dba2e85b03b71cd08c71b2235e5b96e087945cd9.svg "Repobeats analytics image")
 
 ## Deployment
 
 > [!IMPORTANT]
 > You **cannot** deploy to static web hosts, including Netlify, Cloudflare Pages, and GitHub Pages.
+> You can also **not** deploy to Render or Railway anymore as they have banned Ultraviolet.
+
+> [!NOTE]
+> Alternatively, you **can** deploy to Vercel by forking this repo and deploying or clicking the button below.
+> 
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/afterddark/nebulance)
 
 ### Password Protection
 
@@ -43,15 +82,8 @@
 You must run these commands on your server:
 
 ```bash
-git clone https://github.com/UseInterstellar/Interstellar
-cd Interstellar
-```
-
-#### Ad-Free Deployment
-
-```bash
-git clone --branch Ad-Free https://github.com/UseInterstellar/Interstellar
-cd Interstellar
+git clone https://github.com/UseNebulance/Nebulance
+cd Nebulance
 ```
 
 Next depending on your package manager, run one of the following commands:
@@ -65,7 +97,7 @@ bun i
 bun start
 ```
 
-#### pnpm
+#### PNPM (Recommended)
 
 If you are using pnpm, run the following commands:
 
@@ -74,7 +106,7 @@ pnpm i
 pnpm start
 ```
 
-#### npm
+#### NPM
 
 If you are using npm, run the following commands:
 
@@ -86,7 +118,7 @@ npm run start
 ### Updating
 
 ```bash
-cd Interstellar
+cd Nebulance
 git pull --force --allow-unrelated-histories # This may overwrite your local changes
 ```
 
@@ -135,6 +167,6 @@ If you encounter problems, open an issue on GitHub, and we'll address it promptl
 
 # Credits
 
-A huge thanks goes out to all of the people who have contributed to Interstellar.
+A huge thanks goes out to all of the people who have contributed to Nebulance.
 
-[![Contributors](https://contrib.rocks/image?repo=UseInterstellar/Interstellar)](https://github.com/UseInterstellar/Interstellar/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=afterddark/Nebulance)](https://github.com/afterddark/Nebulance/graphs/contributors)

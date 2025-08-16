@@ -20,15 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "algebraxyz.info",
     "thegalleryofart.info",
   ];
-
-  if (!blockedHostnames.includes(window.location.hostname)) {
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src =
-      "//angelabedsautopsy.com/1c/c3/8a/1cc38a6899fdf8ba4dfe779bcc54627b.js";
-    document.body.appendChild(script);
-  }
-
   const nav = document.querySelector(".f-nav");
 
   if (nav) {
@@ -44,7 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="f-nav-right">
         <a class="navbar-link" href="/./a"><i class="fa-solid fa-gamepad navbar-icon"></i><an>&#71;&#97;</an><an>&#109;&#101;&#115;</an></a>
         <a class="navbar-link" href="/./b"><i class="fa-solid fa-phone navbar-icon"></i><an>&#65;&#112;</an><an>&#112;&#115;</an></a>
-        ${qp ? "" : '<a class="navbar-link" href="/./d"><i class="fa-solid fa-laptop navbar-icon"></i><an>&#84;&#97;</an><an>&#98;&#115;</an></a>'}
+        ${
+          qp
+            ? ""
+            : '<a class="navbar-link" href="/./d"><i class="fa-solid fa-laptop navbar-icon"></i><an>&#84;&#97;</an><an>&#98;&#115;</an></a>'
+        }
         <a class="navbar-link" href="/./c"><i class="fa-solid fa-gear navbar-icon settings-icon"></i><an>&#83;&#101;&#116;</an><an>&#116;&#105;&#110;&#103;</an></a>
       </div>`;
     nav.innerHTML = html;
@@ -306,11 +301,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Event Key Logic
-  const eventKey = JSON.parse(localStorage.getItem("eventKey")) || ["Ctrl", "E"];
-  const pLink = localStorage.getItem("pLink") || "https://classroom.google.com/";
+  const eventKey = JSON.parse(localStorage.getItem("eventKey")) || [
+    "Ctrl",
+    "E",
+  ];
+  const pLink =
+    localStorage.getItem("pLink") || "https://classroom.google.com/";
   let pressedKeys = [];
 
-  document.addEventListener("keydown", event => {
+  document.addEventListener("keydown", (event) => {
     pressedKeys.push(event.key);
     if (pressedKeys.length > eventKey.length) {
       pressedKeys.shift();
