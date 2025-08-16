@@ -1111,19 +1111,24 @@ input::placeholder {
 #toast {
   position: fixed;
   top: 15px;
-  right: -40%;
+  right: 1%;
   height: 80px;
   width: 220px;
-  background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0)), 
+              linear-gradient(to bottom, #2c3454);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
   padding: 0px;
   border-radius: 12px;
-  color: black;
+  color: white;
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
   transition: 0.3s;
   overflow-y: hidden;
   overflow-x: hidden;
+  z-index: 9999999999;
 }
 
 #toast p {
@@ -1132,11 +1137,11 @@ input::placeholder {
 
 #toast #timer {
   position: relative;
-  bottom: -9%;
+  bottom: -11%;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: rgb(0, 132, 255);
+  background-color: rgb(199, 217, 255);
 }
 
 @keyframes countdown {
@@ -1178,28 +1183,54 @@ button:focus {
   right: -40%;
   height: 80px;
   width: 220px;
-  background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0));
+  background: linear-gradient(to bottom, #121428, rgb(0, 0, 0)), 
+              linear-gradient(to bottom, #2c3454);
+  background-clip: padding-box, border-box;
   padding: 15px;
-  border-radius: 25px;
-  color: black;
+  border-radius: 12.5px;
+  color: white;
   font-family: Inter;
   font-weight: 500;
   font-size: 16px;
   transition: 0.3s;
+  z-index: 999999999999;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
 #updToast button {
   height: 35px;
   width: 100px;
-  border-radius: 100px;
   color: white;
-  background: dodgerblue;
+  background: #2a36ff;
+  border-radius: 12px;
+  outline: rgba(215, 215, 255, 0.24) 2px solid;
+  outline-offset: -2px;
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.178);
   border: none;
+  transition: 0.2s;
   font-size: 16px;
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+#updToast button.ignore {
+  height: 35px;
+  width: 100px;
+  background: transparent;
+  border-radius: 12px;
+  outline: rgba(215, 215, 255, 0.24) 2px solid;
+  outline-offset: -2px;
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.178);
+  border: none;
   transition: 0.2s;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #updToast button:hover {
