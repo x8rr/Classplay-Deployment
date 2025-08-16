@@ -1111,7 +1111,7 @@ input::placeholder {
 #toast {
   position: fixed;
   top: 15px;
-  right: 1%;
+  right: -40%;
   height: 80px;
   width: 220px;
   background: linear-gradient(to bottom, #121428, rgb(0, 0, 0)), 
