@@ -1,7 +1,7 @@
 // i.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../mathematics/sw.js", {
-    scope: "/",
+  navigator.serviceWorker.register("sw.js", {
+    scope: "/a",
   });
 });
 
@@ -35,7 +35,7 @@ if (form && input) {
 function processUrl(value, path) {
   let url = value.trim();
   const engine = localStorage.getItem("engine");
-  const searchUrl = "https://www.startpage.com/search?q=";
+  const searchUrl = "https://www.google.com/search?q=";
 
   if (!isUrl(url)) {
     url = searchUrl + url;

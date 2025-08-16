@@ -6,8 +6,7 @@ window.addEventListener("load", () => {
   if (form && input) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const formValue = input.value.tr
-      im();
+      const formValue = input.value.trim();
       const url = isUrl(formValue)
         ? prependHttps(formValue)
         : `https://www.startpage.com/search?q=${formValue}`;
@@ -17,9 +16,9 @@ window.addEventListener("load", () => {
   function processUrl(url) {
     sessionStorage.setItem("GoUrl", __uv$config.encodeUrl(url));
     const iframeContainer = document.getElementById("frame-container");
-    const activeIframe = Array.from(iframeContainer.querySelectorAll("iframe")).find(
-      iframe => iframe.classList.contains("active"),
-    );
+    const activeIframe = Array.from(
+      iframeContainer.querySelectorAll("iframe")
+    ).find((iframe) => iframe.classList.contains("active"));
     activeIframe.src = `/a/${__uv$config.encodeUrl(url)}`;
     activeIframe.dataset.tabUrl = url;
     input.value = url;
@@ -41,7 +40,7 @@ window.addEventListener("load", () => {
     return url;
   }
 });
-document.addEventListener("DOMContentLoaded", event => {
+document.addEventListener("DOMContentLoaded", (event) => {
   const addTabButton = document.getElementById("add-tab");
   const tabList = document.getElementById("tab-list");
   const iframeContainer = document.getElementById("frame-container");
@@ -87,12 +86,14 @@ document.addEventListener("DOMContentLoaded", event => {
       } else {
         tabTitle.textContent = title;
       }
-      newIframe.contentWindow.open = url => {
+      newIframe.contentWindow.open = (url) => {
         sessionStorage.setItem("URL", `/a/${__uv$config.encodeUrl(url)}`);
         createNewTab();
         return null;
       };
-      if (newIframe.contentDocument.documentElement.outerHTML.trim().length > 0) {
+      if (
+        newIframe.contentDocument.documentElement.outerHTML.trim().length > 0
+      ) {
         Load();
       }
       Load();
@@ -132,7 +133,9 @@ document.addEventListener("DOMContentLoaded", event => {
     event.stopPropagation();
     const tabId = event.target.closest("li").dataset.tabId;
     const tabToRemove = tabList.querySelector(`[data-tab-id='${tabId}']`);
-    const iframeToRemove = iframeContainer.querySelector(`[data-tab-id='${tabId}']`);
+    const iframeToRemove = iframeContainer.querySelector(
+      `[data-tab-id='${tabId}']`
+    );
     if (tabToRemove && iframeToRemove) {
       tabToRemove.remove();
       iframeToRemove.remove();
@@ -142,18 +145,20 @@ document.addEventListener("DOMContentLoaded", event => {
         document.getElementById("iv").value = "";
       } else {
         const nextTabIndex = remainingTabs.findIndex(
-          tab => tab.dataset.tabId !== tabId,
+          (tab) => tab.dataset.tabId !== tabId
         );
         if (nextTabIndex > -1) {
           const nextTabToActivate = remainingTabs[nextTabIndex];
           const nextIframeToActivate = iframeContainer.querySelector(
-            `[data-tab-id='${nextTabToActivate.dataset.tabId}']`,
+            `[data-tab-id='${nextTabToActivate.dataset.tabId}']`
           );
           for (const tab of remainingTabs) {
             tab.classList.remove("active");
           }
           remainingTabs[nextTabIndex].classList.add("active");
-          const allIframes = Array.from(iframeContainer.querySelectorAll("iframe"));
+          const allIframes = Array.from(
+            iframeContainer.querySelectorAll("iframe")
+          );
           for (const iframe of allIframes) {
             iframe.classList.remove("active");
           }
@@ -179,7 +184,9 @@ document.addEventListener("DOMContentLoaded", event => {
     } else {
       console.log("No selected tab found with ID:", tabId);
     }
-    const selectedIframe = iframeContainer.querySelector(`[data-tab-id='${tabId}']`);
+    const selectedIframe = iframeContainer.querySelector(
+      `[data-tab-id='${tabId}']`
+    );
     if (selectedIframe) {
       selectedIframe.classList.add("active");
     } else {
@@ -187,10 +194,10 @@ document.addEventListener("DOMContentLoaded", event => {
     }
   }
   let dragTab = null;
-  tabList.addEventListener("dragstart", event => {
+  tabList.addEventListener("dragstart", (event) => {
     dragTab = event.target;
   });
-  tabList.addEventListener("dragover", event => {
+  tabList.addEventListener("dragover", (event) => {
     event.preventDefault();
     const targetTab = event.target;
     if (targetTab.tagName === "LI" && targetTab !== dragTab) {
@@ -336,7 +343,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const tb = document.getElementById("tabs-button");
   const nb = document.getElementById("right-side-nav");
   tb.addEventListener("click", () => {
-    const activeIframe = document.querySelector("#frame-container iframe.active");
+    const activeIframe = document.querySelector(
+      "#frame-container iframe.active"
+    );
     if (nb.style.display === "none") {
       nb.style.display = "";
       activeIframe.style.top = "10%";
@@ -394,7 +403,7 @@ function decodeXor(input) {
     decodeURIComponent(str)
       .split("")
       .map((char, ind) =>
-        ind % 2 ? String.fromCharCode(char.charCodeAt(Number.NaN) ^ 2) : char,
+        ind % 2 ? String.fromCharCode(char.charCodeAt(Number.NaN) ^ 2) : char
       )
       .join("") + (search.length ? `?${search.join("?")}` : "")
   );
