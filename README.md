@@ -1,9 +1,9 @@
-> ignore the `forked from bahabryra/useclassplay.github.io`, this is because the og repo was deleted and was forked from him to save it
+> ignore the `forked from bahabryra/useclassplay.github.io`, he's just the repo holder after the old one was removed.
 >
 
 <center>
     <h1>Nebulance</h1>
-    <p>An easy to use, sleek, games website based on Interstellar.</p>
+    <p>An easy to use, sleek games website based on Interstellar.</p>
 </center>
 
 ## Features
