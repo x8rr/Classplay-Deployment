@@ -225,11 +225,11 @@ switches.addEventListener("change", event => {
 function toggleAB() {
   ab = localStorage.getItem("ab");
   if (!ab) {
-    localStorage.setItem("ab", "true");
+    localStorage.setItem("ab", "false");
   } else if (ab === "true") {
     localStorage.setItem("ab", "false");
   } else {
-    localStorage.setItem("ab", "true");
+    localStorage.setItem("ab", "false");
   }
 }
 // Search Engine
