@@ -1,5 +1,5 @@
-importScripts("/assets/mathematics/bundle.js?v=9-30-2024"),
-  importScripts("/assets/mathematics/config.js?v=9-30-2024");
+importScripts("/assets/ultra/bundle.js?v=9-30-2024"),
+  importScripts("/assets/ultra/config.js?v=9-30-2024");
 class UVServiceWorker extends EventEmitter {
   constructor(e = __uv$config) {
     super(),
@@ -7,7 +7,7 @@ class UVServiceWorker extends EventEmitter {
       (this.addresses =
         "string" == typeof e.bare
           ? [new URL(e.bare, location)]
-          : e.bare.map((e) => new URL(e, location))),
+          : e.bare.map(e => new URL(e, location))),
       (this.headers = {
         csp: [
           "cross-origin-embedder-policy",
@@ -33,16 +33,14 @@ class UVServiceWorker extends EventEmitter {
       (this.statusCode = { empty: [204, 304] }),
       (this.config = e),
       (this.browser = Ultraviolet.Bowser.getParser(
-        self.navigator.userAgent
+        self.navigator.userAgent,
       ).getBrowserName()),
       "Firefox" === this.browser &&
         (this.headers.forward.push("user-agent"),
         this.headers.forward.push("content-type"));
   }
   async fetch({ request: e }) {
-    if (
-      !e.url.startsWith(location.origin + (this.config.prefix || "/service/"))
-    )
+    if (!e.url.startsWith(location.origin + (this.config.prefix || "/service/")))
       return fetch(e);
     try {
       const t = new Ultraviolet(this.config);
@@ -55,9 +53,7 @@ class UVServiceWorker extends EventEmitter {
         e,
         this,
         t,
-        this.method.empty.includes(e.method.toUpperCase())
-          ? null
-          : await e.blob()
+        this.method.empty.includes(e.method.toUpperCase()) ? null : await e.blob(),
       );
       if (
         ("blob:" === t.meta.url.protocol &&
@@ -91,7 +87,7 @@ class UVServiceWorker extends EventEmitter {
           (c.headers.location = t.rewriteUrl(c.headers.location)),
         c.headers["set-cookie"] &&
           (Promise.resolve(
-            t.cookie.setCookies(c.headers["set-cookie"], r, t.meta)
+            t.cookie.setCookies(c.headers["set-cookie"], r, t.meta),
           ).then(() => {
             self.clients.matchAll().then(function (e) {
               e.forEach(function (e) {
@@ -121,7 +117,7 @@ class UVServiceWorker extends EventEmitter {
                   this.config.bundle,
                   this.config.config,
                   t.cookie.serialize(s, t.meta, !0),
-                  e.referrer
+                  e.referrer,
                 ),
               }));
         }
@@ -228,7 +224,7 @@ class RequestContext {
         credentials: this.credentials,
         mode: location.origin !== this.address.origin ? "cors" : this.mode,
         body: this.body,
-      }
+      },
     );
   }
   get url() {
@@ -285,14 +281,14 @@ ReflectOwnKeys =
   R && "function" == typeof R.ownKeys
     ? R.ownKeys
     : Object.getOwnPropertySymbols
-    ? function (e) {
-        return Object.getOwnPropertyNames(e).concat(
-          Object.getOwnPropertySymbols(e)
-        );
-      }
-    : function (e) {
-        return Object.getOwnPropertyNames(e);
-      };
+      ? function (e) {
+          return Object.getOwnPropertyNames(e).concat(
+            Object.getOwnPropertySymbols(e),
+          );
+        }
+      : function (e) {
+          return Object.getOwnPropertyNames(e);
+        };
 var NumberIsNaN =
   Number.isNaN ||
   function (e) {
@@ -309,8 +305,7 @@ var defaultMaxListeners = 10;
 function checkListener(e) {
   if ("function" != typeof e)
     throw new TypeError(
-      'The "listener" argument must be of type Function. Received type ' +
-        typeof e
+      'The "listener" argument must be of type Function. Received type ' + typeof e,
     );
 }
 function _getMaxListeners(e) {
@@ -325,8 +320,7 @@ function _addListener(e, t, r, n) {
     void 0 === (i = e._events)
       ? ((i = e._events = Object.create(null)), (e._eventsCount = 0))
       : (void 0 !== i.newListener &&
-          (e.emit("newListener", t, r.listener ? r.listener : r),
-          (i = e._events)),
+          (e.emit("newListener", t, r.listener ? r.listener : r), (i = e._events)),
         (o = i[t])),
     void 0 === o)
   )
@@ -335,8 +329,8 @@ function _addListener(e, t, r, n) {
     ("function" == typeof o
       ? (o = i[t] = n ? [r, o] : [o, r])
       : n
-      ? o.unshift(r)
-      : o.push(r),
+        ? o.unshift(r)
+        : o.push(r),
     (s = _getMaxListeners(e)) > 0 && o.length > s && !o.warned)
   ) {
     o.warned = !0;
@@ -345,7 +339,7 @@ function _addListener(e, t, r, n) {
         o.length +
         " " +
         String(t) +
-        " listeners added. Use emitter.setMaxListeners() to increase limit"
+        " listeners added. Use emitter.setMaxListeners() to increase limit",
     );
     (a.name = "MaxListenersExceededWarning"),
       (a.emitter = e),
@@ -377,12 +371,12 @@ function _listeners(e, t, r) {
   return void 0 === s
     ? []
     : "function" == typeof s
-    ? r
-      ? [s.listener || s]
-      : [s]
-    : r
-    ? unwrapListeners(s)
-    : arrayClone(s, s.length);
+      ? r
+        ? [s.listener || s]
+        : [s]
+      : r
+        ? unwrapListeners(s)
+        : arrayClone(s, s.length);
 }
 function listenerCount(e) {
   var t = this._events;
@@ -428,7 +422,7 @@ function eventTargetAgnosticAddListener(e, t, r, n) {
     if ("function" != typeof e.addEventListener)
       throw new TypeError(
         'The "emitter" argument must be of type EventEmitter. Received type ' +
-          typeof e
+          typeof e,
       );
     e.addEventListener(t, function s(i) {
       n.once && e.removeEventListener(t, s), r(i);
@@ -445,7 +439,7 @@ Object.defineProperty(EventEmitter, "defaultMaxListeners", {
       throw new RangeError(
         'The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' +
           e +
-          "."
+          ".",
       );
     defaultMaxListeners = e;
   },
@@ -461,7 +455,7 @@ Object.defineProperty(EventEmitter, "defaultMaxListeners", {
       throw new RangeError(
         'The value of "n" is out of range. It must be a non-negative number. Received ' +
           e +
-          "."
+          ".",
       );
     return (this._maxListeners = e), this;
   }),
@@ -501,9 +495,7 @@ Object.defineProperty(EventEmitter, "defaultMaxListeners", {
     return checkListener(t), this.on(e, _onceWrap(this, e, t)), this;
   }),
   (EventEmitter.prototype.prependOnceListener = function (e, t) {
-    return (
-      checkListener(t), this.prependListener(e, _onceWrap(this, e, t)), this
-    );
+    return checkListener(t), this.prependListener(e, _onceWrap(this, e, t)), this;
   }),
   (EventEmitter.prototype.removeListener = function (e, t) {
     var r, n, s, i, o;

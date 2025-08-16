@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 > ignore the `forked from bahabryra/useclassplay.github.io`, he's just the repo holder after the old one was removed.
 >
+=======
+<div align="center">
+    <img src="https://raw.githubusercontent.com/UseInterstellar/Interstellar/main/.github/branding/in.png">
+    <p>Serving over 8+ million users since 2023.<p>
+    <p>Interstellar is a web proxy with a Clean and Sleek UI and easy to use menus. Our goal is to provide the best user experience to everyone.</p>
+</div>
+>>>>>>> dev
 
 <center>
     <h1>Nebulance</h1>
@@ -55,6 +63,7 @@ https://coolmathskills.vercel.app/
 
 ![Alt](https://repobeats.axiom.co/api/embed/dba2e85b03b71cd08c71b2235e5b96e087945cd9.svg "Repobeats analytics image")
 
+## Deployment
 
 > [!IMPORTANT]
 > You **cannot** deploy to static web hosts, including Netlify, Cloudflare Pages, and GitHub Pages.
@@ -118,6 +127,14 @@ cd Nebulance
 git pull --force --allow-unrelated-histories # This may overwrite your local changes
 ```
 
+<a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/UseInterstellar/Interstellar"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
+<a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/UseInterstellar/Interstellar"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
+
+### Deployment Alternatives
+
+For more deployment options, join our [Discord Server](https://discord.gg/interstellar) for various ways to deploy Interstellar.
+This includes methods of deploying to Render/OnRender.
+
 #### What happened to Replit Deployment?
 
 As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/hosting-changes). Try GitHub Codespaces instead.
@@ -132,8 +149,7 @@ As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/host
 3. In the terminal at the bottom, paste `pnpm i && pnpm start`.
 4. Respond to the application popup by clicking "Make public."
 > [!IMPORTANT]
-> Make sure you click the "Make public." button, or the proxy won't function properly.<br>
-> If you get a Range Error, go back and make sure you clicked Make public!
+> Make sure you click the "Make public." button, or the proxy won't function properly.
 5. Access the deployed website from the ports tab.
 6. For subsequent uses in the same codespace, just run `pnpm start`
 
@@ -144,9 +160,15 @@ As of January 1st, 2024, Replit is [no longer free](https://blog.replit.com/host
 3. Go to the ports tab, Click Forward A Port, And type the port number.
 4. Right-click Visibility and set Port Visibility to Public.
 
+> [!NOTE]
+> We are committed to making Interstellar easy and personalized however, as of now we need your support in making it ad-free. Consider keeping ads so Interstellar can run freely or contribute by being a supporter.
+
 ## Report Issues
 
 If you encounter problems, open an issue on GitHub, and we'll address it promptly.
+
+> [!TIP]
+> If you're having trouble, don't hesitate to reach out to us on [Discord](https://discord.gg/interstellar) for personalized support.
 
 # Credits
 
