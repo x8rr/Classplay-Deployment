@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
     <meta name="description" content="A game hub built for students, by students" property="og:description">
     <meta name="title" content="Classplay" property="og:title">
-    <meta name="image" content="https://useclassplay.github.io/img/banner.png" property="og:image">
+    <meta name="image" content="https://useClassplay.github.io/img/banner.png" property="og:image">
     <script src="/assets/js/themes.js"></script>
     <script src="/assets/js/main.js"></script>
     <link rel="stylesheet"
@@ -26,21 +26,32 @@
 </head>
 
 <body>
+    <center>
+        <h1 style="font-size: xx-large; color: red;" id="warning-thing">YOU ARE SEEING THIS BECAUSE YOU HAVE NO THEME
+            <br><br> PLEASE SELECT A
+            THEME FROM <a href="/s#theme-selector">HERE</a>
+        </h1>
+    </center>
 
-    <div id="particles-js"></div>
+    <div class="grid-background"></div>
+
+    <center>
+        <h1 style="font-size: 80px; color: red;" id="theme-warning">IF NO THEME, THEN SCROLL DOWN AND SELECT ONE</h1>
+    </center>
 
     <nav class="glass">
         <ul class="navbar">
-            <li><a href="/"><i class="fa-solid fa-home nav-icon"></i></a></li>
-            <li><a href="/g"><i class="fa-solid fa-gamepad nav-icon"></i></a></li>
-            <li><a href="/a"><i class="fa-solid fa-icons nav-icon"></i></a></li>
-            <li><a href="/d"><i class="fa-solid fa-search nav-icon"></i></a></li>
-            <li><a href="/c"><i class="fa-solid fa-message nav-icon"></i></a></li>
-            <li><a href="/403.html"><i class="fa-solid fa-clapperboard nav-icon"></i></a></li>
-            <li><a href="/l"><i class="fa-solid fa-link nav-icon"></i></a></li>
-            <li><a href="/s"><i class="fa-solid fa-sliders nav-icon"></i></a></li>
+            <li>&nbsp;&nbsp;</li> <!-- spacer -->
+            <li><a href="/s"><i class="fa-solid fa-sliders"></i>&nbsp;&nbsp;Settings</a></li>
+            <li><a href="/l"><i class="fa-solid fa-link"></i>&nbsp;&nbsp;Links</a></li>
+            <li><a href="/403.html"><i class="fa-solid fa-clapperboard"></i>&nbsp;&nbsp;Movies</a></li>
+            <li><a href="/c"><i class="fa-solid fa-message"></i>&nbsp;&nbsp;Chat</a></li>
+            <li><a href="/d"><i class="fa-solid fa-search"></i>&nbsp;&nbsp;Search</a></li>
+            <li><a href="/a"><i class="fa-solid fa-icons"></i>&nbsp;&nbsp;Apps</a></li>
+            <li><a href="/g"><i class="fa-solid fa-gamepad "></i>&nbsp;&nbsp;Games</a></li>
+            <li><a href="/"><i class="fa-solid fa-home"></i>&nbsp;&nbsp;Home</a></li>
         </ul>
-    </nav><br><br>
+    </nav><br><br><br><br>
 
     <center>
         <h1 class="title">Settings</h1>
@@ -48,7 +59,7 @@
 
     <div class="container">
 
-        <div class="settings-card glass" style="backdrop-filter: blur(10px);">
+        <div class="settings-card" style="backdrop-filter: blur(10px);">
 
             <center>
 
@@ -59,6 +70,8 @@
             </center>
 
             <br><br>
+
+            <div class="settings-card-border"></div>
 
         </div>
 
@@ -79,8 +92,8 @@
 
             <h1>Saves (W.I.P.)</h1>
 
-            <button class="glass" disabled onclick="exportWebsiteData()" style="height: 40px; width: 250px; font-size: 17px;"><i
-                    class="fa-solid fa-file-export"></i> Export Data
+            <button class="glass" disabled onclick="exportWebsiteData()"
+                style="height: 40px; width: 250px; font-size: 17px;"><i class="fa-solid fa-file-export"></i> Export Data
                 Save</button>
             <input type="file" id="importFile" accept=".ucpconfig" style="display: none;"
                 onchange="handleFileImport(this.files[0])">
@@ -106,8 +119,8 @@
             <form>
                 <input class="tab-cloaker-form glass" type="text" id="key" placeholder="disabled for now" disabled
                     onkeyup="setPanicKey()" name="icon">
-                <input class="tab-cloaker-form glass" type="text" id="link" disabled name="name" placeholder="disabled for now"
-                    onkeyup="setPanicLink()">
+                <input class="tab-cloaker-form glass" type="text" id="link" disabled name="name"
+                    placeholder="disabled for now" onkeyup="setPanicLink()">
             </form>
 
         </div>
@@ -117,12 +130,7 @@
             <h1>Theme</h1>
 
             <select id="theme-selector" class="glass">
-                <option value="themes/v3.css">Space Blue</option>
-                <option value="themes/v3-green.css">Space Green</option>
-                <option value="themes/v3-red.css">Space Red</option>
-                <option value="themes/v3-yellow.css">Space Yellow</option>
-                <option value="themes/v3-purple.css">Space Purple</option>
-                <option value="themes/v4.css">Liquid Glass</option>
+                <option value="themes/v5.css">Modern Blue (v5)</option>
             </select>
 
             <br>
@@ -157,10 +165,7 @@
 
     </div>
 
-    <div class="blob"></div>
-    <div class="blobbig"></div>
-    <div class="blobsmall"></div>
-    <div class="blobtop"></div>
+
 
     <div id="updToast" class="updToast glass">
         A new version is available! Would you like to install it?
