@@ -1,72 +1,72 @@
 const themes = {
   billibilli: {
-    favicon: '/img/cloaks/bb.png',
-    title: 'Billibilli'
+    favicon: "/img/cloaks/bb.png",
+    title: "Billibilli",
   },
   calendar: {
-    favicon: '/img/cloaks/calendar.png',
-    title: 'Google Calendar'
+    favicon: "/img/cloaks/calendar.png",
+    title: "Google Calendar",
   },
   canvas: {
-    favicon: '/img/cloaks/canvas.png',
-    title: 'Canvas'
+    favicon: "/img/cloaks/canvas.png",
+    title: "Canvas",
   },
   deltamath: {
-    favicon: '/img/cloaks/deltamath.png',
-    title: 'DeltaMath Student Application'
+    favicon: "/img/cloaks/deltamath.png",
+    title: "DeltaMath Student Application",
   },
   edpuzzle: {
-    favicon: '/img/cloaks/edpuzzle.png',
-    title: 'Edpuzzle'
+    favicon: "/img/cloaks/edpuzzle.png",
+    title: "Edpuzzle",
   },
   classroom: {
-    favicon: '/img/cloaks/gclassroom.png',
-    title: 'Home'
+    favicon: "/img/cloaks/gclassroom.png",
+    title: "Home",
   },
   drive: {
-    favicon: '/img/cloaks/gdrive.png',
-    title: 'My Drive'
+    favicon: "/img/cloaks/gdrive.png",
+    title: "My Drive",
   },
   gmail: {
-    favicon: '/img/cloaks/gmail.png',
-    title: 'Gmail'
+    favicon: "/img/cloaks/gmail.png",
+    title: "Gmail",
   },
   itchio: {
-    favicon: '/img/cloaks/itch.png',
-    title: 'Download the latest indie games - itch.io'
+    favicon: "/img/cloaks/itch.png",
+    title: "Download the latest indie games - itch.io",
   },
   khan: {
-    favicon: '/img/cloaks/khan.png',
-    title: 'Dashboard | Khan Academy'
+    favicon: "/img/cloaks/khan.png",
+    title: "Dashboard | Khan Academy",
   },
   meet: {
-    favicon: '/img/cloaks/meet.png',
-    title: 'Google Meet'
+    favicon: "/img/cloaks/meet.png",
+    title: "Google Meet",
   },
   search: {
-    favicon: '/img/cloaks/gsearch.png',
-    title: 'Google'
+    favicon: "/img/cloaks/gsearch.png",
+    title: "Google",
   },
   wiki: {
-    favicon: '/img/cloaks/wiki.png',
-    title: 'Wikipedia, the free encyclopedia'
+    favicon: "/img/cloaks/wiki.png",
+    title: "Wikipedia, the free encyclopedia",
   },
   zoom: {
-    favicon: '/img/cloaks/zoom.png',
-    title: 'Zoom'
+    favicon: "/img/cloaks/zoom.png",
+    title: "Zoom",
   },
   default: {
-    favicon: '/img/favicon.png',
-    title: 'Classplay'
-  } 
+    favicon: "/img/favicon.png",
+    title: "Nebulance",
+  },
 };
 
 function getCookie(name) {
   const nameEQ = name + "=";
-  const ca = document.cookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
+  const ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
-    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    while (c.charAt(0) === " ") c = c.substring(1, c.length);
     if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
   }
   return null;
@@ -76,47 +76,47 @@ function setCookie(name, value, days) {
   let expires = "";
   if (days) {
     const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     expires = "; expires=" + date.toUTCString();
   }
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 function applyTheme(themeKey) {
-  const theme = themes[themeKey] || themes['default'];
- 
+  const theme = themes[themeKey] || themes["default"];
+
   document.title = theme.title;
 
   let favicon = document.querySelector('link[rel="icon"]');
   if (!favicon) {
-    favicon = document.createElement('link');
-    favicon.rel = 'icon';
+    favicon = document.createElement("link");
+    favicon.rel = "icon";
     document.head.appendChild(favicon);
   }
   favicon.href = theme.favicon;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const savedTheme = getCookie('selectedTheme');
+document.addEventListener("DOMContentLoaded", function () {
+  const savedTheme = getCookie("selectedTheme");
   if (savedTheme && themes[savedTheme]) {
     applyTheme(savedTheme);
   }
 
-  const dropdown = document.getElementById('premadecloaks');
+  const dropdown = document.getElementById("premadecloaks");
   if (dropdown) {
-    dropdown.value = savedTheme || 'default';
-    dropdown.addEventListener('change', function() {
+    dropdown.value = savedTheme || "default";
+    dropdown.addEventListener("change", function () {
       const selectedTheme = this.value;
-      setCookie('selectedTheme', selectedTheme, 365);
+      setCookie("selectedTheme", selectedTheme, 365);
       applyTheme(selectedTheme);
     });
   }
 });
 
 document.addEventListener("keydown", function (e) {
-    if (e.key === `${panicKey}`) {
-      window.location.href = `${panicLink}`;
-    }
+  if (e.key === `${panicKey}`) {
+    window.location.href = `${panicLink}`;
+  }
 });
 
 function setPanicKey() {
@@ -282,4 +282,4 @@ if (window.location.href.includes("s")) {
     });
 }
 
-applyTheme(getCookie('selectedTheme'));
+applyTheme(getCookie("selectedTheme"));

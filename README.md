@@ -2,32 +2,33 @@
 >
 
 <center>
-    <h1>Classplay</h1>
+    <h1>Nebulance</h1>
     <p>An easy to use, sleek, games website based on Interstellar.</p>
 </center>
 
-## features
-- games
-- apps
-- proxy
-- cloaks + about:blank
-- chatroom
-- movies
+## Features
+- Games
+- Apps
+- Proxy
+- Cloaks + about:blank
+- Chatroom
+- Movies (work in progress)
 
-## proxy support for
-- nowgg
-- youtube
-- discord
-- geforce now
-- more!
+## Proxy support
+- now.gg
+- Youtube
+- Discord
+- Geforce Now
+- easyfun.gg
+- ...and more!
 
-## getting help
-- contact `d3faultedd` on discord @d3faultedd
+## Contact
+- contact `afterddark` on Discord
 - open an issue
 
-## alternate links
+## Links
 
-https://useclassplay.vercel.app/
+https://usenebulance.vercel.app/
 
 https://math-for-dummies.vercel.app/
 
@@ -35,9 +36,9 @@ https://amazingmath.vercel.app/
 
 https://coolmathskills.vercel.app/
 
-## developers
+## Developers
 
-> ### d3faultedd <br> <sub style="font-weight: 200;">owner, founder</sub>
+> ### afterddark <br> <sub style="font-weight: 200;">owner, founder</sub>
 
 > ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
 
@@ -47,7 +48,7 @@ https://coolmathskills.vercel.app/
 
 ## credits
 - movies/website inspo: rednotsus
-- proxy: useinterstellar
+- Proxy: UseInterstellar
 
 
 ## stats
@@ -62,7 +63,7 @@ https://coolmathskills.vercel.app/
 > [!NOTE]
 > Alternatively, you **can** deploy to Vercel by forking this repo and deploying or clicking the button below.
 > 
-> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/d3faultedd/classplay)
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/afterddark/nebulance)
 
 ### Password Protection
 
@@ -77,15 +78,8 @@ https://coolmathskills.vercel.app/
 You must run these commands on your server:
 
 ```bash
-git clone https://github.com/UseInterstellar/Interstellar
-cd Interstellar
-```
-
-#### Ad-Free Deployment
-
-```bash
-git clone --branch Ad-Free https://github.com/UseInterstellar/Interstellar
-cd Interstellar
+git clone https://github.com/UseNebulance/Nebulance
+cd Nebulance
 ```
 
 Next depending on your package manager, run one of the following commands:
@@ -99,7 +93,7 @@ bun i
 bun start
 ```
 
-#### pnpm
+#### PNPM (Recommended)
 
 If you are using pnpm, run the following commands:
 
@@ -108,7 +102,7 @@ pnpm i
 pnpm start
 ```
 
-#### npm
+#### NPM
 
 If you are using npm, run the following commands:
 
@@ -120,7 +114,7 @@ npm run start
 ### Updating
 
 ```bash
-cd Interstellar
+cd Nebulance
 git pull --force --allow-unrelated-histories # This may overwrite your local changes
 ```
 
@@ -156,6 +150,6 @@ If you encounter problems, open an issue on GitHub, and we'll address it promptl
 
 # Credits
 
-A huge thanks goes out to all of the people who have contributed to Classplay.
+A huge thanks goes out to all of the people who have contributed to Nebulance.
 
-[![Contributors](https://contrib.rocks/image?repo=d3faultedd/classplay)](https://github.com/d3faultedd/classplay/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=afterddark/Nebulance)](https://github.com/afterddark/Nebulance/graphs/contributors)
