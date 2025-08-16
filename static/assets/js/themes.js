@@ -1,33 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeSelector = document.getElementById('theme-selector');
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSelector = document.getElementById("theme-selector");
 
-    const setTheme = (theme) => {
-        const themeLink = document.getElementById('theme-style');
-        console.log(`Setting theme to: ${theme}`);
-        themeLink.href = `/${theme}`;
-        document.cookie = `theme=${theme}; path=/; max-age=31536000`;
-    };
+  const setTheme = (theme) => {
+    const themeLink = document.getElementById("theme-style");
+    console.log(`Setting theme to: ${theme}`);
+    themeLink.href = `/${theme}`;
+    document.cookie = `theme=${theme}; path=/; max-age=31536000`;
+  };
 
-    const getThemeFromCookie = () => {
-        const match = document.cookie.match(/(^| )theme=([^;]+)/);
-        return match ? match[2] : 'themes/v3.css';
-    };
+  const getThemeFromCookie = () => {
+    const match = document.cookie.match(/(^| )theme=([^;]+)/);
+    return match ? match[2] : "themes/v5.css";
+  };
 
-    const applyStoredTheme = () => {
-        const storedTheme = getThemeFromCookie();
-        console.log(`Applying stored theme: ${storedTheme}`);
-        setTheme(storedTheme);
-        if (themeSelector) {
-            themeSelector.value = storedTheme;
-        }
-    };
-
+  const applyStoredTheme = () => {
+    const storedTheme = getThemeFromCookie();
+    console.log(`Applying stored theme: ${storedTheme}`);
+    setTheme(storedTheme);
     if (themeSelector) {
-        themeSelector.addEventListener('change', (event) => {
-            const selectedTheme = event.target.value;
-            setTheme(selectedTheme);
-        });
+      themeSelector.value = storedTheme;
     }
+  };
 
-    applyStoredTheme();
+  if (themeSelector) {
+    themeSelector.addEventListener("change", (event) => {
+      const selectedTheme = event.target.value;
+      setTheme(selectedTheme);
+    });
+  }
+
+  applyStoredTheme();
 });
