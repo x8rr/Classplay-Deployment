@@ -7,17 +7,17 @@ const c = window.location.pathname === "/gt";
 let t;
 
 try {
-  t = window.top.location.pathname === "/d";
+  t = window.top.location.pathname === "/rx";
 } catch {
   try {
-    t = window.parent.location.pathname === "/d";
+    t = window.parent.location.pathname === "/rx";
   } catch {
     t = false;
   }
 }
 
 function Span(name) {
-  return name.split("").map(char => {
+  return name.split("").map((char) => {
     const span = document.createElement("span");
     span.textContent = char;
     return span;
@@ -75,7 +75,7 @@ function getSelected(links) {
     .map((link, index) => `${index + 1}: ${link.name}`)
     .join("\n");
   const choice = prompt(
-    `Select a link by entering the corresponding number:\n${options}`,
+    `Select a link by entering the corresponding number:\n${options}`
   );
   const selectedIndex = Number.parseInt(choice, 10) - 1;
 
@@ -245,19 +245,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-let path = "/assets/json/a.min.json";
+let path = "/assets/json/g.json";
 if (g) {
-  path = "/assets/json/a.min.json";
+  path = "/assets/json/a.json";
 } else if (c) {
-  path = "/assets/json/t.min.json";
+  path = "/assets/json/t.json";
 } else if (a) {
-  path = "/assets/json/g.min.json";
+  path = "/assets/json/g.json";
 }
 fetch(path)
-  .then(response => {
+  .then((response) => {
     return response.json();
   })
-  .then(appsList => {
+  .then((appsList) => {
     appsList.sort((a, b) => {
       if (a.name.startsWith("[Custom]")) {
         return -1;
@@ -387,14 +387,14 @@ fetch(path)
     appsContainer.appendChild(pinnedApps);
     appsContainer.appendChild(nonPinnedApps);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error("Error fetching JSON data:", error);
   });
 
 function category() {
   const selectedCategories = Array.from(
-    document.querySelectorAll("#category option:checked"),
-  ).map(option => option.value);
+    document.querySelectorAll("#category option:checked")
+  ).map((option) => option.value);
   const g = document.getElementsByClassName("column");
 
   for (const game of g) {
@@ -402,7 +402,7 @@ function category() {
 
     if (
       selectedCategories.length === 0 ||
-      selectedCategories.some(category => categories.includes(category))
+      selectedCategories.some((category) => categories.includes(category))
     ) {
       game.style.display = "block";
     } else {

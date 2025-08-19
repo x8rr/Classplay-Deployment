@@ -5,7 +5,7 @@ const c = window.location.pathname === "/gt";
 const t = window.top.location.pathname === "/rx";
 
 function Span(name) {
-  return name.split("").map(char => {
+  return name.split("").map((char) => {
     const span = document.createElement("span");
     span.textContent = char;
     return span;
@@ -63,7 +63,7 @@ function getSelected(links) {
     .map((link, index) => `${index + 1}: ${link.name}`)
     .join("\n");
   const choice = prompt(
-    `Select a link by entering the corresponding number:\n${options}`,
+    `Select a link by entering the corresponding number:\n${options}`
   );
   const selectedIndex = Number.parseInt(choice, 10) - 1;
 
@@ -242,10 +242,10 @@ if (g) {
   path = "/assets/json/a.min.json";
 }
 fetch(path)
-  .then(response => {
+  .then((response) => {
     return response.json();
   })
-  .then(appsList => {
+  .then((appsList) => {
     appsList.sort((a, b) => {
       if (a.name.startsWith("[Custom]")) {
         return -1;
@@ -375,14 +375,14 @@ fetch(path)
     appsContainer.appendChild(pinnedApps);
     appsContainer.appendChild(nonPinnedApps);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error("Error fetching JSON data:", error);
   });
 
 function category() {
   const selectedCategories = Array.from(
-    document.querySelectorAll("#category option:checked"),
-  ).map(option => option.value);
+    document.querySelectorAll("#category option:checked")
+  ).map((option) => option.value);
   const g = document.getElementsByClassName("column");
 
   for (const game of g) {
@@ -390,7 +390,7 @@ function category() {
 
     if (
       selectedCategories.length === 0 ||
-      selectedCategories.some(category => categories.includes(category))
+      selectedCategories.some((category) => categories.includes(category))
     ) {
       game.style.display = "block";
     } else {

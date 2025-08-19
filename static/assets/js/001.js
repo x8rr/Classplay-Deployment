@@ -2,10 +2,10 @@
 let qp;
 
 try {
-  qp = window.top.location.pathname === "/d";
+  qp = window.top.location.pathname === "/rx";
 } catch {
   try {
-    qp = window.parent.location.pathname === "/d";
+    qp = window.parent.location.pathname === "/rx";
   } catch {
     qp = false;
   }
