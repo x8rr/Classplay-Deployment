@@ -1,7 +1,7 @@
 // c.js
 let appInd;
-const g = window.location.pathname === "/a";
-const a = window.location.pathname === "/b";
+const g = window.location.pathname === "/g";
+const a = window.location.pathname === "/a";
 const c = window.location.pathname === "/gt";
 
 let t;
@@ -247,11 +247,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let path = "/assets/json/g.json";
 if (g) {
-  path = "/assets/json/a.json";
+  path = "/assets/json/g.json";
 } else if (c) {
   path = "/assets/json/t.json";
 } else if (a) {
-  path = "/assets/json/g.json";
+  path = "/assets/json/a.json";
 }
 fetch(path)
   .then((response) => {
