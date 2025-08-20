@@ -16,8 +16,8 @@ self.__dynamic$config = {
     prefix: "/assets/history/",
     files: {
       handler: "handler.js",
-      client: "client.js?v=12",
-      worker: "worker.js?v=12",
+      client: "client.js",
+      worker: "worker.js",
       config: "config.js",
       inject: "",
     },

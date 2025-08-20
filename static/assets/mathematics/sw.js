@@ -1,5 +1,5 @@
-importScripts("/assets/mathematics/bundle.js?v=9-30-2024"),
-  importScripts("/assets/mathematics/config.js?v=9-30-2024");
+importScripts("/assets/mathematics/bundle"),
+  importScripts("/assets/mathematics/config");
 class UVServiceWorker extends EventEmitter {
   constructor(e = __uv$config) {
     super(),
