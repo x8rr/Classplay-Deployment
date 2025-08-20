@@ -1,7 +1,7 @@
 // i.js
 window.addEventListener("load", () => {
   navigator.serviceWorker.register("sw.js", {
-    scope: "/a",
+    scope: "/",
   });
 });
 
