@@ -78,6 +78,16 @@
     p {
       margin-top: 8%;
     }
+
+    #warning {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: black;
+      padding: 25px;
+      border-radius: 15px;
+    }
   </style>
 
   <center>
@@ -86,12 +96,30 @@
 
     <div>
 
+      <div id="warning">
+        <h1>
+          Attention users!
+        </h1>
+        <br>
+        <p>
+          Addressing the games, apps, and proxy problems, we have rewritten Nebulance using AstroJS, along with an improved Wisp server for better load times and more website support. You can access the new version below, and there is a high chance this non-Wisp, Vanilla JS version will be deprecated in the future. Thank you!
+        </p>
+        <br>
+        <a href="https://usenebulance-astro.vercel.app/">
+          <button>
+            Nebulance Astro
+          </button>
+        </a>
+
+        <button class="close" onclick="document.getElementById('warning').style.display = 'none'">x</button>
+      </div>
+
       <h1 style="font-size: 81px; margin-bottom: 0;">Nebulance</h1>
       <br>
       <div class="main">
         <div class="search-container">
           <form method="POST" id="fv">
-            <input type="text" id="iv" class="glass search-home" placeholder="search anything...">
+            <input type="text" id="iv" class="glass search-home" disabled placeholder="server limit reached. try again later!">
           </form>
         </div>
       </div>
