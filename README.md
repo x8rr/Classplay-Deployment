@@ -2,7 +2,7 @@
 >
 
 <center>
-    <h1>Nebulance</h1>
+    <h1>Classplay</h1>
     <p>An easy to use, sleek games website based on Interstellar.</p>
 </center>
 
@@ -28,7 +28,7 @@
 
 ## Links
 
-https://usenebulance.vercel.app/
+https://useclassplay.vercel.app/
 
 https://math-for-dummies.vercel.app/
 
