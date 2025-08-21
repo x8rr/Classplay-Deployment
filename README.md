@@ -64,7 +64,7 @@ https://coolmathskills.vercel.app/
 > [!NOTE]
 > Alternatively, you **can** deploy to Vercel by forking this repo and deploying or clicking the button below.
 > 
-> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/afterddark/nebulance)
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/afterddark/classplay)
 
 ### Password Protection
 
@@ -153,6 +153,6 @@ If you encounter problems, open an issue on GitHub, and we'll address it promptl
 
 # Credits
 
-A huge thanks goes out to all of the people who have contributed to Nebulance.
+A huge thanks goes out to all of the people who have contributed to classplay.
 
-[![Contributors](https://contrib.rocks/image?repo=afterddark/Nebulance)](https://github.com/afterddark/classplay/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=afterddark/classplay)](https://github.com/afterddark/classplay/graphs/contributors)

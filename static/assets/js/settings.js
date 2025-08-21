@@ -57,7 +57,7 @@ const themes = {
   },
   default: {
     favicon: "/img/favicon.png",
-    title: "Nebulance",
+    title: "classplay",
   },
 };
 
