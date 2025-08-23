@@ -1,4 +1,5 @@
-> [!CAUTION] PLEASE READ!
+> [!CAUTION]
+> PLEASE READ!
 > This website will not be updated anymore except for minor bug fixes, as its successor Adurite has overrun it. You are able to access the new site <a href="https://useadurite.vercel.app/">here.</a>
 
 <center>
