@@ -39,7 +39,7 @@ https://coolmathskills.vercel.app/
 
 ## Developers
 
-> ### afterddark <br> <sub style="font-weight: 200;">owner, founder</sub>
+> ### cl1pped <br> <sub style="font-weight: 200;">owner, founder</sub>
 
 > ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
 
