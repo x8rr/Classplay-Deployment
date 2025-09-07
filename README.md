@@ -80,7 +80,7 @@ https://coolmathskills.vercel.app/
 You must run these commands on your server:
 
 ```bash
-git clone https://github.com/AduriteNetwork/Classplay
+git clone https://github.com/tenclips/Classplay
 cd Classplay
 ```
 
