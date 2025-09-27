@@ -38,7 +38,7 @@ https://coolmathskills.vercel.app/
 
 ## Developers
 
-> ### cl1pped <br> <sub style="font-weight: 200;">owner, founder</sub>
+> ### x8r <br> <sub style="font-weight: 200;">owner, founder</sub>
 
 > ### SyntaxError52 <br> <sub style="font-weight: 200;">helper, former developer</sub>
 
