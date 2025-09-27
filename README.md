@@ -1,5 +1,4 @@
 > [!CAUTION]
-> PLEASE READ!
 > This website will not be updated anymore except for minor bug fixes, as its successor Adurite has overrun it. You are able to access the new site <a href="https://useadurite.netlify.app/">here.</a>
 
 <center>
@@ -24,7 +23,7 @@
 - ...and more!
 
 ## Contact
-- contact `afterddark` on Discord
+- contact `_x8rr` on Discord
 - open an issue
 
 ## Links
