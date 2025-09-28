@@ -1,5 +1,5 @@
 > [!CAUTION]
-> This website will not be updated anymore except for minor bug fixes, as its successor Adurite has overrun it. You are able to access the new site <a href="https://useadurite.netlify.app/">here.</a>
+> This website will not be updated anymore except for minor bug fixes, as its successor Adurite has dethroned it. You are able to access the new site <a href="https://useadurite.netlify.app/">here.</a>
 
 <center>
     <h1>Classplay</h1>
